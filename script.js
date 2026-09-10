@@ -1339,19 +1339,130 @@
     });
   }
 
+  function setupCertificateCarousels() {
+    qsa("[data-certificate-carousel]").forEach((carousel) => {
+      const cards = qsa("[data-certificate-card]", carousel);
+      const dots = qsa("[data-certificate-dot]", carousel);
+      const previous = qs("[data-certificate-previous]", carousel);
+      const next = qs("[data-certificate-next]", carousel);
+      const status = qs("[data-certificate-status]", carousel);
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      let activeIndex = 0;
+      let timer = null;
+      let visible = true;
+      let pointerStartX = null;
+
+      const render = () => {
+        cards.forEach((card, index) => {
+          const offset = (index - activeIndex + cards.length) % cards.length;
+          card.classList.toggle("is-active", offset === 0);
+          card.classList.toggle("is-next", offset === 1);
+          card.classList.toggle("is-previous", offset === cards.length - 1);
+          card.classList.toggle("is-hidden", offset > 1 && offset < cards.length - 1);
+          card.setAttribute("aria-hidden", String(offset !== 0));
+        });
+        dots.forEach((dot, index) => {
+          const active = index === activeIndex;
+          dot.classList.toggle("is-active", active);
+          dot.setAttribute("aria-current", String(active));
+        });
+        const label = qs("figcaption strong", cards[activeIndex])?.textContent?.trim() || "Certificate";
+        if (status) status.textContent = `${label} / ${activeIndex + 1} of ${cards.length}`;
+      };
+
+      const stopAutoplay = () => {
+        if (timer) window.clearTimeout(timer);
+        timer = null;
+      };
+
+      const scheduleAutoplay = () => {
+        stopAutoplay();
+        if (reduceMotion || !visible || document.hidden) return;
+        timer = window.setTimeout(() => {
+          activeIndex = (activeIndex + 1) % cards.length;
+          render();
+          scheduleAutoplay();
+        }, 5200);
+      };
+
+      const select = (index) => {
+        activeIndex = (index + cards.length) % cards.length;
+        render();
+        scheduleAutoplay();
+      };
+
+      previous?.addEventListener("click", () => select(activeIndex - 1));
+      next?.addEventListener("click", () => select(activeIndex + 1));
+      dots.forEach((dot, index) => dot.addEventListener("click", () => select(index)));
+      carousel.addEventListener("keydown", (event) => {
+        if (event.key === "ArrowLeft") {
+          event.preventDefault();
+          select(activeIndex - 1);
+        } else if (event.key === "ArrowRight") {
+          event.preventDefault();
+          select(activeIndex + 1);
+        }
+      });
+      carousel.addEventListener("pointerenter", stopAutoplay);
+      carousel.addEventListener("pointerleave", scheduleAutoplay);
+      carousel.addEventListener("focusin", stopAutoplay);
+      carousel.addEventListener("focusout", () => {
+        window.setTimeout(() => {
+          if (!carousel.contains(document.activeElement)) scheduleAutoplay();
+        }, 0);
+      });
+      carousel.addEventListener("pointerdown", (event) => {
+        if (event.pointerType === "touch") pointerStartX = event.clientX;
+      });
+      carousel.addEventListener("pointerup", (event) => {
+        if (pointerStartX === null || event.pointerType !== "touch") return;
+        const distance = event.clientX - pointerStartX;
+        pointerStartX = null;
+        if (Math.abs(distance) > 42) select(activeIndex + (distance < 0 ? 1 : -1));
+      });
+      document.addEventListener("visibilitychange", scheduleAutoplay);
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(([entry]) => {
+          visible = entry.isIntersecting;
+          if (visible) scheduleAutoplay();
+          else stopAutoplay();
+        }, { threshold: 0.2 });
+        observer.observe(carousel);
+      }
+
+      render();
+      scheduleAutoplay();
+    });
+  }
+
   function setupForm() {
     const form = qs("#quote-form");
     const success = qs("#form-success");
     if (!form) return;
-    form.addEventListener("submit", (event) => {
+    form.addEventListener("submit", async (event) => {
       event.preventDefault();
       if (!form.reportValidity()) return;
-      if (success) {
-        success.hidden = false;
-        success.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      const submit = form.querySelector('button[type="submit"]');
+      if (submit) submit.disabled = true;
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { Accept: "application/json" },
+        });
+        if (!response.ok) throw new Error(`Mail service returned ${response.status}`);
+        if (success) {
+          success.hidden = false;
+          success.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }
+        form.reset();
+        refreshIcons();
+      } catch (error) {
+        console.error("Enquiry submission failed", error);
+        window.alert("We could not send your enquiry. Please email yier2697@outlook.com directly.");
+      } finally {
+        if (submit) submit.disabled = false;
       }
-      form.reset();
-      refreshIcons();
     });
     const fileInput = qs("input[type=file]", form);
     fileInput?.addEventListener("change", () => {
@@ -1371,6 +1482,7 @@
     setupFilters();
     setupModals();
     setupReel();
+    setupCertificateCarousels();
     setupForm();
     refreshIcons();
   });
