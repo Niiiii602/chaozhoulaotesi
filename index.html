@@ -9,9 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20260904watermark2" />
+    <link rel="stylesheet" href="styles.css?v=20260910certs1" />
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
-    <script src="script.js?v=20260904watermark2" defer></script>
+    <script src="script.js?v=20260910certs1" defer></script>
   </head>
   <body class="page-home">
     <div class="page-shell">
@@ -273,19 +273,75 @@
         </section>
 
         <section class="section section--quality" id="quality" aria-labelledby="quality-title">
-          <div class="content-width quality-layout">
-            <div class="quality-copy">
-              <div class="eyebrow">03 / Quality &amp; delivery</div>
-              <h2 id="quality-title">Consistency is<br /><em>the real premium.</em></h2>
-              <p>For a private-label program, the first sample is only the beginning. We build the checks and pack-out around the repeat order.</p>
-              <a class="text-link text-link--dark" href="#quote">Ask for a quality pack <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+          <div class="content-width quality-showcase">
+            <header class="quality-showcase-heading">
+              <div class="quality-copy">
+                <div class="eyebrow">03 / Quality &amp; delivery</div>
+                <h2 id="quality-title">Verified systems.<br /><em>Clearer decisions.</em></h2>
+              </div>
+              <div class="quality-summary">
+                <p>Independent audits support responsible sourcing, environmental management and repeatable quality for export programs.</p>
+                <span>Product compliance reviewed by model and market: FDA / LFGB / DGCCRF.</span>
+                <a class="text-link text-link--dark" href="contact.html#quote">Ask for a quality pack <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </header>
+
+            <div class="certificate-carousel" data-certificate-carousel role="region" aria-roledescription="carousel" aria-label="International certifications" tabindex="0">
+              <div class="certificate-stage">
+                <button class="certificate-arrow certificate-arrow--previous" type="button" data-certificate-previous aria-label="Show previous certificate" title="Previous certificate"><i data-lucide="chevron-left" aria-hidden="true"></i></button>
+                <div class="certificate-card is-active" data-certificate-card aria-hidden="false">
+                  <figure><img src="assets/certifications/iso-14001-redacted.webp" alt="Redacted ISO 14001 environmental management certificate" loading="lazy" /><figcaption><strong>ISO 14001</strong><span>Environmental management</span></figcaption></figure>
+                </div>
+                <div class="certificate-card is-next" data-certificate-card aria-hidden="true">
+                  <figure><img src="assets/certifications/wca-license-redacted.webp" alt="Redacted Intertek Workplace Conditions Assessment license" loading="lazy" /><figcaption><strong>WCA License</strong><span>Workplace conditions assessment</span></figcaption></figure>
+                </div>
+                <div class="certificate-card is-hidden" data-certificate-card aria-hidden="true">
+                  <figure><img src="assets/certifications/bsci-audit-redacted.webp" alt="Redacted first page of the BSCI monitoring summary" loading="lazy" /><figcaption><strong>BSCI Audit</strong><span>First-page monitoring summary</span></figcaption></figure>
+                </div>
+                <div class="certificate-card is-previous" data-certificate-card aria-hidden="true">
+                  <figure><img src="assets/certifications/iso-9001-redacted.webp" alt="Redacted ISO 9001 quality management certificate" loading="lazy" /><figcaption><strong>ISO 9001</strong><span>Quality management</span></figcaption></figure>
+                </div>
+                <button class="certificate-arrow certificate-arrow--next" type="button" data-certificate-next aria-label="Show next certificate" title="Next certificate"><i data-lucide="chevron-right" aria-hidden="true"></i></button>
+              </div>
+              <div class="certificate-controls">
+                <div class="certificate-dots" role="group" aria-label="Choose a certificate">
+                  <button class="is-active" type="button" data-certificate-dot="0" aria-label="Show ISO 14001 certificate" aria-current="true"></button>
+                  <button type="button" data-certificate-dot="1" aria-label="Show WCA License certificate" aria-current="false"></button>
+                  <button type="button" data-certificate-dot="2" aria-label="Show BSCI Audit certificate" aria-current="false"></button>
+                  <button type="button" data-certificate-dot="3" aria-label="Show ISO 9001 certificate" aria-current="false"></button>
+                </div>
+                <span class="certificate-status" data-certificate-status aria-live="polite">ISO 14001 / 1 of 4</span>
+                <span class="certificate-redaction"><i data-lucide="shield-check" aria-hidden="true"></i> Sensitive IDs redacted</span>
+              </div>
             </div>
-            <div class="quality-stack">
-              <div class="quality-row"><span class="quality-icon"><i data-lucide="scan-search" aria-hidden="true"></i></span><div><strong>Incoming material</strong><small>Grade, thickness and surface checked before forming.</small></div><span class="quality-code">01</span></div>
-              <div class="quality-row"><span class="quality-icon"><i data-lucide="ruler" aria-hidden="true"></i></span><div><strong>In-process control</strong><small>Dimensions, weld points, edges and finish reviewed at the line.</small></div><span class="quality-code">02</span></div>
-              <div class="quality-row"><span class="quality-icon"><i data-lucide="package" aria-hidden="true"></i></span><div><strong>Pack-out &amp; shipment</strong><small>Private-label cartons, protection and loading sequence aligned to your brief.</small></div><span class="quality-code">03</span></div>
-              <div class="compliance-note"><i data-lucide="file-check-2" aria-hidden="true"></i><span>Applicable compliance documentation can be reviewed by model and target market.</span></div>
-            </div>
+
+            <section class="commercial-promises" aria-labelledby="commercial-promises-title">
+              <header class="commercial-promises-heading">
+                <h3 id="commercial-promises-title">Best value. Fastest route. Assured quality.</h3>
+                <p>Commercial commitments made visible at a glance.</p>
+              </header>
+              <div class="commercial-promise-grid">
+                <article class="commercial-promise">
+                  <span class="commercial-promise-label">01 / Best value</span>
+                  <strong class="commercial-promise-metric">FREE</strong>
+                  <span class="commercial-promise-caption">samples for qualified projects</span>
+                  <div class="commercial-promise-detail"><span>MOQ from</span><strong>1,000+ pcs</strong><p>Selected models can start from 1,000 pieces.</p></div>
+                </article>
+                <article class="commercial-promise">
+                  <span class="commercial-promise-label">02 / Fastest route</span>
+                  <strong class="commercial-promise-metric">30 days</strong>
+                  <span class="commercial-promise-caption">tooling sample target*</span>
+                  <div class="commercial-promise-detail"><span>Development support</span><strong>Lids + seal rings</strong><p>Designed and developed in-house with practical sealing solutions.</p></div>
+                </article>
+                <article class="commercial-promise">
+                  <span class="commercial-promise-label">03 / Assured quality</span>
+                  <strong class="commercial-promise-metric">100%</strong>
+                  <span class="commercial-promise-caption">manual inspection, every piece</span>
+                  <div class="commercial-promise-detail"><span>Fastest lead time</span><strong>From 30 days*</strong><p>Planned around product structure and order quantity.</p></div>
+                </article>
+              </div>
+              <p class="commercial-promises-note">*Timing depends on product structure, tooling and order quantity.</p>
+            </section>
           </div>
         </section>
 
