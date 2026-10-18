@@ -116,10 +116,56 @@ async function zohoAccountId(env, token) {
   return String(first.accountId);
 }
 
-/** Send through the mailbox itself (no third party, no expiring credit). */
+// Zoho can return an API-level error inside an HTTP-success response.
+// Never treat an unreadable or incomplete acknowledgement as a sent message.
+async function readZohoResponse(response, operation) {
+  let body;
+  try {
+    body = await response.json();
+  } catch {
+    throw new Error(`zoho ${operation}: invalid JSON response (HTTP ${response.status})`);
+  }
+  const code = body && body.status && body.status.code;
+  const hasApiError = body && (body.error || body.errorCode ||
+    (body.data && (body.data.error || body.data.errorCode)));
+  if (!response.ok || !body || typeof body !== 'object' || Array.isArray(body) ||
+      (code != null && !(Number(code) >= 200 && Number(code) < 300)) || hasApiError) {
+    throw new Error(`zoho ${operation}: request rejected (HTTP ${response.status})`);
+  }
+  return body;
+}
+
+async function uploadZohoAttachments(env, message, token, accountId) {
+  if (!message.files.length) return [];
+  const form = new FormData();
+  for (const file of message.files) form.append('attach', file.value, file.name);
+  const response = await fetch(
+    `https://mail.zoho.com/api/accounts/${accountId}/messages/attachments?uploadType=multipart&isInline=false`,
+    {
+      method: 'POST',
+      headers: { Authorization: `Zoho-oauthtoken ${token}`, Accept: 'application/json' },
+      body: form,
+    },
+  );
+  const body = await readZohoResponse(response, 'attachment upload');
+  if (!Array.isArray(body.data) || body.data.length !== message.files.length) {
+    throw new Error('zoho attachment upload: incomplete acknowledgement');
+  }
+  return body.data.map((attachment) => {
+    const keys = ['storeName', 'attachmentPath', 'attachmentName'];
+    if (!attachment || keys.some((key) =>
+      !['string', 'number'].includes(typeof attachment[key]) || !String(attachment[key]).trim())) {
+      throw new Error('zoho attachment upload: missing attachment metadata');
+    }
+    return Object.fromEntries(keys.map((key) => [key, String(attachment[key])]));
+  });
+}
+
+/** Send through the mailbox itself, uploading every attachment before sending. */
 async function sendViaZoho(env, message) {
   const token = await zohoAccessToken(env);
   const accountId = await zohoAccountId(env, token);
+  const attachments = await uploadZohoAttachments(env, message, token, accountId);
   const res = await fetch(`https://mail.zoho.com/api/accounts/${accountId}/messages`, {
     method: 'POST',
     headers: {
@@ -134,15 +180,15 @@ async function sendViaZoho(env, message) {
       content: message.html,
       mailFormat: 'html',
       askReceipt: 'no',
+      ...(attachments.length ? { attachments } : {}),
     }),
   });
-  const text = await res.text();
-  if (!res.ok) throw new Error(`zoho send ${res.status}: ${text.slice(0, 200)}`);
-  try {
-    return JSON.parse(text).data.messageId || 'sent';
-  } catch {
-    return 'sent';
+  const body = await readZohoResponse(res, 'send');
+  const id = body.data && body.data.messageId;
+  if (!['string', 'number'].includes(typeof id) || !String(id).trim()) {
+    throw new Error('zoho send: missing message acknowledgement');
   }
+  return String(id);
 }
 
 function toBase64(buffer) {
@@ -349,6 +395,16 @@ async function handleQuote(request, env) {
     return json({ ok: false, error: 'invalid_email', message: 'Please check the email address.' }, 400);
   }
 
+  // Reject excess attachments instead of silently dropping customer files.
+  if (files.length > MAX_FILES) {
+    return json({ ok: false, error: 'too_many_attachments',
+      message: `Please attach no more than ${MAX_FILES} files. Your enquiry has not been sent.` }, 413);
+  }
+  if (files.reduce((total, file) => total + file.size, 0) > MAX_TOTAL_ATTACHMENT_BYTES) {
+    return json({ ok: false, error: 'attachments_too_large',
+      message: 'Please keep attachments within 4 MiB in total. Your enquiry has not been sent.' }, 413);
+  }
+
   const channels = availableChannels(env);
   if (!channels.length) {
     return json(
@@ -361,17 +417,8 @@ async function handleQuote(request, env) {
     );
   }
 
-  const usable = [];
-  let totalBytes = 0;
-  for (const file of files) {
-    if (usable.length >= MAX_FILES) break;
-    if (totalBytes + file.size > MAX_TOTAL_ATTACHMENT_BYTES) continue;
-    totalBytes += file.size;
-    usable.push(file);
-  }
-
   const destination = env.QUOTE_TO || 'nichole@laotes.com';
-  const message = buildMessage({ ...fields }, usable, request, env, { to: destination });
+  const message = buildMessage({ ...fields, email: String(fields.email).trim() }, files, request, env, { to: destination });
 
   const attempts = [];
   let id = null;

@@ -6,3 +6,12 @@ PROJECT_CONTEXT.md
 .wrangler/
 .dev.vars
 .git/
+tests/
+.git
+.assetsignore
+.gitignore
+.impeccable/
+DESIGN.md
+PRODUCT.md
+SYNC_AUDIT.md
+**/*.webp.json

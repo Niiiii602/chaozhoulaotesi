@@ -1,6 +1,6 @@
 # Chaozhou Laotesi Factory Website
 
-This project contains the OEM factory website for Chaozhou Laotei Enterprise CO., LTD.
+This project contains the OEM factory website for Chaozhou Laotesi Enterprise Co., Ltd.
 
 ## Current scope
 - Warm white and light sage visual system
@@ -25,6 +25,7 @@ This project contains the OEM factory website for Chaozhou Laotei Enterprise CO.
 - assets/
 
 ## Page structure
+- `about-us.html`: company introduction, enterprise honors, CSR / SSR and Why choose LAOTESI; scoped styles and behavior in `about-us.css` and `about-us.js`
 - `index.html`: hero, Quality & Delivery, and Contact
 - `factory-tour.html`: Factory tour page
 - `products.html`: Products page

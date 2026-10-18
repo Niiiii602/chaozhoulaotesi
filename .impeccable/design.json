@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-18T18:46:26+08:00",
+  "title": "Design System: LAOTESI Factory Website",
+  "extensions": {
+    "colorMeta": {
+      "paper": { "role": "neutral", "displayName": "Warm Paper", "canonical": "#fbfaf6", "tonalRamp": ["#26251f", "#4b4940", "#716e63", "#98958a", "#bab7ac", "#d4d1c6", "#e8e5dc", "#fbfaf6"] },
+      "paper-deep": { "role": "neutral", "displayName": "Paper Deep", "canonical": "#f3ede3", "tonalRamp": ["#28241e", "#51493d", "#786d5e", "#9f9280", "#bfb4a4", "#d7cfc2", "#e9e3da", "#f3ede3"] },
+      "sage-paper": { "role": "neutral", "displayName": "Sage Paper", "canonical": "#eef3ec", "tonalRamp": ["#1d2822", "#3b4e42", "#5a705f", "#7c9582", "#9fb6a4", "#bdd0c0", "#d9e5d9", "#eef3ec"] },
+      "white": { "role": "neutral", "displayName": "Warm White", "canonical": "#fffefa", "tonalRamp": ["#292925", "#55534c", "#817f76", "#aaa79d", "#c5c2b8", "#ddd9cf", "#eeeae1", "#fffefa"] },
+      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "#27332f", "tonalRamp": ["#080b0a", "#101815", "#18231f", "#27332f", "#53625b", "#7f8d86", "#adb7b1", "#e6ebe8"] },
+      "ink-soft": { "role": "neutral", "displayName": "Ink Soft", "canonical": "#46554e", "tonalRamp": ["#101613", "#1d2b25", "#2f4139", "#46554e", "#6d7d74", "#99a69f", "#c1cbc5", "#ebefed"] },
+      "muted": { "role": "neutral", "displayName": "Muted Sage Text", "canonical": "#5f7067", "tonalRamp": ["#121a16", "#24352d", "#3f5549", "#5f7067", "#82948a", "#aab8b0", "#ccd5cf", "#eef2ef"] },
+      "about-muted": { "role": "neutral", "displayName": "About Muted", "canonical": "#52645a", "tonalRamp": ["#0f1612", "#203127", "#374b3e", "#52645a", "#75897c", "#a1b1a7", "#c7d1ca", "#edf2ee"] },
+      "line": { "role": "neutral", "displayName": "Paper Line", "canonical": "#dedbd2", "tonalRamp": ["#282720", "#514f46", "#79766c", "#9f9c92", "#bbb8ae", "#d0cdc3", "#dedbd2", "#f6f4ef"] },
+      "teal": { "role": "primary", "displayName": "Deep Teal", "canonical": "#176158", "tonalRamp": ["#061b18", "#0b332e", "#104b43", "#176158", "#4c897e", "#80aaa1", "#b6cec8", "#e5f0ec"] },
+      "teal-dark": { "role": "primary", "displayName": "Deep Green", "canonical": "#173f3a", "tonalRamp": ["#061210", "#0c2420", "#10342e", "#173f3a", "#4e776f", "#7f9f97", "#b1c5bf", "#e4eeea"] },
+      "teal-ink": { "role": "primary", "displayName": "Teal Ink", "canonical": "#153a35", "tonalRamp": ["#050f0d", "#0a211d", "#0f3029", "#153a35", "#4a746b", "#7a9b92", "#adc1ba", "#e2ece8"] },
+      "orange": { "role": "secondary", "displayName": "Coral Signal", "canonical": "#e86f42", "tonalRamp": ["#321209", "#682611", "#9d3e1d", "#e86f42", "#ee9471", "#f3b49d", "#f8d5c8", "#fff0eb"] },
+      "orange-soft": { "role": "secondary", "displayName": "Soft Coral", "canonical": "#f8ddd2", "tonalRamp": ["#35150f", "#6e3024", "#a84f3d", "#d98772", "#e8aa99", "#f0c1b4", "#f8ddd2", "#fff4f0"] },
+      "gold": { "role": "secondary", "displayName": "Gold Signal", "canonical": "#f2b544", "tonalRamp": ["#3a2304", "#76500a", "#af7c16", "#f2b544", "#f5c96f", "#f7d99a", "#fbe8bf", "#fff7e6"] },
+      "steel": { "role": "neutral", "displayName": "Steel", "canonical": "#c9c5bb", "tonalRamp": ["#262520", "#4d4b45", "#74716a", "#98958d", "#adaaa2", "#bcb9b1", "#c9c5bb", "#f1efeb"] },
+      "accent-coral-soft": { "role": "secondary", "displayName": "Accent Coral Wash", "canonical": "rgba(235, 108, 70, 0.12)", "tonalRamp": ["rgba(70, 20, 8, 0.65)", "rgba(115, 40, 19, 0.55)", "rgba(165, 61, 31, 0.42)", "rgba(235, 108, 70, 0.32)", "rgba(235, 108, 70, 0.24)", "rgba(235, 108, 70, 0.18)", "rgba(235, 108, 70, 0.12)", "rgba(235, 108, 70, 0.06)"] },
+      "sage-line": { "role": "neutral", "displayName": "Sage Line", "canonical": "rgba(39, 51, 47, 0.18)", "tonalRamp": ["rgba(12, 23, 18, 0.65)", "rgba(24, 40, 32, 0.52)", "rgba(39, 51, 47, 0.4)", "rgba(39, 51, 47, 0.3)", "rgba(39, 51, 47, 0.24)", "rgba(39, 51, 47, 0.18)", "rgba(39, 51, 47, 0.12)", "rgba(39, 51, 47, 0.06)"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "About Display", "purpose": "Large About opening heading in Space Grotesk." },
+      "headline": { "displayName": "About Headline", "purpose": "Section headings and major statements on the About surface." },
+      "title": { "displayName": "Content Title", "purpose": "Compact reason-card and content headings." },
+      "body": { "displayName": "Operational Body", "purpose": "Readable product, factory, quality, contact, and About copy." },
+      "label": { "displayName": "Utility Label", "purpose": "Eyebrows, metadata, compact navigation, and status labels." }
+    },
+    "shadows": [
+      { "name": "ambient-card", "value": "0 20px 50px rgba(73, 64, 48, 0.14)", "purpose": "Global product-card hover depth." },
+      { "name": "header-rule", "value": "0 1px 0 rgba(73, 64, 48, 0.14)", "purpose": "Scrolled header separation." },
+      { "name": "product-lift", "value": "0 14px 32px rgba(39, 51, 47, 0.1)", "purpose": "Later global product-card hover treatment." }
+    ],
+    "motion": [
+      { "name": "state-standard", "value": "180ms ease", "purpose": "Button, navigation, border, color, and transform state changes." },
+      { "name": "image-reveal", "value": "500ms ease", "purpose": "Gallery image transform and filter response." },
+      { "name": "image-lift", "value": "600ms ease", "purpose": "Factory reel image hover scale." },
+      { "name": "reduced-motion", "value": "prefers-reduced-motion: reduce", "purpose": "Disable smooth scrolling and long transitions for users who request reduced motion." }
+    ],
+    "breakpoints": [
+      { "name": "about-wide", "value": "1100px", "purpose": "About-specific intermediate spacing before the global 1060px layout pass." },
+      { "name": "wide", "value": "1060px", "purpose": "Tighten content gutters and multi-column composition." },
+      { "name": "tablet", "value": "860px", "purpose": "Collapse or rebalance About and global layouts." },
+      { "name": "mobile", "value": "600px", "purpose": "Use single-column content, compact gutters, and mobile navigation." },
+      { "name": "small", "value": "360px", "purpose": "Tightest small-screen adjustments in the global stylesheet." }
+    ]
+  },
+  "components": [
+    {
+      "name": "About Primary Button",
+      "kind": "button",
+      "refersTo": "about-button-primary",
+      "description": "Teal action button used for the About page's primary contact or exploration action.",
+      "html": "<button class=\"ds-btn-primary\" type=\"button\">Discuss your project <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M7 17 17 7M8 7h9v9\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 46px; padding: 0 20px; border: 1px solid transparent; border-radius: 3px; background: var(--teal); color: var(--white); font: 700 13px/1.2 \"DM Sans\", Arial, sans-serif; letter-spacing: 0.02em; cursor: pointer; transition: transform 180ms ease, background 180ms ease, color 180ms ease; } .ds-btn-primary svg { width: 16px; height: 16px; } .ds-btn-primary:hover { background: var(--teal-dark); transform: translateY(-2px); } .ds-btn-primary:focus-visible { outline: 3px solid var(--teal); outline-offset: 5px; } .ds-btn-primary:active { transform: translateY(0); }"
+    },
+    {
+      "name": "Header Navigation",
+      "kind": "nav",
+      "refersTo": "button-header",
+      "description": "Fixed site navigation with compact links, a coral active rule, and a small header action.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Primary navigation\"><a href=\"#story\" aria-current=\"page\">About us</a><a href=\"#factory\">Factory tour</a><a href=\"#products\">Products</a><button class=\"ds-nav-action\" type=\"button\">Get in touch</button></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; gap: 29px; min-height: 86px; padding: 0 24px; background: var(--paper); color: var(--ink); font: 600 13px/1.2 \"DM Sans\", Arial, sans-serif; } .ds-nav a { position: relative; color: var(--ink); opacity: 0.78; text-decoration: none; } .ds-nav a::after { position: absolute; right: 0; bottom: -8px; left: 0; height: 2px; background: var(--orange); content: \"\"; transform: scaleX(0); transform-origin: right center; transition: transform 180ms ease; } .ds-nav a:hover, .ds-nav a:focus-visible, .ds-nav a[aria-current=\"page\"] { opacity: 1; color: var(--teal); } .ds-nav a:hover::after, .ds-nav a:focus-visible::after, .ds-nav a[aria-current=\"page\"]::after { transform: scaleX(1); transform-origin: left center; } .ds-nav-action { min-height: 40px; padding: 0 15px; border: 0; border-radius: 3px; background: var(--teal); color: var(--white); font: inherit; cursor: pointer; transition: background 180ms ease, transform 180ms ease; } .ds-nav-action:hover, .ds-nav-action:focus-visible { background: var(--teal-dark); transform: translateY(-2px); } .ds-nav-action:focus-visible, .ds-nav a:focus-visible { outline: 3px solid var(--teal); outline-offset: 5px; }"
+    },
+    {
+      "name": "About Section Index",
+      "kind": "nav",
+      "refersTo": "about-section-nav",
+      "description": "Sticky About reading index that exposes the story, honors, responsibility, and Why choose sections.",
+      "html": "<nav class=\"ds-section-index\" aria-label=\"About sections\"><a href=\"#story\" aria-current=\"location\">Our story</a><a href=\"#honors\">Honors</a><a href=\"#responsibility\">Responsibility</a><a href=\"#why\">Why choose us</a></nav>",
+      "css": ".ds-section-index { position: sticky; top: 86px; z-index: 2; display: flex; justify-content: center; gap: 64px; min-height: 58px; padding: 0 24px; border-block: 1px solid var(--line); background: var(--paper); font: 600 12px/1.4 \"DM Sans\", Arial, sans-serif; } .ds-section-index a { position: relative; display: inline-flex; align-items: center; color: var(--about-muted); text-decoration: none; } .ds-section-index a::after { position: absolute; right: 0; bottom: -1px; left: 0; height: 2px; background: transparent; content: \"\"; } .ds-section-index a[aria-current=\"location\"], .ds-section-index a:hover, .ds-section-index a:focus-visible { color: var(--teal); } .ds-section-index a[aria-current=\"location\"]::after { background: var(--orange); } .ds-section-index a:focus-visible { outline: 3px solid var(--teal); outline-offset: 5px; }"
+    },
+    {
+      "name": "Product Card",
+      "kind": "card",
+      "refersTo": "product-card",
+      "description": "Warm-white product container with a restrained hover lift and a quiet border.",
+      "html": "<article class=\"ds-card\"><span class=\"ds-card-kicker\">Cookware</span><h3>Stainless steel range</h3><p>Practical product information stays easy to scan.</p><a href=\"#range\">Explore range <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M7 17 17 7M8 7h9v9\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a></article>",
+      "css": ".ds-card { padding: 22px; border: 1px solid var(--line); border-radius: 6px; background: var(--white); color: var(--ink); transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease; } .ds-card-kicker { color: var(--teal); font: 700 10px/1.2 \"DM Sans\", Arial, sans-serif; letter-spacing: 0.12em; text-transform: uppercase; } .ds-card h3 { margin: 12px 0 0; font: 500 24px/1.1 \"Space Grotesk\", \"DM Sans\", sans-serif; letter-spacing: -0.03em; } .ds-card p { margin: 12px 0 17px; color: var(--muted); font: 400 13px/1.55 \"DM Sans\", Arial, sans-serif; } .ds-card a { display: inline-flex; align-items: center; gap: 9px; color: var(--teal); font: 700 12px/1.2 \"DM Sans\", Arial, sans-serif; text-decoration: none; } .ds-card a svg { width: 15px; height: 15px; transition: transform 180ms ease; } .ds-card:hover { transform: translateY(-4px); border-color: var(--sage-line); box-shadow: 0 14px 32px rgba(39, 51, 47, 0.1); } .ds-card a:hover svg, .ds-card a:focus-visible svg { transform: translateX(4px); } .ds-card:focus-within { outline: 2px solid var(--orange); outline-offset: 4px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Compact quote/contact field with a teal focus state and no decorative chrome.",
+      "html": "<label class=\"ds-field\"><span>Company email</span><input type=\"email\" placeholder=\"name@company.com\" /></label>",
+      "css": ".ds-field { display: grid; gap: 7px; color: var(--ink-soft); font: 700 10px/1.2 \"DM Sans\", Arial, sans-serif; letter-spacing: 0.1em; text-transform: uppercase; } .ds-field input { width: 100%; height: 44px; padding: 0 12px; border: 1px solid var(--line); border-radius: 2px; outline: 0; background: var(--paper); color: var(--ink); font: 400 14px/1.4 \"DM Sans\", Arial, sans-serif; letter-spacing: normal; transition: border-color 180ms ease, box-shadow 180ms ease; } .ds-field input::placeholder { color: #9aa09c; } .ds-field input:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(12, 90, 93, 0.12); }"
+    },
+    {
+      "name": "Filter Tabs",
+      "kind": "chip",
+      "refersTo": "filter-button",
+      "description": "Compact product filter control with an ink active state and coral accent variant.",
+      "html": "<div class=\"ds-filter\" role=\"group\" aria-label=\"Product filters\"><button type=\"button\">All</button><button class=\"is-active\" type=\"button\">Cookware</button><button class=\"is-accent\" type=\"button\">OEM</button></div>",
+      "css": ".ds-filter { display: inline-flex; align-items: center; gap: 4px; min-height: 47px; padding: 4px; border: 1px solid var(--line); border-radius: 3px; background: var(--paper-deep); } .ds-filter button { min-height: 37px; padding: 0 16px; border: 0; border-radius: 2px; background: transparent; color: var(--muted); font: 700 12px/1.2 \"DM Sans\", Arial, sans-serif; letter-spacing: 0.03em; cursor: pointer; transition: background 180ms ease, color 180ms ease, transform 180ms ease; } .ds-filter button:hover, .ds-filter button:focus-visible { color: var(--ink); transform: translateY(-1px); } .ds-filter button.is-active { background: var(--ink); color: var(--white); } .ds-filter button.is-accent { color: var(--orange); } .ds-filter button.is-accent.is-active { background: var(--orange); color: var(--white); } .ds-filter button:focus-visible { outline: 2px solid var(--orange); outline-offset: 4px; }"
+    },
+    {
+      "name": "Community Panel",
+      "kind": "custom",
+      "refersTo": "about-community-panel",
+      "description": "Deep-green About responsibility panel that keeps community copy direct and legible.",
+      "html": "<article class=\"ds-community\"><span class=\"ds-community-label\">Community &amp; CSR</span><h3>Responsibility, put into practice.</h3><p>Supporting the community around us and caring for the people behind our products.</p><ul><li>Education</li><li>Community care</li><li>Local development</li></ul></article>",
+      "css": ".ds-community { padding: 42px 48px 40px; background: var(--teal-dark); color: var(--white); } .ds-community-label { display: block; padding-bottom: 22px; border-bottom: 1px solid #5e8074; color: var(--orange); font: 700 10px/1.2 \"DM Sans\", Arial, sans-serif; letter-spacing: 0.14em; text-transform: uppercase; } .ds-community h3 { margin: 24px 0; font: 500 34px/1.15 \"Space Grotesk\", \"DM Sans\", sans-serif; letter-spacing: -0.03em; } .ds-community p { max-width: 42ch; color: #d8e6df; font: 400 14px/1.9 \"DM Sans\", Arial, sans-serif; } .ds-community ul { display: grid; gap: 0; margin: 32px 0 0; padding: 0; list-style: none; } .ds-community li { padding: 12px 0; border-top: 1px solid #5e8074; color: #edf3ec; font: 400 13px/1.5 \"DM Sans\", Arial, sans-serif; } .ds-community li:first-child { border-top: 0; }"
+    },
+    {
+      "name": "Factory Panorama Frame",
+      "kind": "custom",
+      "refersTo": "about-community-panel",
+      "description": "Image-led About opening frame that keeps the complete factory panorama dominant and inspectable.",
+      "html": "<figure class=\"ds-panorama\"><div class=\"ds-panorama-art\"><span>LAOTESI / Chaozhou, China</span><strong>Factory panorama</strong></div><figcaption>Company archive</figcaption></figure>",
+      "css": ".ds-panorama { margin: 0; color: var(--about-muted); font: 400 11px/1.6 \"DM Sans\", Arial, sans-serif; } .ds-panorama-art { display: flex; min-height: 210px; aspect-ratio: 2400 / 953; flex-direction: column; justify-content: space-between; padding: 22px; background: var(--teal-dark); color: var(--white); } .ds-panorama-art span { color: #c8d5cc; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; } .ds-panorama-art strong { font: 500 clamp(24px, 4vw, 48px)/1.05 \"Space Grotesk\", \"DM Sans\", sans-serif; letter-spacing: -0.03em; } .ds-panorama figcaption { padding: 14px 0; border-bottom: 1px solid var(--line); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Working Factory, Clearly Seen",
+    "overview": "LAOTESI presents a real manufacturing partner with a warm, practical visual system. Warm paper is the default canvas; sage bands separate proof-oriented content; deep green and teal carry factory confidence; and coral is reserved for action, emphasis, and wayfinding. The result should feel grounded and capable rather than anonymous or overly polished.\n\nThe global site uses DM Sans for readable operational copy and Space Grotesk as the scoped About heading voice. The About surface extends this incumbent world with an image-led factory panorama, a sticky section index, calm editorial spacing, direct honors, and dark community panels. Keep the page persuasive for international kitchenware buyers while preserving the static HTML, CSS, and JavaScript implementation.",
+    "keyCharacteristics": [
+      "Warm-white paper with sage proof bands and deep teal action surfaces.",
+      "DM Sans body copy paired with Space Grotesk About headings.",
+      "Restrained 2px, 3px, and 6px corners; rounded pills and circles are reserved for controls.",
+      "Real factory imagery, thin rules, and tonal blocks provide hierarchy without decorative noise.",
+      "The About extension is scoped under `.page-about` and must not change unrelated routes."
+    ],
+    "rules": [
+      { "name": "The Coral Signal Rule", "body": "Coral is a wayfinding and action signal, not a general page wash. Keep it rare enough that a button, underline, or active state remains immediately legible.", "section": "colors" },
+      { "name": "The Two Voices, One System Rule", "body": "Use Space Grotesk for About headings and DM Sans for everything users must read, scan, enter, or act on. Do not introduce a third type family.", "section": "typography" },
+      { "name": "The Flat About Rule", "body": "About surfaces should feel architectural and inspectable. Prefer sage/teal blocks and one-pixel rules; do not add floating shadows to every section.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep warm paper as the default canvas and use sage/teal bands to distinguish proof, community, and action content.",
+      "Do use DM Sans for body copy and Space Grotesk for About headings; preserve the established fallback stacks.",
+      "Do use real factory and product imagery with the observed aspect ratios and `object-fit: contain` where inspection matters.",
+      "Do use coral sparingly for calls to action, active rules, labels, and selected metrics.",
+      "Do keep About overrides scoped to `.page-about` so existing product, factory, quality, and contact routes remain stable.",
+      "Do retain visible focus states and the existing responsive gutters at 48px, 28px, 20px, and 16px."
+    ],
+    "donts": [
+      "Don't replace the warm-white/sage/deep-teal world with a new palette or typography system.",
+      "Don't turn the About page into an anonymous supplier-card wall; let the factory panorama and people/workplace proof lead.",
+      "Don't add broad rounded cards, decorative gradients, or floating shadows that conflict with the flat tonal system.",
+      "Don't introduce unsupported company claims, awards, customer names, testimonials, or capabilities into the visual documentation.",
+      "Don't widen About selectors into global styles or break the existing mobile navigation behavior."
+    ]
+  }
+}

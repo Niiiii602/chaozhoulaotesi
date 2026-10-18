@@ -1442,6 +1442,7 @@
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
       if (!form.reportValidity()) return;
+      if (success) success.hidden = true;
       const submit = form.querySelector('button[type="submit"]');
       if (submit) submit.disabled = true;
       try {
@@ -1456,8 +1457,12 @@
         } catch (parseError) {
           payload = null;
         }
-        if (!response.ok || (payload && payload.ok === false)) {
-          throw new Error((payload && payload.error) || `Mail service returned ${response.status}`);
+        if (!response.ok || !payload || payload.ok !== true) {
+          const failure = new Error((payload && payload.error) || `Mail service returned ${response.status}`);
+          if (response.status === 413) {
+            failure.userMessage = (payload && payload.message) || 'Please reduce your attachment size. Your enquiry has not been sent.';
+          }
+          throw failure;
         }
         if (success) {
           success.hidden = false;
@@ -1467,7 +1472,7 @@
         refreshIcons();
       } catch (error) {
         console.error("Enquiry submission failed", error);
-        window.alert("We could not send your enquiry. Please email nichole@laotes.com directly.");
+        window.alert(error.userMessage || "We could not send your enquiry. Please email nichole@laotes.com directly.");
       } finally {
         if (submit) submit.disabled = false;
       }

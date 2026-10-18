@@ -2011,3 +2011,18 @@ body {
     max-width: 46ch;
   }
 }
+
+/* Six-route navigation: retain room for About us without wrapping. */
+.site-header--expanded .main-nav { gap: clamp(12px, 1.6vw, 23px); }
+.site-header--expanded .main-nav a { white-space: nowrap; }
+.site-header--expanded .main-nav a[aria-current="page"] { opacity: 1; }
+.site-header--expanded .main-nav a[aria-current="page"]::after { width: 100%; }
+@media (min-width: 861px) and (max-width: 1180px) {
+  .site-header--expanded .header-inner { gap: 20px; }
+  .site-header--expanded .header-actions { display: none; }
+  .site-header--expanded .main-nav { gap: 19px; }
+  .site-header--expanded .main-nav a { font-size: 12px; }
+}
+@media (max-width: 860px) {
+  .site-header--expanded .main-nav { gap: 0; }
+}
