@@ -1450,7 +1450,15 @@
           body: new FormData(form),
           headers: { Accept: "application/json" },
         });
-        if (!response.ok) throw new Error(`Mail service returned ${response.status}`);
+        let payload = null;
+        try {
+          payload = await response.json();
+        } catch (parseError) {
+          payload = null;
+        }
+        if (!response.ok || (payload && payload.ok === false)) {
+          throw new Error((payload && payload.error) || `Mail service returned ${response.status}`);
+        }
         if (success) {
           success.hidden = false;
           success.scrollIntoView({ behavior: "smooth", block: "nearest" });
@@ -1459,7 +1467,7 @@
         refreshIcons();
       } catch (error) {
         console.error("Enquiry submission failed", error);
-        window.alert("We could not send your enquiry. Please email yier2697@outlook.com directly.");
+        window.alert("We could not send your enquiry. Please email nichole@laotes.com directly.");
       } finally {
         if (submit) submit.disabled = false;
       }

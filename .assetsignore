@@ -1,0 +1,8 @@
+# Files that must never be published as static assets on laotes.com
+wrangler.toml
+worker.js
+worker.js.map
+PROJECT_CONTEXT.md
+.wrangler/
+.dev.vars
+.git/

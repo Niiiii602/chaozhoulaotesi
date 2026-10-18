@@ -2,7 +2,40 @@ name = "chaozhoulaotesi"
 compatibility_date = "2026-09-04"
 main = "worker.js"
 
+# Custom domains (zone laotes.com lives in the same Cloudflare account)
+routes = [
+  { pattern = "laotes.com", custom_domain = true },
+  { pattern = "www.laotes.com", custom_domain = true }
+]
+
 [assets]
 directory = "."
 binding = "ASSETS"
 not_found_handling = "404-page"
+
+# Enquiry form endpoint configuration (non-secret). Sending credentials are set
+# separately with `wrangler secret put` (ZOHO_CLIENT_ID / ZOHO_CLIENT_SECRET /
+# ZEPTOMAIL_TOKEN).
+#
+# Sending order is a fallback chain (see availableChannels in worker.js):
+#   zoho  ->  cloudflare-email-service  ->  resend  ->  zeptomail
+# The mailbox path is primary so the form no longer depends on ZeptoMail credit.
+[vars]
+QUOTE_TO = "nichole@laotes.com"
+QUOTE_FROM = "website@laotes.com"
+QUOTE_FROM_NAME = "LAOTESI Website"
+QUOTE_SUBJECT_PREFIX = "[Website enquiry]"
+ZEPTOMAIL_API = "https://cpaas.zoho.com/v1.1/email"
+ZOHO_ACCOUNT_ID = "7298402000000008002"
+
+# Shares the webmail namespace, so both Workers read the same OAuth refresh token.
+[[kv_namespaces]]
+binding = "WEBMAIL_KV"
+id = "c6db3c144f7f4f62af86874ce9d2381b"
+
+# 开发信互动追踪用：/r/<token> 与 /o/<token>.gif 要写回 outreach 的草稿。
+# 和 webmail 的 OUTREACH_KV 是同一个命名空间 —— 追踪链接必须挂在
+# laotes.com（公网、无 Access）而不是 mail.laotes.com（整站在 Access 后面）。
+[[kv_namespaces]]
+binding = "OUTREACH_KV"
+id = "10be3512c1204d5c8b3a3cfd9e13814d"

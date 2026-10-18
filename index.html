@@ -355,7 +355,7 @@
               <div class="quote-contact" aria-label="Nichole export contact">
                 <div class="quote-contact-heading"><i data-lucide="user-round" aria-hidden="true"></i><span>Export contact</span></div>
                 <strong>Nichole</strong>
-                <a href="mailto:yier2697@outlook.com">yier2697@outlook.com</a>
+                <a href="mailto:nichole@laotes.com">nichole@laotes.com</a>
                 <a href="tel:+8613903099416">+86 139 0309 9416</a>
                 <a class="quote-contact-social" href="https://wa.me/8613903099416" target="_blank" rel="noopener" aria-label="WhatsApp Nichole at +86 139 0309 9416"><i data-lucide="message-circle" aria-hidden="true"></i><span>WhatsApp: +86 139 0309 9416</span></a>
                 <span class="quote-contact-social"><i data-lucide="message-square" aria-hidden="true"></i><span>WeChat: +86 139 0309 9416</span></span>
@@ -363,7 +363,8 @@
               </div>
             </div>
 
-            <form class="quote-form" id="quote-form">
+            <form class="quote-form" id="quote-form" action="/api/quote" method="POST" enctype="multipart/form-data">
+              <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" />
               <div class="form-heading"><span>Project enquiry</span><span class="required-note">* Required</span></div>
               <div class="form-grid">
                 <label class="field" for="quote-name"><span>Name *</span><input id="quote-name" name="name" type="text" autocomplete="name" required placeholder="Your name" /></label>
@@ -375,7 +376,7 @@
                 <label class="field field--full" for="quote-message"><span>What do you need?</span><textarea id="quote-message" name="message" rows="4" placeholder="Material, size, finish, lid or packaging requirements..."></textarea></label>
                 <label class="field field--full file-field" for="quote-attachment"><span>Reference file</span><span class="file-input-wrap"><input id="quote-attachment" name="attachment" type="file" accept=".pdf,.jpg,.jpeg,.png,.ai,.dxf" /><span class="file-placeholder"><i data-lucide="paperclip" aria-hidden="true"></i><span>Attach a drawing, logo or reference photo</span></span></span></label>
               </div>
-              <div class="form-footer"><span class="form-privacy"><i data-lucide="info" aria-hidden="true"></i>Preview form - connect your inbox or CRM before launch.</span><button class="button button--primary" type="submit">Send enquiry <i data-lucide="arrow-up-right" aria-hidden="true"></i></button></div>
+              <div class="form-footer"><span class="form-privacy"><i data-lucide="info" aria-hidden="true"></i>Enquiries are sent straight to our export team.</span><button class="button button--primary" type="submit">Send enquiry <i data-lucide="arrow-up-right" aria-hidden="true"></i></button></div>
               <div class="form-success" id="form-success" role="status" hidden><i data-lucide="check-circle-2" aria-hidden="true"></i><div><strong>Preview received locally.</strong><span>Connect your inbox or CRM before launch to receive live enquiries.</span></div></div>
             </form>
           </div>
@@ -386,7 +387,7 @@
         <div class="content-width footer-grid">
           <div class="footer-brand"><a class="brand brand--footer" href="#top" aria-label="LAOTESI home - Chaozhou Laotei Enterprise CO., LTD."><span class="brand-logo-stack brand-logo-stack--footer" aria-hidden="true"><img class="brand-logo brand-logo--white" src="assets/logo-laotesi-outline-white-v2-padded.png" alt="" /></span><span class="brand-copy"><small>Chaozhou Laotei Enterprise CO., LTD.</small></span></a><p>Precision stainless manufacturing for export-oriented OEM projects.</p></div>
           <div class="footer-links"><span class="footer-label">Explore</span><a href="#products">Product ranges</a><a href="#oem">QUALITY &amp; DELIVERY</a><a href="#factory">Factory tour</a><a href="#quality">Quality</a></div>
-          <div class="footer-links"><span class="footer-label">Start here</span><a href="#quote">Request a quote</a><a href="mailto:yier2697@outlook.com">yier2697@outlook.com</a><a href="tel:+8613903099416">+86 139 0309 9416</a><a href="https://wa.me/8613903099416" target="_blank" rel="noopener">WhatsApp / WeChat</a><span class="footer-muted">Huamei Industrial Zone, Caitang Town, Chao'an District, Chaozhou, Guangdong, China</span></div>
+          <div class="footer-links"><span class="footer-label">Start here</span><a href="#quote">Request a quote</a><a href="mailto:nichole@laotes.com">nichole@laotes.com</a><a href="tel:+8613903099416">+86 139 0309 9416</a><a href="https://wa.me/8613903099416" target="_blank" rel="noopener">WhatsApp / WeChat</a><span class="footer-muted">Huamei Industrial Zone, Caitang Town, Chao'an District, Chaozhou, Guangdong, China</span></div>
           <div class="footer-mark"><span class="footer-mark-line"></span><span>LT / 01</span></div>
         </div>
         <div class="content-width footer-bottom"><span>(c) 2026 LAOTESI Stainless Works</span><span>Built for your brand.</span></div>
