@@ -86,7 +86,7 @@ test('Pre-shipment inspection covers all requested checks and evidence formats',
 test('Every published navigation places Q&A immediately after Contact', () => {
   for (const filename of ['index.html', 'about-us.html', 'factory-tour.html', 'products.html', 'quality-delivery.html', 'contact.html', 'qa.html']) {
     const html = fs.readFileSync(path.join(project, filename), 'utf8');
-    assert.match(html, /<a href="contact.html">Contact<\/a>\s*<a href="qa.html"(?: aria-current="page")?>Q&amp;A<\/a>/, filename);
+    assert.match(html, /<a href="\/contact">Contact<\/a>\s*<a href="\/qa"(?: aria-current="page")?>Q&amp;A<\/a>/, filename);
   }
 });
 

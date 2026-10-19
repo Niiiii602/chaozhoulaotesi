@@ -654,6 +654,29 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
+    if (request.method === 'GET' || request.method === 'HEAD') {
+      const canonicalUrl = new URL(url);
+      if (url.hostname === 'laotes.com' || url.hostname === 'www.laotes.com') {
+        canonicalUrl.protocol = 'https:';
+        canonicalUrl.hostname = 'laotes.com';
+        canonicalUrl.port = '';
+      }
+      if (/^\/index(?:\.html)?\/?$/.test(url.pathname)) {
+        canonicalUrl.pathname = '/';
+      } else if (/^\/oem-tooling(?:\.html)?\/?$/.test(url.pathname)) {
+        canonicalUrl.pathname = '/quality-delivery';
+      } else {
+        const page = url.pathname.match(/^\/(about-us|factory-tour|products|quality-delivery|contact|qa)(?:\.html)?\/?$/);
+        if (page) canonicalUrl.pathname = '/' + page[1];
+      }
+      if (canonicalUrl.href !== url.href) {
+        return new Response(null, {
+          status: 301,
+          headers: { Location: canonicalUrl.href, 'Cache-Control': 'public, max-age=3600' },
+        });
+      }
+    }
+
     if (url.pathname.startsWith('/r/') || url.pathname.startsWith('/o/')) {
       const tracked = await handleTrack(request, env, url);
       if (tracked) return tracked;

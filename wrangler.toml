@@ -12,6 +12,8 @@ routes = [
 directory = "."
 binding = "ASSETS"
 not_found_handling = "404-page"
+run_worker_first = true
+html_handling = "drop-trailing-slash"
 
 # Enquiry form endpoint configuration (non-secret). Sending credentials are set
 # separately with `wrangler secret put` (ZOHO_CLIENT_ID / ZOHO_CLIENT_SECRET /
