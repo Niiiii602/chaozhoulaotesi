@@ -122,8 +122,10 @@
     setAccessMessage("", "");
     const days = qs("#days-select").value;
     try {
-      const response = await fetch("/api/analytics?days=" + encodeURIComponent(days), { headers: { Accept: "application/json", Authorization: "Bearer " + state.token } });
-      const payload = await response.json().catch(() => null);
+      const response = await fetch("/api/analytics?days=" + encodeURIComponent(days), { cache: "no-store", headers: { Accept: "application/json", Authorization: "Bearer " + state.token } });
+      const raw = await response.text();
+      let payload = null;
+      try { payload = raw ? JSON.parse(raw) : null; } catch { payload = null; }
       if (!response.ok || !payload?.ok) {
         if (response.status === 401) {
           sessionStorage.removeItem(tokenStorageKey);
@@ -134,14 +136,15 @@
           showAccess();
           setAccessMessage("The Worker has not been configured with ANALYTICS_ADMIN_TOKEN yet.", "error");
         } else {
-          setAccessMessage(payload?.message || "The report could not be loaded.", "error");
+          const detail = payload?.error || payload?.message || (response.status ? "HTTP " + response.status : "empty response");
+          setAccessMessage("Report request failed: " + detail + ".", "error");
         }
         return;
       }
       renderReport(payload);
       showDashboard();
-    } catch {
-      setAccessMessage("Could not reach the analytics endpoint. Check the deployed site or network connection.", "error");
+    } catch (error) {
+      setAccessMessage("Could not reach the analytics endpoint: " + (error?.message || "network error") + ".", "error");
     } finally {
       if (refresh) refresh.disabled = false;
     }
