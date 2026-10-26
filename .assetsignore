@@ -18,3 +18,6 @@ SYNC_AUDIT.md
 SEO_GEO_AUDIT.md
 tools/
 about-us-preview.*
+%SystemDrive%/
+console.log*
+process.stdout*
