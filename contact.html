@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css?v=20261019qa1" />
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+    <script src="analytics.js?v=20261026analytics1" defer></script>
     <script src="script.js?v=20261018quotefix1" defer></script>
   </head>
   <body class="page-contact">
@@ -312,6 +313,7 @@
 
 <form class="quote-form" id="quote-form" action="/api/quote" method="POST" enctype="multipart/form-data">
               <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" />
+              <input type="hidden" name="_visitor" value="" />
               <div class="form-heading"><span>Project enquiry</span><span class="required-note">* Required</span></div>
               <div class="form-grid">
                 <label class="field" for="quote-name"><span>Name *</span><input id="quote-name" name="name" type="text" autocomplete="name" required placeholder="Your name" /></label>

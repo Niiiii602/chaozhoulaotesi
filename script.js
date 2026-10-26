@@ -959,6 +959,7 @@
     const requestedImageIndex = Number(imageIndex);
     if (Number.isFinite(requestedImageIndex) && requestedImageIndex > 0) selectProductImage(requestedImageIndex);
     setModal(qs("#product-modal"), true);
+    window.LAOTESI_TRACK?.("product_view", { product: series.title });
     refreshIcons();
   }
 
@@ -1439,16 +1440,27 @@
     const form = qs("#quote-form");
     const success = qs("#form-success");
     if (!form) return;
+    const marketingContentPattern = /(?:\b(?:seo|aeo|geo|bing|sem|ppc)\b|\bgoogle\b|\badvertis(?:e|ing|ement)\b|\bbacklinks?\b|\blink\s*building\b|\bdigital\s+marketing\b|\bsearch\s+engine\s+optimization\b|\blead\s+generation\b|\bguest\s+post(?:ing)?\b|\bsponsored\s+post\b|\bweb\s+traffic\b|\bwebsite\s+ranking\b|\bmarketing\s+promotion\b)/i;
+    const marketingContentMessage = "This form is for product and OEM enquiries only. Please remove marketing or SEO-related content.";
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
       if (!form.reportValidity()) return;
       if (success) success.hidden = true;
+      const submission = new FormData(form);
+      const entries = typeof submission.entries === "function" ? submission.entries() : [];
+      for (const [key, value] of entries) {
+        const text = typeof value === "string" ? value : value?.name || "";
+        if (marketingContentPattern.test(String(text))) {
+          window.alert(marketingContentMessage);
+          return;
+        }
+      }
       const submit = form.querySelector('button[type="submit"]');
       if (submit) submit.disabled = true;
       try {
         const response = await fetch(form.action, {
           method: "POST",
-          body: new FormData(form),
+          body: submission,
           headers: { Accept: "application/json" },
         });
         let payload = null;
@@ -1459,6 +1471,7 @@
         }
         if (!response.ok || !payload || payload.ok !== true) {
           const failure = new Error((payload && payload.error) || `Mail service returned ${response.status}`);
+          if (payload && payload.message) failure.userMessage = payload.message;
           if (response.status === 413) {
             failure.userMessage = (payload && payload.message) || 'Please reduce your attachment size. Your enquiry has not been sent.';
           }

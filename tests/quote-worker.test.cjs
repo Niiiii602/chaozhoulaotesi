@@ -498,3 +498,48 @@ for (const [label, metadata] of [
     assert.equal(callsFor(harness, isZohoSend).length, 0);
   });
 }
+
+for (const [label, fields] of [
+  ['SEO lowercase in message', { ...VALID_FIELDS, message: 'Please provide SEO services.' }],
+  ['Google mixed case in company', { ...VALID_FIELDS, company: 'Google Growth Partners' }],
+  ['GEO uppercase in category', { ...VALID_FIELDS, category: 'GEO visibility campaign' }],
+]) {
+  test('rejects marketing content before sending: ' + label, async () => {
+    const harness = loadHarness(() => { throw new Error('No provider call expected'); });
+    const response = await harness.worker.fetch(jsonRequest(fields, { ip: '198.51.100.' + (50 + Math.floor(Math.random() * 20)) }), harness.env);
+    const result = await readJsonResponse(response);
+    assert.equal(response.status, 422);
+    assert.equal(result.body.ok, false);
+    assert.equal(result.body.error, 'marketing_content');
+    assert.equal(callsFor(harness, isZohoSend).length, 0);
+  });
+}
+
+test('rejects marketing content in a multipart attachment filename', async () => {
+  const harness = loadHarness(() => { throw new Error('No provider call expected'); });
+  const response = await harness.worker.fetch(
+    formRequest(VALID_FIELDS, [makeFile('seo-audit.pdf', [1, 2, 3], 'application/pdf')], { ip: '198.51.100.80' }),
+    harness.env,
+  );
+  const result = await readJsonResponse(response);
+  assert.equal(response.status, 422);
+  assert.equal(result.body.error, 'marketing_content');
+  assert.equal(callsFor(harness, isZohoUpload).length, 0);
+  assert.equal(callsFor(harness, isZohoSend).length, 0);
+});
+
+test('allows a normal OEM enquiry with a promotional product reference', async () => {
+  const harness = loadHarness(async ({ url: rawUrl }) => {
+    const url = new URL(rawUrl);
+    if (isTokenRequest(url)) return tokenResponse();
+    if (isZohoSend(url)) return jsonResponse({ status: { code: 200 }, data: { messageId: 'normal-oem' } });
+    throw new Error('unexpected provider call: ' + rawUrl);
+  });
+  const response = await harness.worker.fetch(
+    jsonRequest({ ...VALID_FIELDS, message: 'We need a promotional food storage set for a retail launch.' }, { ip: '198.51.100.81' }),
+    harness.env,
+  );
+  const result = await readJsonResponse(response);
+  assert.equal(response.status, 200);
+  assert.equal(result.body.id, 'normal-oem');
+});

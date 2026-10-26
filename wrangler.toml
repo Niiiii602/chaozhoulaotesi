@@ -22,6 +22,8 @@ html_handling = "drop-trailing-slash"
 # Sending order is a fallback chain (see availableChannels in worker.js):
 #   zoho  ->  cloudflare-email-service  ->  resend  ->  zeptomail
 # The mailbox path is primary so the form no longer depends on ZeptoMail credit.
+# Analytics uses the existing OUTREACH_KV under a separate site:analytics:* key prefix.
+# Set the admin viewer secret before deployment: wrangler secret put ANALYTICS_ADMIN_TOKEN
 [vars]
 QUOTE_TO = "nichole@laotes.com"
 QUOTE_FROM = "website@laotes.com"

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="canonical" href="https://laotes.com/analytics" />
+    <title>LAOTESI Analytics | Private Visitor Report</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="analytics-dashboard.css?v=20261026analytics1" />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+    <script src="analytics-dashboard.js?v=20261026analytics1" defer></script>
+  </head>
+  <body class="analytics-page">
+    <div class="analytics-shell">
+      <header class="analytics-header">
+        <a class="analytics-brand" href="/" aria-label="Back to LAOTESI website">
+          <span class="analytics-brand-mark">LT</span>
+          <span><strong>LAOTESI</strong><small>PRIVATE SITE ANALYTICS</small></span>
+        </a>
+        <div class="analytics-header-actions">
+          <span class="connection-pill" id="connection-state"><i data-lucide="shield-check" aria-hidden="true"></i> Private report</span>
+          <a class="site-link" href="/">Open website <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+        </div>
+      </header>
+
+      <main class="analytics-main">
+        <section class="analytics-intro" aria-labelledby="analytics-title">
+          <div>
+            <p class="analytics-eyebrow">Site intelligence / anonymous sessions</p>
+            <h1 id="analytics-title">Visitor activity, in one quiet view.</h1>
+            <p class="analytics-lead">Review page interest, product detail views and anonymous browsing paths without exposing personal visitor data.</p>
+          </div>
+          <div class="report-stamp"><span>REPORT WINDOW</span><strong id="report-window">7 DAYS</strong><small id="report-updated">Waiting for access</small></div>
+        </section>
+
+        <section class="access-panel" id="access-panel" aria-labelledby="access-title">
+          <div class="access-copy">
+            <span class="access-icon"><i data-lucide="key-round" aria-hidden="true"></i></span>
+            <div><p class="analytics-eyebrow">Private access</p><h2 id="access-title">Unlock the visitor report</h2><p>Use the Worker secret configured as <code>ANALYTICS_ADMIN_TOKEN</code>. It stays in this browser session and is never added to the URL.</p></div>
+          </div>
+          <form class="access-form" id="analytics-auth-form">
+            <label for="analytics-token">Admin token</label>
+            <div class="token-row"><input id="analytics-token" type="password" autocomplete="current-password" placeholder="Paste the report token" required /><button class="analytics-button analytics-button--primary" type="submit"><i data-lucide="unlock" aria-hidden="true"></i>Unlock report</button></div>
+            <p class="access-message" id="access-message" role="status" aria-live="polite"></p>
+          </form>
+        </section>
+
+        <section id="analytics-dashboard" hidden>
+          <div class="dashboard-toolbar">
+            <div><p class="analytics-eyebrow">Live report</p><h2>What visitors are exploring</h2></div>
+            <div class="toolbar-actions"><label for="days-select">Window</label><select id="days-select"><option value="1">1 day</option><option value="7" selected>7 days</option><option value="14">14 days</option><option value="30">30 days</option></select><button class="analytics-button analytics-button--quiet" id="refresh-report" type="button" title="Refresh report"><i data-lucide="refresh-cw" aria-hidden="true"></i><span>Refresh</span></button><button class="analytics-button analytics-button--quiet" id="logout-report" type="button"><i data-lucide="log-out" aria-hidden="true"></i><span>Lock</span></button></div>
+          </div>
+
+          <div class="metric-grid" aria-label="Report summary">
+            <article class="metric-card"><span>Page views</span><strong id="metric-page-views">-</strong><small>All tracked pages</small></article>
+            <article class="metric-card"><span>Anonymous visitors</span><strong id="metric-visitors">-</strong><small>Unique sessions in window</small></article>
+            <article class="metric-card"><span>Product views</span><strong id="metric-product-views">-</strong><small>Detail panels opened</small></article>
+            <article class="metric-card metric-card--accent"><span>Top page</span><strong id="metric-top-page">-</strong><small id="metric-top-page-count">No data yet</small></article>
+          </div>
+
+          <section class="report-section chart-section" aria-labelledby="daily-title">
+            <div class="section-heading"><div><p class="analytics-eyebrow">Daily pulse</p><h2 id="daily-title">Traffic by day</h2></div><span class="chart-legend"><i class="legend-swatch legend-swatch--views"></i>Page views <i class="legend-swatch legend-swatch--visitors"></i>Visitors</span></div>
+            <div class="daily-chart" id="daily-chart" aria-label="Daily page views and visitor chart"></div>
+          </section>
+
+          <div class="report-grid report-grid--three">
+            <section class="report-panel" aria-labelledby="pages-title"><div class="section-heading"><div><p class="analytics-eyebrow">Content</p><h2 id="pages-title">Popular pages</h2></div></div><div class="rank-list" id="top-pages"></div></section>
+            <section class="report-panel" aria-labelledby="products-title"><div class="section-heading"><div><p class="analytics-eyebrow">Product interest</p><h2 id="products-title">Product details</h2></div></div><div class="rank-list" id="top-products"></div></section>
+            <section class="report-panel" aria-labelledby="sources-title"><div class="section-heading"><div><p class="analytics-eyebrow">Acquisition</p><h2 id="sources-title">Sources &amp; places</h2></div></div><div class="split-list"><div><span class="list-label">Sources</span><div class="rank-list" id="top-sources"></div></div><div><span class="list-label">Countries</span><div class="rank-list" id="top-countries"></div></div></div></section>
+          </div>
+
+          <section class="report-section visitors-section" aria-labelledby="visitors-title">
+            <div class="section-heading"><div><p class="analytics-eyebrow">Anonymous session paths</p><h2 id="visitors-title">Recent visitors</h2></div><span class="section-note">Names become visible only after an enquiry is submitted.</span></div>
+            <div class="table-wrap"><table><thead><tr><th>Visitor</th><th>Last seen</th><th>Device / country</th><th>Source</th><th>Pages viewed</th><th>Products</th></tr></thead><tbody id="visitor-table"></tbody></table></div>
+          </section>
+        </section>
+      </main>
+
+      <footer class="analytics-footer"><span>LAOTESI / internal report</span><span>Anonymous telemetry · 14-day retention</span></footer>
+    </div>
+  </body>
+</html>

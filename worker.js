@@ -25,6 +25,12 @@ const RATE_WINDOW_MS = 60_000;
 const RATE_MAX_PER_WINDOW = 5;
 const MAX_FILES = 3;
 const MAX_TOTAL_ATTACHMENT_BYTES = 4 * 1024 * 1024; // provider limits are ~5 MiB per message
+const ANALYTICS_MAX_DAYS = 30;
+const ANALYTICS_MAX_EVENTS_PER_DAY = 2000;
+const ANALYTICS_RETENTION_DAYS = 14;
+
+const MARKETING_CONTENT_PATTERN = /(?:\b(?:seo|aeo|geo|bing|sem|ppc)\b|\bgoogle\b|\badvertis(?:e|ing|ement)\b|\bbacklinks?\b|\blink\s*building\b|\bdigital\s+marketing\b|\bsearch\s+engine\s+optimization\b|\blead\s+generation\b|\bguest\s+post(?:ing)?\b|\bsponsored\s+post\b|\bweb\s+traffic\b|\bwebsite\s+ranking\b|\bmarketing\s+promotion\b)/i;
+const MARKETING_CONTENT_MESSAGE = 'This form is for product and OEM enquiries only. Please remove marketing or SEO-related content.';
 
 const rateBuckets = new Map(); // isolate-local, best-effort flood protection
 
@@ -221,6 +227,187 @@ async function parseSubmission(request) {
   return { fields, files };
 }
 
+function containsMarketingContent(fields, files = []) {
+  const values = Object.values(fields || {}).map((value) => String(value ?? ''));
+  values.push(...files.map((file) => String(file && file.name || '')));
+  return values.some((value) => MARKETING_CONTENT_PATTERN.test(value));
+}
+
+function analyticsStore(env) {
+  // Keep analytics isolated by key prefix. A dedicated ANALYTICS_KV can be added
+  // later; the existing outreach KV keeps the first deployment zero-config.
+  return env.ANALYTICS_KV || env.OUTREACH_KV || null;
+}
+
+function analyticsDay(date = new Date()) {
+  return date.toISOString().slice(0, 10);
+}
+
+function analyticsText(value, max = 160) {
+  return String(value ?? '').trim().slice(0, max);
+}
+
+function analyticsPagePath(value, fallback = '/') {
+  const path = analyticsText(value, 180);
+  return path.startsWith('/') ? path.split('?')[0].split('#')[0] || '/' : fallback;
+}
+
+function analyticsReferrer(value) {
+  try {
+    return new URL(String(value || '')).hostname.slice(0, 120);
+  } catch {
+    return '';
+  }
+}
+
+function analyticsDevice(userAgent) {
+  const agent = String(userAgent || '');
+  if (/tablet|ipad/i.test(agent)) return 'tablet';
+  if (/mobile|android|iphone/i.test(agent)) return 'mobile';
+  return 'desktop';
+}
+
+function normalizeAnalyticsEvent(request, body) {
+  const visitorId = analyticsText(body && (body.visitorId || body.sessionId), 64);
+  if (!/^[A-Za-z0-9_-]{8,64}$/.test(visitorId)) return null;
+  const url = new URL(request.url);
+  const event = body && body.event === 'product_view' ? 'product_view' : 'page_view';
+  const country = analyticsText(request.cf && request.cf.country, 8);
+  return {
+    at: new Date().toISOString(),
+    visitorId,
+    event,
+    path: analyticsPagePath(body && body.path, url.pathname),
+    title: analyticsText(body && body.title, 160),
+    product: event === 'product_view' ? analyticsText(body && body.product, 160) : '',
+    referrer: analyticsReferrer(body && body.referrer),
+    source: analyticsText(body && body.source, 80),
+    campaign: analyticsText(body && body.campaign, 120),
+    country,
+    device: analyticsDevice(request.headers.get('user-agent')),
+  };
+}
+
+async function handleVisit(request, env) {
+  const ip = request.headers.get('cf-connecting-ip') || 'analytics';
+  if (rateLimited('analytics:' + ip)) return new Response(null, { status: 204 });
+  const store = analyticsStore(env);
+  if (!store) return json({ ok: false, error: 'analytics_unavailable' }, 503);
+
+  let body;
+  try {
+    body = await request.json();
+  } catch {
+    return json({ ok: false, error: 'bad_request' }, 400);
+  }
+  const event = normalizeAnalyticsEvent(request, body);
+  if (!event) return json({ ok: false, error: 'invalid_event' }, 400);
+
+  const day = analyticsDay();
+  const key = 'site:analytics:' + day;
+  let record = { version: 1, day, events: [] };
+  try {
+    const raw = await store.get(key);
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      if (parsed && Array.isArray(parsed.events)) record = parsed;
+    }
+  } catch {
+    // A malformed analytics record should not block a real page view.
+  }
+  if (record.events.length >= ANALYTICS_MAX_EVENTS_PER_DAY) return json({ ok: true, recorded: false }, 202);
+  record.events.push(event);
+  await store.put(key, JSON.stringify(record), { expirationTtl: ANALYTICS_RETENTION_DAYS * 86400 });
+  return json({ ok: true, recorded: true }, 202);
+}
+
+function analyticsAuthorized(request, env) {
+  const expected = analyticsText(env.ANALYTICS_ADMIN_TOKEN, 200);
+  const received = request.headers.get('authorization') || '';
+  return Boolean(expected && received === 'Bearer ' + expected);
+}
+
+function topAnalyticsValues(values, limit = 10) {
+  const counts = new Map();
+  for (const value of values) {
+    const key = analyticsText(value, 160) || '(direct)';
+    counts.set(key, (counts.get(key) || 0) + 1);
+  }
+  return [...counts.entries()]
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+    .slice(0, limit)
+    .map(([value, count]) => ({ value, count }));
+}
+
+async function handleAnalytics(request, env, url) {
+  if (!analyticsText(env.ANALYTICS_ADMIN_TOKEN, 200)) {
+    return json({ ok: false, error: 'analytics_admin_not_configured' }, 503);
+  }
+  if (!analyticsAuthorized(request, env)) {
+    return new Response(JSON.stringify({ ok: false, error: 'unauthorized' }), {
+      status: 401,
+      headers: { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store', 'WWW-Authenticate': 'Bearer' },
+    });
+  }
+  const requestedDays = Number(url.searchParams.get('days') || 7);
+  const days = Math.min(ANALYTICS_MAX_DAYS, Math.max(1, Number.isFinite(requestedDays) ? Math.floor(requestedDays) : 7));
+  const store = analyticsStore(env);
+  if (!store) return json({ ok: false, error: 'analytics_unavailable' }, 503);
+
+  const visitorMap = new Map();
+  const daily = [];
+  for (let offset = 0; offset < days; offset += 1) {
+    const date = new Date(Date.now() - offset * 86400000);
+    const day = analyticsDay(date);
+    let events = [];
+    try {
+      const raw = await store.get('site:analytics:' + day);
+      const parsed = raw ? JSON.parse(raw) : null;
+      if (parsed && Array.isArray(parsed.events)) events = parsed.events;
+    } catch {
+      events = [];
+    }
+    const pageViews = events.filter((event) => event.event === 'page_view');
+    const productViews = events.filter((event) => event.event === 'product_view');
+    const uniqueVisitors = new Set(events.map((event) => event.visitorId).filter(Boolean));
+    daily.push({
+      day,
+      events: events.length,
+      pageViews: pageViews.length,
+      productViews: productViews.length,
+      uniqueVisitors: uniqueVisitors.size,
+      topPages: topAnalyticsValues(events.map((event) => event.path)),
+      topProducts: topAnalyticsValues(productViews.map((event) => event.product)).filter((item) => item.value !== '(direct)'),
+      sources: topAnalyticsValues(events.map((event) => event.source || event.referrer)),
+      countries: topAnalyticsValues(events.map((event) => event.country)).filter((item) => item.value !== '(direct)'),
+    });
+    for (const event of events) {
+      if (!event.visitorId) continue;
+      const existing = visitorMap.get(event.visitorId) || {
+        id: event.visitorId.slice(0, 12),
+        events: 0,
+        firstSeen: event.at,
+        lastSeen: event.at,
+        pages: new Set(),
+        products: new Set(),
+        country: event.country || '',
+        device: event.device || '',
+        source: event.source || event.referrer || '',
+      };
+      existing.events += 1;
+      existing.firstSeen = existing.firstSeen < event.at ? existing.firstSeen : event.at;
+      existing.lastSeen = existing.lastSeen > event.at ? existing.lastSeen : event.at;
+      if (event.path) existing.pages.add(event.path);
+      if (event.product) existing.products.add(event.product);
+      visitorMap.set(event.visitorId, existing);
+    }
+  }
+  const visitors = [...visitorMap.values()]
+    .sort((a, b) => String(b.lastSeen).localeCompare(String(a.lastSeen)))
+    .map((visitor) => ({ ...visitor, pages: [...visitor.pages].slice(0, 20), products: [...visitor.products].slice(0, 20) }));
+  return json({ ok: true, generatedAt: new Date().toISOString(), days, retentionDays: ANALYTICS_RETENTION_DAYS, daily, visitors });
+}
+
 function buildMessage(fields, files, request, env, destinations) {
   const prefix = destinations.subjectPrefix || env.QUOTE_SUBJECT_PREFIX || '[Website enquiry]';
   const who = fields.company || fields.name || 'Unknown company';
@@ -238,6 +425,7 @@ function buildMessage(fields, files, request, env, destinations) {
     ['Page', fields._page || request.headers.get('referer') || ''],
     ['IP', request.headers.get('cf-connecting-ip') || ''],
     ['User agent', request.headers.get('user-agent') || ''],
+    ...(String(fields._visitor || '').trim() ? [['Anonymous visitor', String(fields._visitor).trim().slice(0, 12)]] : []),
     ['Attachments', files.length ? files.map((f) => `${f.name} (${Math.round(f.size / 1024)} KB)`).join(', ') : 'none'],
   ].map(
     ([label, value]) =>
@@ -385,6 +573,10 @@ async function handleQuote(request, env) {
   // Honeypot: real users never fill this hidden field.
   if (String(fields._honey || fields.website || '').trim()) {
     return json({ ok: true, accepted: true });
+  }
+
+  if (containsMarketingContent(fields, files)) {
+    return json({ ok: false, error: 'marketing_content', message: MARKETING_CONTENT_MESSAGE }, 422);
   }
 
   const missing = ['name', 'company', 'email'].filter((key) => !String(fields[key] || '').trim());
@@ -666,7 +858,7 @@ export default {
       } else if (/^\/oem-tooling(?:\.html)?\/?$/.test(url.pathname)) {
         canonicalUrl.pathname = '/quality-delivery';
       } else {
-        const page = url.pathname.match(/^\/(about-us|factory-tour|products|quality-delivery|contact|qa)(?:\.html)?\/?$/);
+        const page = url.pathname.match(/^\/(about-us|factory-tour|products|quality-delivery|contact|qa|analytics)(?:\.html)?\/?$/);
         if (page) canonicalUrl.pathname = '/' + page[1];
       }
       if (canonicalUrl.href !== url.href) {
@@ -686,6 +878,17 @@ export default {
       if (request.method === 'OPTIONS') return new Response(null, { status: 204 });
       if (request.method !== 'POST') return json({ ok: false, error: 'method_not_allowed' }, 405);
       return handleQuote(request, env);
+    }
+
+    if (url.pathname === '/api/visit') {
+      if (request.method === 'OPTIONS') return new Response(null, { status: 204 });
+      if (request.method !== 'POST') return json({ ok: false, error: 'method_not_allowed' }, 405);
+      return handleVisit(request, env);
+    }
+
+    if (url.pathname === '/api/analytics') {
+      if (request.method !== 'GET') return json({ ok: false, error: 'method_not_allowed' }, 405);
+      return handleAnalytics(request, env, url);
     }
 
     if (url.pathname === '/api/probe') {

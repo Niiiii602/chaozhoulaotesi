@@ -11,7 +11,7 @@ const end = source.indexOf('  // Keep the catalog', start);
 assert.ok(start >= 0 && end > start, 'Locate the current form implementation');
 const setupSource = source.slice(start, end);
 
-async function submit(responseFactory) {
+async function submit(responseFactory, formEntries = []) {
   let handler;
   let resets = 0;
   let refreshes = 0;
@@ -27,7 +27,9 @@ async function submit(responseFactory) {
   };
   const context = vm.createContext({
     qs(selector) { return selector === '#quote-form' ? form : selector === '#form-success' ? success : null; },
-    FormData: class MockFormData {},
+    FormData: class MockFormData {
+      entries() { return formEntries[Symbol.iterator](); }
+    },
     fetch: responseFactory,
     console: { error() {} },
     window: { alert(message) { alerts.push(message); } },
@@ -61,6 +63,19 @@ test('Displays an attachment-limit failure and preserves the form', async () => 
   assert.match(result.alerts[0], /4 MiB/);
   assert.equal(result.success.hidden, true);
   assert.equal(result.resets, 0);
+  assert.equal(result.button.disabled, false);
+});
+
+test('Blocks marketing content before making the request', async () => {
+  let requested = false;
+  const result = await submit(async () => {
+    requested = true;
+    return new Response(JSON.stringify({ ok: true }));
+  }, [['message', 'Please improve our Google SEO ranking.']]);
+  assert.equal(requested, false);
+  assert.equal(result.resets, 0);
+  assert.equal(result.success.hidden, true);
+  assert.match(result.alerts[0], /product and OEM enquiries only/i);
   assert.equal(result.button.disabled, false);
 });
 
