@@ -72,7 +72,7 @@ test('Care and food-contact answers retain the user-confirmed product coverage',
 test('Branding, tooling and ordering answers retain all specific commitments', () => {
   for (const fact of ['laser-engraved', 'screen-printed', 'heat-transfer', 'lid colors', 'silicone gasket colors']) assert.ok(answerFor('branding').includes(fact));
   for (const fact of ['initial idea, drawing or physical reference', '30-40 days', 'expedited schedule']) assert.ok(answerFor('tooling').includes(fact));
-  assert.match(answerFor('moq'), /all regular models is 1,000 pieces/);
+  assert.match(answerFor('moq'), /each individual model and specification, the minimum order quantity is 1,000 pieces, including the corresponding lid/);
   for (const fact of ['before production', 'before packaging', 'For every order', 'one mass-production sample set', 'free of charge']) assert.ok(answerFor('samples').includes(fact));
   for (const fact of ['blister packs', 'PP bags', 'color-printed boxes', 'kraft boxes', 'display boxes', 'supermarket display stands']) assert.ok(answerFor('packaging').includes(fact));
   assert.match(answerFor('lead-time'), /40-50 days/);
