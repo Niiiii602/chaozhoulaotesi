@@ -1343,7 +1343,11 @@ body {
 }
 
 .quote-intro .eyebrow--light {
-  color: var(--coral);
+  color: var(--teal);
+}
+
+.quote-intro h2 {
+  color: var(--ink);
 }
 
 .quote-intro > p,

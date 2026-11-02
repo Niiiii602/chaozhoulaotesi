@@ -1,4 +1,4 @@
-# Files that must never be published as static assets on laotes.com
+# Files that must never be published as static assets on maylendy.com
 wrangler.toml
 worker.js
 worker.js.map
@@ -16,8 +16,10 @@ PRODUCT.md
 SYNC_AUDIT.md
 **/*.webp.json
 SEO_GEO_AUDIT.md
+DOMAIN_MIGRATION.md
 tools/
 about-us-preview.*
 %SystemDrive%/
 console.log*
+*console.log*
 process.stdout*

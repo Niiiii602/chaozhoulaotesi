@@ -2,8 +2,10 @@ name = "chaozhoulaotesi"
 compatibility_date = "2026-09-04"
 main = "worker.js"
 
-# Custom domains (zone laotes.com lives in the same Cloudflare account)
+# Primary website: maylendy.com. Keep legacy hosts for 301 redirects and email tracking.
 routes = [
+  { pattern = "maylendy.com", custom_domain = true },
+  { pattern = "www.maylendy.com", custom_domain = true },
   { pattern = "laotes.com", custom_domain = true },
   { pattern = "www.laotes.com", custom_domain = true }
 ]
@@ -25,6 +27,8 @@ html_handling = "drop-trailing-slash"
 # Analytics uses the existing OUTREACH_KV under a separate site:analytics:* key prefix.
 # Set the admin viewer secret before deployment: wrangler secret put ANALYTICS_ADMIN_TOKEN
 [vars]
+# These are verified Zoho mailboxes, not website URLs. Do not replace them
+# until mailboxes and sender authentication on the new domain are provisioned.
 QUOTE_TO = "nichole@laotes.com"
 QUOTE_FROM = "website@laotes.com"
 QUOTE_FROM_NAME = "LAOTESI Website"

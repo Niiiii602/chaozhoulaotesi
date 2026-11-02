@@ -27,7 +27,7 @@ function loadWorker(env) {
 }
 
 function visitRequest(body, ip = '198.51.100.90') {
-  return new Request('https://laotes.com/api/visit', {
+  return new Request('https://maylendy.com/api/visit', {
     method: 'POST',
     headers: { 'content-type': 'application/json', 'cf-connecting-ip': ip, 'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) Mobile' },
     body: JSON.stringify(body),
@@ -42,10 +42,10 @@ test('records anonymous page and product events and exposes only authorized summ
   assert.equal(page.status, 202);
   assert.equal(product.status, 202);
 
-  const unauthorized = await harness.worker.fetch(new Request('https://laotes.com/api/analytics?days=1'), env);
+  const unauthorized = await harness.worker.fetch(new Request('https://maylendy.com/api/analytics?days=1'), env);
   assert.equal(unauthorized.status, 401);
 
-  const authorized = await harness.worker.fetch(new Request('https://laotes.com/api/analytics?days=1', { headers: { authorization: 'Bearer test-admin-token' } }), env);
+  const authorized = await harness.worker.fetch(new Request('https://maylendy.com/api/analytics?days=1', { headers: { authorization: 'Bearer test-admin-token' } }), env);
   const report = await authorized.json();
   assert.equal(authorized.status, 200);
   assert.equal(report.ok, true);

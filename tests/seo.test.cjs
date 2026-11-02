@@ -40,7 +40,7 @@ test('Sitemap contains exactly the seven public canonical URLs', () => {
   assert.match(xml, /^<\?xml version="1\.0" encoding="UTF-8"\?>/);
   assert.match(xml, /<urlset xmlns="http:\/\/www\.sitemaps\.org\/schemas\/sitemap\/0\.9">/);
   const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
-  assert.deepEqual(urls, [...pages.keys()].map((pathname) => 'https://laotes.com' + pathname));
+  assert.deepEqual(urls, [...pages.keys()].map((pathname) => 'https://maylendy.com' + pathname));
   assert.equal(new Set(urls).size, urls.length);
   assert.doesNotMatch(xml, /preview|oem-tooling|<lastmod>|<priority>|<changefreq>/);
 });
@@ -52,7 +52,7 @@ test('Each public page has one absolute self-canonical and unique metadata', () 
     const html = read(filename);
     const links = [...html.matchAll(/<link\s+rel="canonical"\s+href="([^"]+)"\s*\/>/g)];
     assert.equal(links.length, 1, filename);
-    assert.equal(links[0][1], 'https://laotes.com' + pathname, filename);
+    assert.equal(links[0][1], 'https://maylendy.com' + pathname, filename);
     assert.ok(html.indexOf(links[0][0]) < html.indexOf('</head>'), filename);
     titles.push(html.match(/<title>([^<]+)<\/title>/)[1]);
     descriptions.push(html.match(/<meta name="description" content="([^"]+)"/)[1]);
@@ -66,7 +66,7 @@ test('Each public page has one absolute self-canonical and unique metadata', () 
 test('Robots allows public search crawling and advertises the canonical sitemap', () => {
   const robots = read('robots.txt');
   assert.match(robots, /User-agent: \*\r?\nAllow: \/\r?\n/);
-  assert.match(robots, /Sitemap: https:\/\/laotes\.com\/sitemap\.xml/);
+  assert.match(robots, /Sitemap: https:\/\/maylendy\.com\/sitemap\.xml/);
   assert.doesNotMatch(robots, /Disallow: \/\s*$/m);
   for (const prefix of ['/api/', '/r/', '/o/']) assert.ok(robots.includes('Disallow: ' + prefix));
 });
@@ -77,7 +77,7 @@ test('Homepage structured data uses the documented company identity without inve
   const organization = data['@graph'].find((entry) => entry['@type'] === 'Organization');
   assert.equal(data['@context'], 'https://schema.org');
   assert.equal(organization.legalName, 'Chaozhou Laotesi Enterprise Co., Ltd.');
-  assert.equal(organization.url, 'https://laotes.com/');
+  assert.equal(organization.url, 'https://maylendy.com/');
   assert.equal(organization.address.addressCountry, 'CN');
   assert.ok(fs.existsSync(path.join(project, new URL(organization.logo).pathname)));
   assert.doesNotMatch(JSON.stringify(data), /aggregateRating|reviewCount|foundingDate|price/);
@@ -98,7 +98,7 @@ test('HTTP, www and HTML aliases converge in one permanent redirect preserving t
   for (const [pathname, filename] of pages) {
     const response = await harness.worker.fetch(new Request('http://www.laotes.com/' + filename + '?utm_source=test'), harness.env);
     assert.equal(response.status, 301, filename);
-    assert.equal(response.headers.get('location'), 'https://laotes.com' + pathname + '?utm_source=test', filename);
+    assert.equal(response.headers.get('location'), 'https://maylendy.com' + pathname + '?utm_source=test', filename);
   }
   assert.equal(harness.assets.length, 0);
 });
@@ -112,16 +112,16 @@ test('Homepage aliases, trailing slashes and old tooling route have permanent ta
     ['/oem-tooling.html', '/quality-delivery'],
   ]);
   for (const [from, to] of aliases) {
-    const response = await harness.worker.fetch(new Request('https://laotes.com' + from), harness.env);
+    const response = await harness.worker.fetch(new Request('https://maylendy.com' + from), harness.env);
     assert.equal(response.status, 301, from);
-    assert.equal(response.headers.get('location'), 'https://laotes.com' + to, from);
+    assert.equal(response.headers.get('location'), 'https://maylendy.com' + to, from);
   }
 });
 
 test('Canonical pages and static files reach assets without redirect loops', async () => {
   const harness = loadWorker();
   for (const pathname of [...pages.keys(), '/products?category=storage', '/sitemap.xml', '/robots.txt', '/assets/logo.png', '/missing.html']) {
-    const request = new Request('https://laotes.com' + pathname);
+    const request = new Request('https://maylendy.com' + pathname);
     const response = await harness.worker.fetch(request, harness.env);
     assert.equal(response.status, 200, pathname);
     assert.equal(response.headers.get('location'), null, pathname);
@@ -133,7 +133,7 @@ test('HEAD uses the same canonical redirect without a response body', async () =
   const harness = loadWorker();
   const response = await harness.worker.fetch(new Request('http://www.laotes.com/contact.html', { method: 'HEAD' }), harness.env);
   assert.equal(response.status, 301);
-  assert.equal(response.headers.get('location'), 'https://laotes.com/contact');
+  assert.equal(response.headers.get('location'), 'https://maylendy.com/contact');
   assert.equal(await response.text(), '');
 });
 
@@ -148,12 +148,70 @@ test('POST and OPTIONS on the quote endpoint are not redirected', async () => {
 
 test('Existing email click and pixel routes retain their original behavior', async () => {
   const harness = loadWorker();
-  const click = await harness.worker.fetch(new Request('https://laotes.com/r/testtoken123'), harness.env);
+  const click = await harness.worker.fetch(new Request('https://maylendy.com/r/testtoken123'), harness.env);
   assert.equal(click.status, 302);
-  assert.equal(click.headers.get('location'), 'https://laotes.com/');
-  const pixel = await harness.worker.fetch(new Request('https://laotes.com/o/testtoken123.gif'), harness.env);
+  assert.equal(click.headers.get('location'), 'https://maylendy.com/');
+  const pixel = await harness.worker.fetch(new Request('https://maylendy.com/o/testtoken123.gif'), harness.env);
   assert.equal(pixel.headers.get('content-type'), 'image/gif');
   assert.ok((await pixel.arrayBuffer()).byteLength > 0);
+});
+
+test('New www and both legacy hosts redirect directly to the new canonical domain', async () => {
+  const harness = loadWorker();
+  for (const host of ['laotes.com', 'www.laotes.com', 'www.maylendy.com']) {
+    for (const path of ['/', '/products', '/contact.html', '/analytics', '/sitemap.xml', '/assets/logo.png']) {
+      const response = await harness.worker.fetch(new Request('https://' + host + path + '?utm_source=migration'), harness.env);
+      assert.equal(response.status, 301, host + path);
+      assert.equal(response.headers.get('location'), 'https://maylendy.com' + path.replace('.html', '') + '?utm_source=migration');
+    }
+  }
+});
+
+test('Both new hosts enforce HTTPS without changing local development', async () => {
+  const harness = loadWorker();
+  for (const host of ['maylendy.com', 'www.maylendy.com']) {
+    const response = await harness.worker.fetch(new Request('http://' + host + '/products.html?category=storage'), harness.env);
+    assert.equal(response.status, 301);
+    assert.equal(response.headers.get('location'), 'https://maylendy.com/products?category=storage');
+  }
+});
+
+test('Legacy health and tracking routes remain directly usable', async () => {
+  const harness = loadWorker();
+  for (const host of ['laotes.com', 'www.laotes.com', 'maylendy.com', 'www.maylendy.com']) {
+    const health = await harness.worker.fetch(new Request('https://' + host + '/api/health'), harness.env);
+    assert.equal(health.status, 200);
+    assert.equal(health.headers.get('location'), null);
+    const click = await harness.worker.fetch(new Request('https://' + host + '/r/migrationtest123'), harness.env);
+    assert.equal(click.status, 302);
+    assert.equal(click.headers.get('location'), 'https://maylendy.com/');
+    const pixel = await harness.worker.fetch(new Request('https://' + host + '/o/migrationtest123.gif'), harness.env);
+    assert.equal(pixel.status, 200);
+    assert.equal(pixel.headers.get('content-type'), 'image/gif');
+  }
+});
+
+test('Published website URLs have no legacy domain references', () => {
+  for (const filename of [...pages.values(), 'analytics.html', 'oem-tooling.html', 'script.js', 'analytics.js', 'analytics-dashboard.js', 'sitemap.xml', 'robots.txt']) {
+    assert.doesNotMatch(read(filename), /https?:\/\/(?:www\.)?laotes\.com/i, filename);
+  }
+});
+
+test('Forms and analytics stay same-origin and verified mailboxes are not invented', () => {
+  for (const filename of ['index.html', 'contact.html']) {
+    assert.ok(read(filename).includes('action="/api/quote"'), filename);
+    assert.ok(read(filename).includes('mailto:nichole@laotes.com'), filename);
+  }
+  assert.ok(read('analytics.js').includes('"/api/visit"'));
+  assert.ok(read('analytics-dashboard.js').includes('/api/analytics'));
+  const config = read('wrangler.toml');
+  for (const host of ['maylendy.com', 'www.maylendy.com', 'laotes.com', 'www.laotes.com']) {
+    assert.ok(config.includes('pattern = "' + host + '"'), host);
+  }
+  assert.ok(config.includes('QUOTE_TO = "nichole@laotes.com"'));
+  assert.ok(config.includes('QUOTE_FROM = "website@laotes.com"'));
+  assert.ok(config.includes('10be3512c1204d5c8b3a3cfd9e13814d'));
+  assert.ok(config.includes('c6db3c144f7f4f62af86874ce9d2381b'));
 });
 
 test('Local development keeps its host and scheme', async () => {

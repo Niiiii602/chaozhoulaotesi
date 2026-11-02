@@ -4,4 +4,4 @@ Disallow: /api/
 Disallow: /r/
 Disallow: /o/
 
-Sitemap: https://laotes.com/sitemap.xml
+Sitemap: https://maylendy.com/sitemap.xml

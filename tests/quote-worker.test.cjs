@@ -8,7 +8,7 @@ const vm = require('node:vm');
 
 const workerPath = process.env.QUOTE_WORKER_PATH || path.join(__dirname, '..', 'worker.js');
 const workerSource = fs.readFileSync(workerPath, 'utf8');
-const API_URL = 'https://laotes.com/api/quote';
+const API_URL = 'https://maylendy.com/api/quote';
 
 const VALID_FIELDS = {
   name: 'Ada Lovelace',

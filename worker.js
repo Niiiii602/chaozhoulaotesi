@@ -1,5 +1,5 @@
 /**
- * laotes.com — Cloudflare Worker
+ * maylendy.com — Cloudflare Worker (legacy laotes.com redirects retained)
  *
  * Routes
  *   GET  /api/health  -> which sending channel is wired up (never exposes secrets)
@@ -21,6 +21,8 @@
  * the "email us directly" alert, so nothing is silently lost.
  */
 
+const SITE_HOSTNAME = 'maylendy.com';
+const WEBSITE_HOSTS = new Set([SITE_HOSTNAME, 'www.' + SITE_HOSTNAME, 'laotes.com', 'www.laotes.com']);
 const RATE_WINDOW_MS = 60_000;
 const RATE_MAX_PER_WINDOW = 5;
 const MAX_FILES = 3;
@@ -444,7 +446,7 @@ function buildMessage(fields, files, request, env, destinations) {
 
   const html =
     `<div style="font-family:system-ui,-apple-system,'Segoe UI',sans-serif;font-size:14px;line-height:1.5">` +
-    `<h2 style="margin:0 0 12px;font-size:17px">New enquiry from laotes.com</h2>` +
+    `<h2 style="margin:0 0 12px;font-size:17px">New enquiry from maylendy.com</h2>` +
     replyLink +
     `<table style="border-collapse:collapse">${rows.join('')}</table>` +
     `<hr style="margin:18px 0;border:0;border-top:1px solid #e5e7eb">` +
@@ -452,7 +454,7 @@ function buildMessage(fields, files, request, env, destinations) {
     `</div>`;
 
   const text = [
-    'New enquiry from laotes.com',
+    'New enquiry from maylendy.com',
     '',
     ...FIELDS.filter(([key]) => String(fields[key] || '').trim()).map(([key, label]) => `${label}: ${fields[key]}`),
     '',
@@ -620,7 +622,7 @@ async function handleQuote(request, env) {
       if (candidate === 'zoho') id = await sendViaZoho(env, message);
       else if (candidate === 'cloudflare-email-service') id = await sendViaCloudflare(env, message);
       else if (candidate === 'resend') id = await sendViaResend(env, message);
-      else id = await sendViaZeptoMail(env, message, fields.company || 'laotes.com website');
+      else id = await sendViaZeptoMail(env, message, fields.company || 'maylendy.com website');
       channel = candidate;
       break;
     } catch (error) {
@@ -676,17 +678,17 @@ async function handleProbe(request, env) {
   const message = buildMessage(
     {
       name: 'Outbound health probe',
-      company: 'laotes.com',
+      company: 'maylendy.com',
       email: env.PROBE_REPLY_TO || env.QUOTE_FROM || 'website@laotes.com',
       country: '-',
-      product: 'laotes.com outbound probe',
+      product: 'maylendy.com outbound probe',
       quantity: '-',
       message: `Automated outbound health check. If you are reading this, website@laotes.com could still send EXTERNAL mail at ${stamp}.`,
     },
     [],
     request,
     env,
-    { to, subject: `[HEALTH PROBE] laotes.com outbound OK @ ${stamp}` },
+    { to, subject: `[HEALTH PROBE] maylendy.com outbound OK @ ${stamp}` },
   );
 
   const attempts = [];
@@ -822,7 +824,7 @@ async function handleTrack(request, env, url) {
     // 不管 token 认不认得出来，都跳到首页 —— 认不出还报错等于告诉对方这是个追踪链接。
     return new Response(null, {
       status: 302,
-      headers: { Location: 'https://laotes.com/', 'Cache-Control': 'no-store' },
+      headers: { Location: 'https://maylendy.com/', 'Cache-Control': 'no-store' },
     });
   }
 
@@ -846,11 +848,17 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
-    if (request.method === 'GET' || request.method === 'HEAD') {
+    // Keep historical email tracking links working without an extra host redirect.
+    if (url.pathname.startsWith('/r/') || url.pathname.startsWith('/o/')) {
+      const tracked = await handleTrack(request, env, url);
+      if (tracked) return tracked;
+    }
+
+    if ((request.method === 'GET' || request.method === 'HEAD') && !url.pathname.startsWith('/api/')) {
       const canonicalUrl = new URL(url);
-      if (url.hostname === 'laotes.com' || url.hostname === 'www.laotes.com') {
+      if (WEBSITE_HOSTS.has(url.hostname)) {
         canonicalUrl.protocol = 'https:';
-        canonicalUrl.hostname = 'laotes.com';
+        canonicalUrl.hostname = SITE_HOSTNAME;
         canonicalUrl.port = '';
       }
       if (/^\/index(?:\.html)?\/?$/.test(url.pathname)) {
@@ -867,11 +875,6 @@ export default {
           headers: { Location: canonicalUrl.href, 'Cache-Control': 'public, max-age=3600' },
         });
       }
-    }
-
-    if (url.pathname.startsWith('/r/') || url.pathname.startsWith('/o/')) {
-      const tracked = await handleTrack(request, env, url);
-      if (tracked) return tracked;
     }
 
     if (url.pathname === '/api/quote') {
