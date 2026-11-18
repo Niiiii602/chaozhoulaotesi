@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /analytics
+Disallow: /__laotes/
+Disallow: /review/
+Disallow: /tools/
+
+Sitemap: https://laotes.com/sitemap.xml

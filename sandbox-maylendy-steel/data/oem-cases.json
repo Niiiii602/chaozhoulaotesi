@@ -1,0 +1,28 @@
+[
+  {
+    "id": "leakage",
+    "page": "case-compartment-lunch-box.html",
+    "title": "Solving a leakage challenge for a compartment lunch box",
+    "channel": "European supermarket channel",
+    "product": "Stainless steel compartment lunch box",
+    "image": "assets/catalog-white/divided-19-neutral.webp",
+    "challenge": "Leakage was observed in the reference sample and in an alternative supplier sample. Reliable leak performance was therefore a key requirement for the project.",
+    "approach": "MayLendy developed samples and worked through mold development and product adjustments with the customer. The team refined the product through testing and iteration before completing the mold.",
+    "result": "The product made with the completed mold passed the project’s leak test.",
+    "summary": "After leakage was found in initial samples, MayLendy worked with a European supermarket-channel customer on sample and mold adjustments. The final compartment lunch box passed the project’s leak test.",
+    "link": "food-storage.html"
+  },
+  {
+    "id": "nesting",
+    "page": "case-nesting-storage-set.html",
+    "title": "A nesting set designed for more efficient shipping",
+    "channel": "North American gifting channel",
+    "product": "Stainless steel food storage set",
+    "image": "assets/catalog-white/sets-7-neutral.webp",
+    "challenge": "The customer wanted a coordinated set that could make better use of shipping space.",
+    "approach": "MayLendy arranged the set so that one larger tray could hold two smaller-sized containers, creating a compact, organized configuration.",
+    "result": "The nesting arrangement made more efficient use of the available shipping space.",
+    "summary": "For a North American gifting-channel customer, MayLendy arranged a stainless steel storage set so that one larger tray could hold two smaller containers — making better use of shipping space.",
+    "link": "storage-pp.html#sets-7"
+  }
+]

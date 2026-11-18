@@ -1,0 +1,5651 @@
+{
+  "audit_type":  "Read-only specification audit. Only scratch outputs written. Project builders not executed.",
+  "source_pdf":  "E:\\照片\\可用\\1-产品目录\\2603-Laotesi catalog.pdf",
+  "pdf_size_bytes":  414725593,
+  "source_mode":  "Existing native text/layout and prior 52-record audit reused; original PDF existence/metadata checked, not reparsed.",
+  "authority":  {
+    "latest_user_sets1":  "Keep code 01-BXH650/1300/2250ml; third component is confirmed 2500ml/85oz/10.6cup, 24.8x19.3x8.2cm. First two: 650ml/22oz/2.7cup 17.5x13x5.8cm; 1300ml/44oz/5.5cup 21.5x16.1x7.1cm.",
+    "owner_01RC2000":  "2000ml / 68oz confirmed; cup not newly owner-confirmed.",
+    "prior_owner":  {
+      "capacity_basis":  "brimful / 满口容量",
+      "dimensions_include_lid":  true,
+      "thickness_mm":  0.4,
+      "01RC2000":  {
+        "ml":  2000,
+        "oz":  68
+      },
+      "approved_material_options":  [
+        "304",
+        "316L",
+        "titanium"
+      ]
+    },
+    "units":  "Use printed oz/cup as catalog reference, never generate numerical conversions. Retain raw print and owner overrides separately.",
+    "supersedes_prior_audit":  [
+      "set-2250-vs2500 unresolved decision",
+      "960-cup-review blocker: now restore printed 4.6cup as catalog reference"
+    ]
+  },
+  "counts":  {
+    "core_models":  52,
+    "distinct_ids":  52,
+    "distinct_code_strings":  44,
+    "specification_component_rows":  67,
+    "product_index_total":  56,
+    "product_index_storage":  52,
+    "product_index_other":  4,
+    "lid_groups":  [
+      {
+        "lid_type":  "integrated-pp",
+        "models":  31,
+        "components":  45
+      },
+      {
+        "lid_type":  "silicone-glass",
+        "models":  7,
+        "components":  7
+      },
+      {
+        "lid_type":  "pure-silicone",
+        "models":  6,
+        "components":  6
+      },
+      {
+        "lid_type":  "detachable-pp",
+        "models":  8,
+        "components":  9
+      }
+    ],
+    "component_count_definition":  "67 specification rows: set size/quantity groups and 01RC450/280 compartment rows; not a count of physical containers.",
+    "dimension_numeric_matches":  67,
+    "missing_ml_rows":  1,
+    "missing_oz_rows":  1,
+    "missing_printed_cup_rows":  3,
+    "index_discrepancies":  0
+  },
+  "must_correct_or_complete":  [
+    {
+      "id":  "sets-1-confirmed-third-component",
+      "priority":  "required",
+      "classification":  "已确认应修正",
+      "record_id":  "sets-1",
+      "reason":  "Latest user authority resolves the former 2250/2500 discrepancy. Model code remains 01-BXH650/1300/2250ml; component 3 is 2500ml/85oz/10.6cup.",
+      "evidence":  [
+        "Latest user-provided authoritative screenshot specification",
+        "catalog-pdf-layout-native.txt:5-11, PDF p.7 right upper panel",
+        "catalog-pdf-text.txt:159-166"
+      ],
+      "components":  [
+        {
+          "component":  1,
+          "capacity_ml":  650,
+          "oz":  "22",
+          "cup":  "2.7",
+          "size_cm":  "17.5 x 13 x 5.8",
+          "action":  "already correct"
+        },
+        {
+          "component":  2,
+          "capacity_ml":  1300,
+          "oz":  "44",
+          "cup":  "5.5",
+          "size_cm":  "21.5 x 16.1 x 7.1",
+          "action":  "already correct"
+        },
+        {
+          "component":  3,
+          "capacity_ml":  2500,
+          "oz":  "85",
+          "cup":  "10.6",
+          "size_cm":  "24.8 x 19.3 x 8.2",
+          "action":  "capacity/units update; size already correct"
+        }
+      ],
+      "changes":  [
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/models/21/model/capacity",
+          "line":  5967,
+          "operation":  "replace",
+          "current":  "650 ml + 1,300 ml + largest container capacity to confirm",
+          "recommended":  "650ml / 22oz / 2.7cup + 1300ml / 44oz / 5.5cup + 2500ml / 85oz / 10.6cup"
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/models/21/model/details/2/capacity",
+          "line":  5981,
+          "operation":  "replace",
+          "current":  "To confirm",
+          "recommended":  "2,500 ml"
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/models/21/model/details/2/unitReference",
+          "line":  5983,
+          "operation":  "replace",
+          "current":  "",
+          "recommended":  "85 oz / 10.6 cup"
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/models/21/model/components/2/capacity",
+          "line":  5991,
+          "operation":  "replace",
+          "current":  "To confirm",
+          "recommended":  "2,500 ml"
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/models/21/model/capacityNote",
+          "line":  5988,
+          "operation":  "remove",
+          "current":  "Largest container capacity to confirm.",
+          "recommended":  null
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/catalog/series/1/panelModels/1/capacity",
+          "line":  3014,
+          "operation":  "replace",
+          "current":  "650ml / 22oz / 2.7cup + 1300ml / 44oz / 5.5cup + 2250ml / 76oz / 9.5cup",
+          "recommended":  "650ml / 22oz / 2.7cup + 1300ml / 44oz / 5.5cup + 2500ml / 85oz / 10.6cup"
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/catalog/series/1/panelModels/1/details/2/capacity",
+          "line":  3026,
+          "operation":  "replace",
+          "current":  "2250ml / 76oz / 9.5cup",
+          "recommended":  "2500ml / 85oz / 10.6cup"
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/catalog/categories/0/series/1/panelModels/1/capacity",
+          "line":  613,
+          "operation":  "replace",
+          "current":  "650ml / 22oz / 2.7cup + 1300ml / 44oz / 5.5cup + 2250ml / 76oz / 9.5cup",
+          "recommended":  "650ml / 22oz / 2.7cup + 1300ml / 44oz / 5.5cup + 2500ml / 85oz / 10.6cup"
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/catalog/categories/0/series/1/panelModels/1/details/2/capacity",
+          "line":  625,
+          "operation":  "replace",
+          "current":  "2250ml / 76oz / 9.5cup",
+          "recommended":  "2500ml / 85oz / 10.6cup"
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/catalog/series/1/catalogModels/1/capacity",
+          "line":  3273,
+          "operation":  "replace",
+          "current":  "650ml / 22oz / 2.7cup + 1300ml / 44oz / 5.5cup + 2250ml / 76oz / 9.5cup",
+          "recommended":  "650ml / 22oz / 2.7cup + 1300ml / 44oz / 5.5cup + 2500ml / 85oz / 10.6cup"
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/catalog/series/1/catalogModels/1/details/2/capacity",
+          "line":  3285,
+          "operation":  "replace",
+          "current":  "2250ml / 76oz / 9.5cup",
+          "recommended":  "2500ml / 85oz / 10.6cup"
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/catalog/categories/0/series/1/catalogModels/1/capacity",
+          "line":  872,
+          "operation":  "replace",
+          "current":  "650ml / 22oz / 2.7cup + 1300ml / 44oz / 5.5cup + 2250ml / 76oz / 9.5cup",
+          "recommended":  "650ml / 22oz / 2.7cup + 1300ml / 44oz / 5.5cup + 2500ml / 85oz / 10.6cup"
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/catalog/categories/0/series/1/catalogModels/1/details/2/capacity",
+          "line":  884,
+          "operation":  "replace",
+          "current":  "2250ml / 76oz / 9.5cup",
+          "recommended":  "2500ml / 85oz / 10.6cup"
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/product-index.json",
+          "pointer":  "/21/capacity",
+          "line":  236,
+          "operation":  "regenerate_from_source",
+          "current":  "650 ml / 22 oz / 2.7 cup + 1,300 ml / 44 oz / 5.5 cup + To confirm",
+          "recommended":  "650 ml / 22 oz / 2.7 cup + 1,300 ml / 44 oz / 5.5 cup + 2,500 ml / 85 oz / 10.6 cup"
+        }
+      ],
+      "unchanged_fields":  [
+        "/models/21/model/code",
+        "/models/21/model/size",
+        "/models/21/model/details/0",
+        "/models/21/model/details/1",
+        "/models/21/model/details/2/size"
+      ],
+      "do_not":  "Do not replace code suffix 2250ml; do not copy 2250ml/76oz/9.5cup from standalone 01RC2250. Do not preserve a To confirm blocker."
+    },
+    {
+      "id":  "restore-printed-960-cup",
+      "priority":  "required",
+      "classification":  "目录明确应补全",
+      "record_id":  "divided-18",
+      "evidence":  [
+        "catalog-pdf-text.txt:101-104, PDF p.5",
+        "catalog-source.json:5578 already stores raw 4.6cup"
+      ],
+      "reason":  "Current renderer reads details[].unitReference, so its 32 oz drops the 4.6 cup already stored in model.capacity.",
+      "changes":  [
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/models/9/model/details/0/unitReference",
+          "line":  5584,
+          "operation":  "replace",
+          "current":  "32 oz",
+          "recommended":  "32 oz / 4.6 cup (catalog reference)"
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/models/9/model/capacityNote",
+          "line":  null,
+          "operation":  "add",
+          "current":  null,
+          "recommended":  "Catalog p.5 prints 960 ml / 32 oz / 4.6 cup; cup is reproduced as printed."
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/product-index.json",
+          "pointer":  "/9/capacity",
+          "line":  104,
+          "operation":  "regenerate_from_source",
+          "current":  "960 ml / 32 oz",
+          "recommended":  "960 ml / 32 oz / 4.6 cup (catalog reference)"
+        }
+      ],
+      "do_not":  "Do not replace 4.6 with a calculated cup value or keep asking for confirmation of text clearly printed in the catalog."
+    },
+    {
+      "id":  "01RC2000-owner-oz-catalog-cup",
+      "priority":  "recommended_for_requested_catalog_completeness",
+      "classification":  "保留业主数值并补目录参考",
+      "record_id":  "rectangular-6",
+      "evidence":  [
+        "User explicitly approved 2000ml/68oz",
+        "catalog-pdf-text.txt:30-33, exact model p.2: 2000ml/62oz/8.4cup",
+        "catalog-pdf-text.txt:130-133, different model 01-KP2000ml p.6: 2000ml/68oz/8.5cup",
+        "catalog-pdf-text.txt:161-162, set component p.7: 2000ml/68oz/8.5cup"
+      ],
+      "reason":  "8.4cup belongs to the exact 01RC2000 panel. 8.5cup belongs to related configurations and is not a new owner confirmation for 01RC2000.",
+      "changes":  [
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/models/10/model/details/0/unitReference",
+          "line":  5616,
+          "operation":  "replace",
+          "current":  "68 oz",
+          "recommended":  "68 oz / 8.4 cup (cup: catalog reference)"
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/models/10/model/capacity",
+          "line":  5610,
+          "operation":  "replace",
+          "current":  "2000ml / 68oz / 8.4cup",
+          "recommended":  "2000ml / 68oz / 8.4cup (cup: catalog reference)"
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/models/10/model/capacityNote",
+          "line":  null,
+          "operation":  "add",
+          "current":  null,
+          "recommended":  "2,000 ml / 68 oz confirmed by owner; 8.4 cup reproduced from catalog p.2."
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/product-index.json",
+          "pointer":  "/10/capacity",
+          "line":  115,
+          "operation":  "regenerate_from_source",
+          "current":  "2,000 ml / 68 oz",
+          "recommended":  "2,000 ml / 68 oz / 8.4 cup (cup: catalog reference)"
+        }
+      ],
+      "stale_effective_mirror_changes":  [
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/catalog/series/0/panelModels/6/capacity",
+          "line":  2616,
+          "operation":  "replace",
+          "current":  "2000ml / 62oz / 8.4cup",
+          "recommended":  "2000ml / 68oz / 8.4cup (cup: catalog reference)"
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/catalog/series/0/panelModels/6/details/0/capacity",
+          "line":  2620,
+          "operation":  "replace",
+          "current":  "2000ml / 62oz / 8.4cup",
+          "recommended":  "2000ml / 68oz / 8.4cup (cup: catalog reference)"
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/catalog/categories/0/series/0/panelModels/6/capacity",
+          "line":  215,
+          "operation":  "replace",
+          "current":  "2000ml / 62oz / 8.4cup",
+          "recommended":  "2000ml / 68oz / 8.4cup (cup: catalog reference)"
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/catalog/categories/0/series/0/panelModels/6/details/0/capacity",
+          "line":  219,
+          "operation":  "replace",
+          "current":  "2000ml / 62oz / 8.4cup",
+          "recommended":  "2000ml / 68oz / 8.4cup (cup: catalog reference)"
+        }
+      ],
+      "raw_evidence_to_retain":  "2000ml/62oz/8.4cup (PDF p.2)",
+      "mirror_policy":  "If nested catalog arrays intentionally retain raw print, retain 62 only in an explicitly labeled raw-evidence field. Effective capacity fields should use owner-approved 68. Do not silently erase the printed original or present 8.4 as owner-confirmed."
+    },
+    {
+      "id":  "sync-stale-sets3-dimensions",
+      "priority":  "required_data_consistency",
+      "classification":  "现网页正确、旧副本应同步",
+      "record_id":  "sets-3",
+      "evidence":  [
+        "catalog-pdf-layout-native.txt:13-17, PDF p.7 lower right",
+        "catalog-pdf-text.txt:167-168"
+      ],
+      "reason":  "All four catalog mirrors still contain height 7.5cm for the 2500ml component, while top-level models and index correctly use 7cm.",
+      "changes":  [
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/catalog/series/1/panelModels/3/size",
+          "line":  3063,
+          "operation":  "replace",
+          "current":  "17.5 x 13 x 5.8cm / 29.8 x 21.4 x 7.5cm",
+          "recommended":  "17.5 x 13 x 5.8cm / 29.8 x 21.4 x 7cm"
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/catalog/series/1/panelModels/3/details/1/size",
+          "line":  3071,
+          "operation":  "replace",
+          "current":  "29.8 x 21.4 x 7.5cm",
+          "recommended":  "29.8 x 21.4 x 7cm"
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/catalog/categories/0/series/1/panelModels/3/size",
+          "line":  662,
+          "operation":  "replace",
+          "current":  "17.5 x 13 x 5.8cm / 29.8 x 21.4 x 7.5cm",
+          "recommended":  "17.5 x 13 x 5.8cm / 29.8 x 21.4 x 7cm"
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/catalog/categories/0/series/1/panelModels/3/details/1/size",
+          "line":  670,
+          "operation":  "replace",
+          "current":  "29.8 x 21.4 x 7.5cm",
+          "recommended":  "29.8 x 21.4 x 7cm"
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/catalog/series/1/catalogModels/3/size",
+          "line":  3322,
+          "operation":  "replace",
+          "current":  "17.5 x 13 x 5.8cm / 29.8 x 21.4 x 7.5cm",
+          "recommended":  "17.5 x 13 x 5.8cm / 29.8 x 21.4 x 7cm"
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/catalog/series/1/catalogModels/3/details/1/size",
+          "line":  3330,
+          "operation":  "replace",
+          "current":  "29.8 x 21.4 x 7.5cm",
+          "recommended":  "29.8 x 21.4 x 7cm"
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/catalog/categories/0/series/1/catalogModels/3/size",
+          "line":  921,
+          "operation":  "replace",
+          "current":  "17.5 x 13 x 5.8cm / 29.8 x 21.4 x 7.5cm",
+          "recommended":  "17.5 x 13 x 5.8cm / 29.8 x 21.4 x 7cm"
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/catalog/categories/0/series/1/catalogModels/3/details/1/size",
+          "line":  929,
+          "operation":  "replace",
+          "current":  "29.8 x 21.4 x 7.5cm",
+          "recommended":  "29.8 x 21.4 x 7cm"
+        }
+      ],
+      "unchanged_refs":  [
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/models/23/model/details/1/size",
+          "line":  6062,
+          "current":  "29.8 x 21.4 x 7 cm"
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/models/23/model/size",
+          "line":  6053,
+          "current":  "17.5 x 13 x 5.8 cm / 29.8 x 21.4 x 7 cm"
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/product-index.json",
+          "pointer":  "/23/size",
+          "line":  259,
+          "current":  "17.5 x 13 x 5.8 cm / 29.8 x 21.4 x 7 cm"
+        }
+      ]
+    },
+    {
+      "id":  "tri-ply-existing-ranges-missing-height",
+      "priority":  "recommended",
+      "classification":  "其他系列已有明确尺寸可补全",
+      "series_id":  "cookware-tri-ply",
+      "evidence":  [
+        "catalog-pdf-text.txt:320-328, shallow pan table, PDF p.13",
+        "catalog-pdf-text.txt:349-359, wok table, PDF p.13"
+      ],
+      "reason":  "Current series gives only diameter options; catalog includes ID x H for every currently named shallow pan and wok. These are internal diameter/height, not food-storage external dimensions including lids.",
+      "changes":  [
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/catalog/series/6/specs/0/value",
+          "line":  4599,
+          "operation":  "replace",
+          "current":  "Shallow pan 26 / 28 / 30 / 32 cm; wok 30 / 32 cm",
+          "recommended":  "Shallow pan (ID x H): 26 x 4.8 / 28 x 5 / 30 x 5.3 / 32 x 5.6 cm; wok (ID x H): 30 x 9 / 32 x 9.5 cm"
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/catalog/categories/1/series/0/specs/0/value",
+          "line":  2206,
+          "operation":  "replace",
+          "current":  "Shallow pan 26 / 28 / 30 / 32 cm; wok 30 / 32 cm",
+          "recommended":  "Shallow pan (ID x H): 26 x 4.8 / 28 x 5 / 30 x 5.3 / 32 x 5.6 cm; wok (ID x H): 30 x 9 / 32 x 9.5 cm"
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/product-index.json",
+          "pointer":  "/52/size",
+          "line":  578,
+          "operation":  "regenerate_from_source",
+          "current":  "Shallow pan 26 / 28 / 30 / 32 cm; wok 30 / 32 cm",
+          "recommended":  "Shallow pan (ID x H): 26 x 4.8 / 28 x 5 / 30 x 5.3 / 32 x 5.6 cm; wok (ID x H): 30 x 9 / 32 x 9.5 cm"
+        }
+      ],
+      "do_not":  "Do not calculate volume from diameters/heights. Do not relabel cookware ID x H as dimensions including lid."
+    }
+  ],
+  "placeholder_inventory_classified":  [
+    {
+      "scope":  "core_storage_52",
+      "id":  "sets-1",
+      "literal_confirm_occurrences":  5,
+      "source_refs":  [
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/models/21/model/capacity",
+          "line":  5967,
+          "current":  "650 ml + 1,300 ml + largest container capacity to confirm"
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/models/21/model/details/2/capacity",
+          "line":  5981,
+          "current":  "To confirm"
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/models/21/model/capacityNote",
+          "line":  5988,
+          "current":  "Largest container capacity to confirm."
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/models/21/model/components/2/capacity",
+          "line":  5991,
+          "current":  "To confirm"
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/product-index.json",
+          "pointer":  "/21/capacity",
+          "line":  236,
+          "current":  "650 ml / 22 oz / 2.7 cup + 1,300 ml / 44 oz / 5.5 cup + To confirm"
+        }
+      ],
+      "also_blank_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/21/model/details/2/unitReference",
+        "line":  5983,
+        "current":  ""
+      },
+      "action":  "Replace from current owner authority; no other core record contains a fact placeholder."
+    },
+    {
+      "scope":  "other_series",
+      "id":  "cookware-tri-ply",
+      "fact":  "numeric capacity",
+      "refs":  [
+        {
+          "file":  "sandbox-maylendy-steel/data/product-index.json",
+          "pointer":  "/52/capacity",
+          "line":  577,
+          "current":  "Confirm capacity by model"
+        }
+      ],
+      "generator":  "sandbox-maylendy-steel/tools/build_site.py:67",
+      "source_condition":  "No Capacity spec in /catalog/series/6/specs",
+      "evidence_status":  "No printed volume in supplied PDF p.13",
+      "action":  "Do not invent ml/oz/cup; use printed ID x H, retain capacity as unavailable or omit volume field for this series."
+    },
+    {
+      "scope":  "other_series",
+      "id":  "cookware-tri-ply",
+      "fact":  "exact tri-ply layer materials",
+      "refs":  [
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/catalog/series/6/specs/2/value",
+          "line":  4607,
+          "current":  "2.2 mm tri-ply construction; selected layer materials confirmed for the model"
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/product-index.json",
+          "pointer":  "/52/material",
+          "line":  579,
+          "current":  "2.2 mm tri-ply construction; selected layer materials confirmed for the model"
+        }
+      ],
+      "evidence_status":  "2.2mm tri-ply is printed, specific layer stack not supplied",
+      "action":  "Retain 2.2mm construction. General owner cookware material options do not establish a particular tri-ply stack."
+    },
+    {
+      "scope":  "other_series",
+      "id":  "cookware-skillets",
+      "fact":  "numeric capacity hidden behind nonnumeric prose",
+      "refs":  [
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/catalog/series/7/specs/1/value",
+          "line":  4660,
+          "current":  "Sized for everyday cooking and serving"
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/catalog/categories/1/series/1/specs/1/value",
+          "line":  2267,
+          "current":  "Sized for everyday cooking and serving"
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/product-index.json",
+          "pointer":  "/53/capacity",
+          "line":  588,
+          "current":  "Sized for everyday cooking and serving"
+        }
+      ],
+      "evidence_status":  "Sized for everyday cooking and serving is not a measured capacity. No corresponding volume in supplied PDF.",
+      "action":  "Missing actual data; do not calculate volume from the 16/18/20/22/24/26cm diameter choices."
+    },
+    {
+      "scope":  "other_series",
+      "id":  "plates-serving-compartment",
+      "fact":  "compartment capacity",
+      "refs":  [
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/catalog/series/8/specs/1/value",
+          "line":  4713,
+          "current":  "Compartment volume confirm by model"
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/catalog/categories/2/series/0/specs/1/value",
+          "line":  2328,
+          "current":  "Compartment volume confirm by model"
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/product-index.json",
+          "pointer":  "/54/capacity",
+          "line":  599,
+          "current":  "Compartment volume confirm by model"
+        }
+      ],
+      "evidence_status":  "No measured compartment capacity in supplied PDF/text",
+      "action":  "Retain unknown/omit numerical capacity; do not infer it from 23.5x18cm."
+    },
+    {
+      "scope":  "other_series",
+      "id":  "plates-serving-compartment",
+      "fact":  "specific steel grade",
+      "refs":  [
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/catalog/series/8/specs/2/value",
+          "line":  4717,
+          "current":  "Stainless steel; grade to confirm by model"
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/catalog/categories/2/series/0/specs/2/value",
+          "line":  2332,
+          "current":  "Stainless steel; grade to confirm by model"
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/product-index.json",
+          "pointer":  "/54/material",
+          "line":  601,
+          "current":  "Stainless steel; grade to confirm by model"
+        }
+      ],
+      "evidence_status":  "No model-specific grade in supplied evidence",
+      "action":  "Do not copy food-storage grades or general cookware material options into this product."
+    },
+    {
+      "scope":  "other_series",
+      "id":  "kettles-household-range",
+      "fact":  "dimensions",
+      "refs":  [
+        {
+          "file":  "sandbox-maylendy-steel/data/product-index.json",
+          "pointer":  "/55/size",
+          "line":  611,
+          "current":  "Confirm dimensions by model"
+        }
+      ],
+      "generator":  "sandbox-maylendy-steel/tools/build_site.py:68",
+      "evidence_status":  "Actual dimensions unavailable. 2.5/3.5/4.5/5.5/7.5L are capacities.",
+      "action":  "Keep the five supported capacity choices and 201 steel; no dimension can be derived from them."
+    },
+    {
+      "scope":  "additional_storage_outside_core52",
+      "id":  "04-series",
+      "fact":  "dimensions, formal code, oz, cup",
+      "generator":  "sandbox-maylendy-steel/tools/owner_revision.py:91, default Confirmed with the selected model and lid",
+      "source_condition":  "special-lids.json is referenced by owner_revision.py:84-85 but is outside the requested file scope; this audit does not assert its literal current values.",
+      "evidence_status":  "Table 2 unavailable; no explicit 04 dimensions in cached 13-page PDF search",
+      "action":  "Preserve owner/filename-supported 800ml and 1400ml capacities and steel/bamboo options; keep exact dimensions, oz/cup, formal codes unavailable."
+    }
+  ],
+  "no_change_needed":  [
+    {
+      "item":  "52 records / 67 specification rows / 44 distinct code strings",
+      "reason":  "All IDs, variant names, collection/index mirror mappings and current rendered storage-index fields match; no merging or deletion needed."
+    },
+    {
+      "item":  "Core dimensions",
+      "reason":  "67/67 numerical dimension strings match their exact catalog row/panel after spacing and x/* normalization. sets-1 all three dimensions are already correct.",
+      "qualifications":  [
+        "PDF p.5 01-CTXSSG1700ml omits cm suffix; current cm is existing data, not newly measured evidence.",
+        "PDF p.7 sets-1 component2 text ends cn; latest user authority explicitly confirms cm.",
+        "01RC450/280 has two compartment capacities with the same outer size; this is not two separate body variants."
+      ]
+    },
+    {
+      "item":  "Standalone 01RC2250 / rectangular-5",
+      "ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/5/model/details/0/capacity",
+        "line":  5454,
+        "current":  "2,250 ml"
+      },
+      "value":  "2250ml/76oz/9.5cup; 24.8x19.3x8.2cm",
+      "reason":  "Changing sets-1 to 2500 does not change this separate standalone model."
+    },
+    {
+      "item":  "01RC2000 ml/oz and dimensions",
+      "refs":  [
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/models/10/model/details/0/capacity",
+          "line":  5614,
+          "current":  "2,000 ml"
+        },
+        {
+          "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+          "pointer":  "/models/10/model/details/0/size",
+          "line":  5615,
+          "current":  "29.8 x 21.4 x 5.8 cm"
+        }
+      ],
+      "value":  "2000ml/68oz;29.8x21.4x5.8cm",
+      "reason":  "Already owner-approved and rendered correctly. 8.4cup restoration is a labeled catalog-reference decision, not a new owner approval."
+    },
+    {
+      "item":  "01RC550 oz suffix",
+      "ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/1/model/details/0/unitReference",
+        "line":  5328,
+        "current":  "18.6 oz / 2.3 cup"
+      },
+      "reason":  "Rendered 18.6oz/2.3cup already complete. Exact p.2 raw omits oz, while alternate p.11 explicitly prints 18.6oz; preserve that provenance and do not merge dimensions."
+    },
+    {
+      "item":  "Printed per-model rounding",
+      "reason":  "Keep 21.9 vs 22oz,43.9 vs44oz,84 vs85oz,87 vs88oz,101 vs102oz in their own source contexts. Do not replace with a global conversion table."
+    },
+    {
+      "item":  "set quantities and variant identity",
+      "reason":  "Current x2/x4 and distinct profiles are preserved. The x4/formal code for sets-10 remains a source-provenance limitation rather than grounds to merge/delete its record."
+    },
+    {
+      "item":  "Owner-approved specification basis",
+      "value":  "Brimful capacity; external dimensions including lid;0.4mm nominal food-storage body;304/316L/titanium options",
+      "source":  "Prior audit owner authority and owner_revision.py:42,44,45,61",
+      "reason":  "No further confirmation required for these already-authorized facts."
+    }
+  ],
+  "missing_actual_data_or_conflicting_source":  [
+    {
+      "id":  "04-table2",
+      "required_data":  [
+        "Exact formal model codes",
+        "Size by capacity and lid",
+        "oz/cup if explicitly available"
+      ],
+      "known":  [
+        "800ml",
+        "1400ml",
+        "steel/bamboo lid options"
+      ],
+      "table2":  "Not supplied/available",
+      "source_audit":  "catalog-unit-audit.json /series04 and catalog-unit-audit-report.md:49-50",
+      "do_not":  "Do not invent 04RC800/04RC1400 codes or use 05.jpg inch values under mm headings. A lone OCR 22.9cm on the 1400ml image is insufficient for a full size."
+    },
+    {
+      "id":  "sets-10-formal-code-and-quantity",
+      "record_id":  "sets-10",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/30/model/code",
+        "line":  6319,
+        "current":  "01-KP400*4/4300ml"
+      },
+      "evidence":  "PDF p.9 lower-left panel: catalog-pdf-layout-native.txt:44-48 prints 400ml/14oz/1.7cup 12.3x12.3x7cm and 4300ml/145oz/18.2cup 29x29x8.7cm. Native/OCR cached audit found no explicit 01-KP400*4/4300ml code or x4 text.",
+      "action":  "Keep existing ID/code/quantity without claiming independently verified catalog text; actual model/order sheet or verified image composition is required for stronger provenance. Component capacity/size values are supported."
+    },
+    {
+      "id":  "01RC2000-owner-cup",
+      "missing":  "New owner confirmation of a cup value",
+      "available":  "Exact-model p.2 printed8.4cup; related p.6/p.7 printed8.5cup",
+      "action":  "This does not block displaying 8.4 as catalog reference; do not assert either value is newly owner-confirmed."
+    },
+    {
+      "id":  "tri-ply-deep30",
+      "evidence":  [
+        "catalog-pdf-text.txt:342: 30cm 28cm*6.8cm 2140g",
+        "catalog-pdf-page-ocr.json:65 also reads nominal30cm with28cm*6.8cm"
+      ],
+      "conflict":  "Nominal size30cm vs printed ID28cm",
+      "action":  "Do not silently publish30x6.8cm as corrected fact. Preserve raw table and flag the nominal/ID discrepancy if this deep-pan row is added."
+    },
+    {
+      "id":  "other-series-missing-volume-material-dimensions",
+      "items":  [
+        "tri-ply and single-layer cookware measured capacity",
+        "tri-ply exact layer materials",
+        "serving plate compartment capacities and model grade",
+        "kettle actual dimensions"
+      ],
+      "action":  "Supplied catalog/owner scope does not establish these; no fabricated volume/units/dimensions."
+    }
+  ],
+  "additional_explicit_catalog_specs_outside_core52":  [
+    {
+      "group":  "Four p.6 standalone baking-dish codes absent from current source/index",
+      "scope":  "Potential catalog expansion; not a failed mapping among the existing52",
+      "rows":  [
+        {
+          "code":  "01-KP3000ml",
+          "ml":  3000,
+          "oz":  "102",
+          "cup_printed_number":  "12.7",
+          "cup_suffix_printed":  false,
+          "dimensions_cm":  "36.8 x 25.2 x 6.2",
+          "text_lines":  [
+            122,
+            124,
+            125
+          ],
+          "action":  "12.7 is printed without cup suffix; retain raw number, do not describe suffix as printed or change102oz to101oz."
+        },
+        {
+          "code":  "01-KP2500ml",
+          "ml":  2500,
+          "oz":  "85",
+          "cup":  "10.6",
+          "dimensions_cm":  "29.8 x 21.4 x 7",
+          "text_lines":  [
+            126,
+            128,
+            129
+          ]
+        },
+        {
+          "code":  "01-KP2000ml",
+          "ml":  2000,
+          "oz":  "68",
+          "cup":  "8.5",
+          "dimensions_cm":  "29.8 x 21.4 x 5.8",
+          "text_lines":  [
+            130,
+            132,
+            133
+          ]
+        },
+        {
+          "code":  "01-KP5000ml",
+          "ml":  5000,
+          "oz":  "169",
+          "cup":  "21.1",
+          "dimensions_cm":  "36.8 x 25.2 x 8.5",
+          "text_lines":  [
+            134,
+            136,
+            137
+          ]
+        }
+      ],
+      "recommendation":  "Report these as known, separately coded catalog products. Do not splice them into same-size01RC records or silently change the52-model scope during a specification correction."
+    },
+    {
+      "group":  "Deep-pan p.13 rows absent from current shallow-pan/wok description",
+      "scope":  "Other cookware, separate from current listed format",
+      "clear_rows":  [
+        {
+          "nominal_size_cm":  28,
+          "ID_cm":  28,
+          "height_cm":  6.2,
+          "thickness_mm":  2.2,
+          "raw_text_line":  339
+        },
+        {
+          "nominal_size_cm":  32,
+          "ID_cm":  32,
+          "height_cm":  7.5,
+          "thickness_mm":  2.2,
+          "raw_text_line":  343
+        }
+      ],
+      "conflicting_row":  "30cm nominal row prints28cm*6.8cm; see conflict entry",
+      "recommendation":  "These can support a separate deep-pan range if included; do not infer liter capacity."
+    }
+  ],
+  "implementation_notes_for_parent":  [
+    "Active storage output derives capacity from models[*].model.details[*].capacity + unitReference (build_site.py:56-63,74-75), not model.capacity. Changing only model.capacity will not fix the displayed omission.",
+    "product-index.json is generated at build_site.py:159; regenerate from corrected source and keep all52 IDs and67 detail rows. It is consistent with current input but inherits its missing values.",
+    "Put catalog-reference qualification in unitReference itself or explicitly propagate its basis to the index renderer. A model.capacityNote alone is shown on cards but not copied to the product-index by build_site.py:63.",
+    "Synchronize all four sets mirror arrays (catalog.series and catalog.categories[0].series, panelModels and catalogModels). Preserve exact code/variant/index identity.",
+    "Generic confirmation text in owner_revision.py is not a substitute for real numeric fields. Do not broadly remove model/lid/handling qualifications.",
+    "Kettle source currently labels five liter capacities as Dimensions (catalog-source.json:4756-4757), and build_site.py:67-68,114 special-cases that layout. Optional schema cleanup must update those readers together; actual dimensions remain missing.",
+    "Earlier scratch audit source_line values refer to an older source snapshot. Use this report current line numbers and JSON pointers. Earlier unresolved decisions forsets-1 and960cup are superseded by the latest user request."
+  ],
+  "validation":  {
+    "core52":  true,
+    "rows67":  true,
+    "index_consistent":  true,
+    "exact_catalog_row_numbers_recorded":  true,
+    "all_numeric_core_sizes_correspond_to_print":  true,
+    "source_files_unchanged":  true,
+    "cached_csv_52_identity_and_page_matches":  true,
+    "aggregate_size_matches_details":  true,
+    "cached_mapping_issues":  [
+    ],
+    "aggregate_size_issues":  [
+    ]
+  },
+  "audit_limits":  [
+    "Only the four requested project files were inspected; owner-approved.json and special-lids.json were not read. Prior authority is taken from the latest task and existing audit.",
+    "Original414725593-byte PDF was not reparsed. Cached native text/layout supply raw rows; existing cachedOCR was consulted only for p.13 nominal/ID conflict.",
+    "No image viewer is available in this audit. Existing04 image references are cached filename/OCR evidence, not new visual verification.",
+    "No project build, edit, SEO review or certificate review performed.",
+    "Variant-to-dimension mapping was checked against exact PDF rows and current series/index records; lid assignments are inherited from the existing source and were not independently reclassified from product images."
+  ],
+  "input_snapshots":  [
+    {
+      "path":  "E:\\Documents\\ChatGPT\\大计之官网\\factory-website-project\\sandbox-maylendy-steel\\data\\catalog-source.json",
+      "sha256":  "4D2598CDDC5059541B5DF230C294AB2CD8E548DAA97F20F2C1AA7B90871ECDB0"
+    },
+    {
+      "path":  "E:\\Documents\\ChatGPT\\大计之官网\\factory-website-project\\sandbox-maylendy-steel\\data\\product-index.json",
+      "sha256":  "D72A4F23304A4E8FB3C3A022E70997F0BD63FF984F90BE00C909D3E29DF08ECB"
+    },
+    {
+      "path":  "E:\\Documents\\ChatGPT\\大计之官网\\factory-website-project\\sandbox-maylendy-steel\\tools\\build_site.py",
+      "sha256":  "F87F9960B7EC4DA3CC682055CF46AE700EADD6041059B581D9A50192DC37A452"
+    },
+    {
+      "path":  "E:\\Documents\\ChatGPT\\大计之官网\\factory-website-project\\sandbox-maylendy-steel\\tools\\owner_revision.py",
+      "sha256":  "DE3F9D9AB796C02381C8CB1C90F80FA8D8DAA31A76B46BA4702A6F9AFBB5E3FF"
+    }
+  ],
+  "generic_confirmation_not_missing_facts":  [
+    {
+      "source":  "sandbox-maylendy-steel/tools/build_site.py:71,87,95,105",
+      "meaning":  "Generic final-configuration/care wording is not evidence that all 52 numerical specifications are unknown."
+    },
+    {
+      "source":  "sandbox-maylendy-steel/tools/owner_revision.py:32,40,42,44,45,91,92",
+      "meaning":  "Body/lid matching, nominal thickness, brimful basis, configuration and care qualification remain valid. Only a real empty dimensions fallback is a data gap."
+    },
+    {
+      "source":  "sandbox-maylendy-steel/data/catalog-source.json:2356",
+      "meaning":  "Category prose says capacity/construction confirmed per model, while the actual kettle series already carries five capacities and 201 stainless steel; do not count this as five missing capacities."
+    },
+    {
+      "source":  "sandbox-maylendy-steel/data/product-index.json:591,602",
+      "meaning":  "Optional lid / cover on request describes configurable options, not an established missing numerical specification."
+    }
+  ],
+  "placeholder_occurrences":  [
+    {
+      "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+      "pointer":  "/catalog/categories/2/series/0/specs/1/value",
+      "line":  2328,
+      "value":  "Compartment volume confirm by model",
+      "scope":  "catalog_other"
+    },
+    {
+      "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+      "pointer":  "/catalog/categories/2/series/0/specs/2/value",
+      "line":  2332,
+      "value":  "Stainless steel; grade to confirm by model",
+      "scope":  "catalog_other"
+    },
+    {
+      "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+      "pointer":  "/catalog/categories/3/description",
+      "line":  2356,
+      "value":  "Stainless kettle silhouettes shown for household and foodservice programs, with capacity and construction confirmed per model.",
+      "scope":  "catalog_other"
+    },
+    {
+      "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+      "pointer":  "/catalog/series/6/specs/2/value",
+      "line":  4607,
+      "value":  "2.2 mm tri-ply construction; selected layer materials confirmed for the model",
+      "scope":  "catalog_other"
+    },
+    {
+      "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+      "pointer":  "/catalog/series/8/specs/1/value",
+      "line":  4713,
+      "value":  "Compartment volume confirm by model",
+      "scope":  "catalog_other"
+    },
+    {
+      "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+      "pointer":  "/catalog/series/8/specs/2/value",
+      "line":  4717,
+      "value":  "Stainless steel; grade to confirm by model",
+      "scope":  "catalog_other"
+    },
+    {
+      "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+      "pointer":  "/models/21/model/capacity",
+      "line":  5967,
+      "value":  "650 ml + 1,300 ml + largest container capacity to confirm",
+      "scope":  "core_storage"
+    },
+    {
+      "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+      "pointer":  "/models/21/model/details/2/capacity",
+      "line":  5981,
+      "value":  "To confirm",
+      "scope":  "core_storage"
+    },
+    {
+      "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+      "pointer":  "/models/21/model/capacityNote",
+      "line":  5988,
+      "value":  "Largest container capacity to confirm.",
+      "scope":  "core_storage"
+    },
+    {
+      "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+      "pointer":  "/models/21/model/components/2/capacity",
+      "line":  5991,
+      "value":  "To confirm",
+      "scope":  "core_storage"
+    },
+    {
+      "file":  "sandbox-maylendy-steel/data/product-index.json",
+      "pointer":  "/21/capacity",
+      "line":  236,
+      "value":  "650 ml / 22 oz / 2.7 cup + 1,300 ml / 44 oz / 5.5 cup + To confirm",
+      "scope":  "core_storage"
+    },
+    {
+      "file":  "sandbox-maylendy-steel/data/product-index.json",
+      "pointer":  "/52/capacity",
+      "line":  577,
+      "value":  "Confirm capacity by model",
+      "scope":  "other_series"
+    },
+    {
+      "file":  "sandbox-maylendy-steel/data/product-index.json",
+      "pointer":  "/52/material",
+      "line":  579,
+      "value":  "2.2 mm tri-ply construction; selected layer materials confirmed for the model",
+      "scope":  "other_series"
+    },
+    {
+      "file":  "sandbox-maylendy-steel/data/product-index.json",
+      "pointer":  "/54/capacity",
+      "line":  599,
+      "value":  "Compartment volume confirm by model",
+      "scope":  "other_series"
+    },
+    {
+      "file":  "sandbox-maylendy-steel/data/product-index.json",
+      "pointer":  "/54/material",
+      "line":  601,
+      "value":  "Stainless steel; grade to confirm by model",
+      "scope":  "other_series"
+    },
+    {
+      "file":  "sandbox-maylendy-steel/data/product-index.json",
+      "pointer":  "/55/size",
+      "line":  611,
+      "value":  "Confirm dimensions by model",
+      "scope":  "other_series"
+    }
+  ],
+  "duplicate_code_groups":  [
+    {
+      "code":  "01RC550",
+      "records":  [
+        {
+          "id":  "rectangular-1",
+          "variant":  "",
+          "lid_type":  "integrated-pp",
+          "size":  "16.5 x 12.5 x 6 cm",
+          "source_line":  5315
+        },
+        {
+          "id":  "alternate-pp-0",
+          "variant":  "Alternate profile",
+          "lid_type":  "detachable-pp",
+          "size":  "16.8 x 12.8 x 5.8 cm",
+          "source_line":  6772
+        }
+      ]
+    },
+    {
+      "code":  "01RC1300",
+      "records":  [
+        {
+          "id":  "rectangular-4",
+          "variant":  "",
+          "lid_type":  "integrated-pp",
+          "size":  "21.4 x 16.3 x 7.2 cm",
+          "source_line":  5411
+        },
+        {
+          "id":  "alternate-pp-1",
+          "variant":  "Alternate profile",
+          "lid_type":  "detachable-pp",
+          "size":  "22 x 16.8 x 7.2 cm",
+          "source_line":  6804
+        }
+      ]
+    },
+    {
+      "code":  "10RC600",
+      "records":  [
+        {
+          "id":  "silicone-glass-0",
+          "variant":  "Rectangular",
+          "lid_type":  "silicone-glass",
+          "size":  "15.2 x 11.1 x 5.4 cm",
+          "source_line":  6356
+        },
+        {
+          "id":  "silicone-0",
+          "variant":  "Profile A",
+          "lid_type":  "pure-silicone",
+          "size":  "15.5 x 11.5 x 5.5 cm",
+          "source_line":  6580
+        },
+        {
+          "id":  "silicone-3",
+          "variant":  "Profile B",
+          "lid_type":  "pure-silicone",
+          "size":  "15.5 x 11.5 x 5.8 cm",
+          "source_line":  6676
+        }
+      ]
+    },
+    {
+      "code":  "10RC900",
+      "records":  [
+        {
+          "id":  "silicone-glass-1",
+          "variant":  "Rectangular",
+          "lid_type":  "silicone-glass",
+          "size":  "17.8 x 12.1 x 5.8 cm",
+          "source_line":  6388
+        },
+        {
+          "id":  "silicone-1",
+          "variant":  "Profile A",
+          "lid_type":  "pure-silicone",
+          "size":  "18.3 x 12.4 x 5.8 cm",
+          "source_line":  6612
+        },
+        {
+          "id":  "silicone-4",
+          "variant":  "Profile B",
+          "lid_type":  "pure-silicone",
+          "size":  "18.3 x 12.5 x 5.9 cm",
+          "source_line":  6708
+        }
+      ]
+    },
+    {
+      "code":  "10RC1200",
+      "records":  [
+        {
+          "id":  "silicone-glass-2",
+          "variant":  "Rectangular",
+          "lid_type":  "silicone-glass",
+          "size":  "19.4 x 14.2 x 6 cm",
+          "source_line":  6420
+        },
+        {
+          "id":  "silicone-2",
+          "variant":  "Profile A",
+          "lid_type":  "pure-silicone",
+          "size":  "19.8 x 14.5 x 6 cm",
+          "source_line":  6644
+        },
+        {
+          "id":  "silicone-5",
+          "variant":  "Profile B",
+          "lid_type":  "pure-silicone",
+          "size":  "19.8 x 14.5 x 6 cm",
+          "source_line":  6740
+        }
+      ]
+    }
+  ],
+  "existing_image_evidence_candidates":  [
+    {
+      "path":  "E:\\照片\\可用\\保鲜盒\\04款钢盖竹盖\\1400ml-全钢饭盒大.jpg",
+      "ocr_text":  "22 · 9cm",
+      "basis":  "Previously cached filename/OCR audit, not newly viewed in this audit",
+      "use":  "Filename supports1400ml; lone22.9cm is insufficient size"
+    },
+    {
+      "path":  "E:\\照片\\可用\\保鲜盒\\04款钢盖竹盖\\800ml-全钢饭盒小.jpg",
+      "ocr_text":  "",
+      "basis":  "Previously cached filename/OCR audit, not newly viewed in this audit",
+      "use":  "Filename supports800ml"
+    },
+    {
+      "path":  "E:\\照片\\可用\\保鲜盒\\04款钢盖竹盖\\A.不锈钢大小号配钢盖竹盖\\A款不锈钢大小号（提交版）\\主图\\主图11.jpg",
+      "ocr_text":  "Cover type ： With bamboo cover /stainless steel cover",
+      "basis":  "Previously cached filename/OCR audit, not newly viewed in this audit",
+      "use":  "Printed steel/bamboo lid options; not capacity-to-size mapping"
+    },
+    {
+      "path":  "E:\\照片\\可用\\保鲜盒\\04款钢盖竹盖\\A.不锈钢大小号配钢盖竹盖\\A款不锈钢大小号（提交版）\\05.jpg",
+      "ocr_text":  "PRODUCT INFORMATION Product Name ： sta i nless steel lunch bOX Cover type ： With bambOO cover/sta i nless steel cover Shape 。 recta ngle Material: 304 stainless steel Width Wi th Size la rge small Length Length Length(mm) 5.59inch 5.7inch Height Hei ht Width(mm) 8.03inch 4.52inch Rectangle Rectangle Height(mm) 2.36inch 2.36inch You only choose the sizes you want, we will reply you within 24hours.",
+      "basis":  "Previously cached filename/OCR audit, not newly viewed in this audit",
+      "use":  "Unit conflict: mm headings with inch cells; exclude as dimension authority"
+    }
+  ],
+  "index_discrepancies":  [
+  ],
+  "stale_mirror_dimension_fields":  [
+    {
+      "id":  "sets-3",
+      "field":  "size",
+      "ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/catalog/series/1/panelModels/3/details/1/size",
+        "line":  3071,
+        "current":  "29.8 x 21.4 x 7.5cm"
+      },
+      "effective_size":  "29.8 x 21.4 x 7 cm"
+    },
+    {
+      "id":  "sets-3",
+      "field":  "size",
+      "ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/catalog/categories/0/series/1/panelModels/3/details/1/size",
+        "line":  670,
+        "current":  "29.8 x 21.4 x 7.5cm"
+      },
+      "effective_size":  "29.8 x 21.4 x 7 cm"
+    },
+    {
+      "id":  "sets-3",
+      "field":  "size",
+      "ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/catalog/series/1/catalogModels/3/details/1/size",
+        "line":  3330,
+        "current":  "29.8 x 21.4 x 7.5cm"
+      },
+      "effective_size":  "29.8 x 21.4 x 7 cm"
+    },
+    {
+      "id":  "sets-3",
+      "field":  "size",
+      "ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/catalog/categories/0/series/1/catalogModels/3/details/1/size",
+        "line":  929,
+        "current":  "29.8 x 21.4 x 7.5cm"
+      },
+      "effective_size":  "29.8 x 21.4 x 7 cm"
+    }
+  ],
+  "model_mapping":  [
+    {
+      "id":  "rectangular-0",
+      "code":  "01RC400",
+      "variant":  "",
+      "lid_type":  "integrated-pp",
+      "collection_id":  "rectangular",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/0/id",
+        "line":  5278,
+        "current":  "rectangular-0"
+      },
+      "source_array_index":  0,
+      "product_index_array_index":  0,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/0/id",
+        "line":  3,
+        "current":  "rectangular-0"
+      },
+      "pdf_page":  2,
+      "component_count":  1,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/0/panelModels/0",
+        "/catalog/categories/0/series/0/panelModels/0"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "rectangular-1",
+      "code":  "01RC550",
+      "variant":  "",
+      "lid_type":  "integrated-pp",
+      "collection_id":  "rectangular",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/1/id",
+        "line":  5310,
+        "current":  "rectangular-1"
+      },
+      "source_array_index":  1,
+      "product_index_array_index":  1,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/1/id",
+        "line":  14,
+        "current":  "rectangular-1"
+      },
+      "pdf_page":  2,
+      "component_count":  1,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/0/panelModels/1",
+        "/catalog/categories/0/series/0/panelModels/1"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "rectangular-2",
+      "code":  "01RC650",
+      "variant":  "",
+      "lid_type":  "integrated-pp",
+      "collection_id":  "rectangular",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/2/id",
+        "line":  5342,
+        "current":  "rectangular-2"
+      },
+      "source_array_index":  2,
+      "product_index_array_index":  2,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/2/id",
+        "line":  25,
+        "current":  "rectangular-2"
+      },
+      "pdf_page":  2,
+      "component_count":  1,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/0/panelModels/2",
+        "/catalog/categories/0/series/0/panelModels/2"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "rectangular-3",
+      "code":  "01RC1000",
+      "variant":  "",
+      "lid_type":  "integrated-pp",
+      "collection_id":  "rectangular",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/3/id",
+        "line":  5374,
+        "current":  "rectangular-3"
+      },
+      "source_array_index":  3,
+      "product_index_array_index":  3,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/3/id",
+        "line":  36,
+        "current":  "rectangular-3"
+      },
+      "pdf_page":  2,
+      "component_count":  1,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/0/panelModels/3",
+        "/catalog/categories/0/series/0/panelModels/3"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "rectangular-4",
+      "code":  "01RC1300",
+      "variant":  "",
+      "lid_type":  "integrated-pp",
+      "collection_id":  "rectangular",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/4/id",
+        "line":  5406,
+        "current":  "rectangular-4"
+      },
+      "source_array_index":  4,
+      "product_index_array_index":  4,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/4/id",
+        "line":  47,
+        "current":  "rectangular-4"
+      },
+      "pdf_page":  2,
+      "component_count":  1,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/0/panelModels/4",
+        "/catalog/categories/0/series/0/panelModels/4"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "rectangular-5",
+      "code":  "01RC2250",
+      "variant":  "",
+      "lid_type":  "integrated-pp",
+      "collection_id":  "rectangular",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/5/id",
+        "line":  5438,
+        "current":  "rectangular-5"
+      },
+      "source_array_index":  5,
+      "product_index_array_index":  5,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/5/id",
+        "line":  58,
+        "current":  "rectangular-5"
+      },
+      "pdf_page":  2,
+      "component_count":  1,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/0/panelModels/5",
+        "/catalog/categories/0/series/0/panelModels/5"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "square-14",
+      "code":  "01SQ400",
+      "variant":  "",
+      "lid_type":  "integrated-pp",
+      "collection_id":  "square",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/6/id",
+        "line":  5470,
+        "current":  "square-14"
+      },
+      "source_array_index":  6,
+      "product_index_array_index":  6,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/6/id",
+        "line":  69,
+        "current":  "square-14"
+      },
+      "pdf_page":  3,
+      "component_count":  1,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/0/panelModels/14",
+        "/catalog/categories/0/series/0/panelModels/14"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "square-15",
+      "code":  "01SQ1000",
+      "variant":  "",
+      "lid_type":  "integrated-pp",
+      "collection_id":  "square",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/7/id",
+        "line":  5502,
+        "current":  "square-15"
+      },
+      "source_array_index":  7,
+      "product_index_array_index":  7,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/7/id",
+        "line":  80,
+        "current":  "square-15"
+      },
+      "pdf_page":  3,
+      "component_count":  1,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/0/panelModels/15",
+        "/catalog/categories/0/series/0/panelModels/15"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "divided-17",
+      "code":  "01-SG450/280ml",
+      "variant":  "",
+      "lid_type":  "integrated-pp",
+      "collection_id":  "divided",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/8/id",
+        "line":  5534,
+        "current":  "divided-17"
+      },
+      "source_array_index":  8,
+      "product_index_array_index":  8,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/8/id",
+        "line":  91,
+        "current":  "divided-17"
+      },
+      "pdf_page":  5,
+      "component_count":  1,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/0/panelModels/17",
+        "/catalog/categories/0/series/0/panelModels/17"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "divided-18",
+      "code":  "01-SSG400/280/280ml",
+      "variant":  "",
+      "lid_type":  "integrated-pp",
+      "collection_id":  "divided",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/9/id",
+        "line":  5566,
+        "current":  "divided-18"
+      },
+      "source_array_index":  9,
+      "product_index_array_index":  9,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/9/id",
+        "line":  102,
+        "current":  "divided-18"
+      },
+      "pdf_page":  5,
+      "component_count":  1,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/0/panelModels/18",
+        "/catalog/categories/0/series/0/panelModels/18"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "rectangular-6",
+      "code":  "01RC2000",
+      "variant":  "",
+      "lid_type":  "integrated-pp",
+      "collection_id":  "rectangular",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/10/id",
+        "line":  5598,
+        "current":  "rectangular-6"
+      },
+      "source_array_index":  10,
+      "product_index_array_index":  10,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/10/id",
+        "line":  113,
+        "current":  "rectangular-6"
+      },
+      "pdf_page":  2,
+      "component_count":  1,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/0/panelModels/6",
+        "/catalog/categories/0/series/0/panelModels/6"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "rectangular-7",
+      "code":  "01RC2500",
+      "variant":  "",
+      "lid_type":  "integrated-pp",
+      "collection_id":  "rectangular",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/11/id",
+        "line":  5630,
+        "current":  "rectangular-7"
+      },
+      "source_array_index":  11,
+      "product_index_array_index":  11,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/11/id",
+        "line":  124,
+        "current":  "rectangular-7"
+      },
+      "pdf_page":  2,
+      "component_count":  1,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/0/panelModels/7",
+        "/catalog/categories/0/series/0/panelModels/7"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "rectangular-8",
+      "code":  "01RC4200",
+      "variant":  "",
+      "lid_type":  "integrated-pp",
+      "collection_id":  "rectangular",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/12/id",
+        "line":  5662,
+        "current":  "rectangular-8"
+      },
+      "source_array_index":  12,
+      "product_index_array_index":  12,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/12/id",
+        "line":  135,
+        "current":  "rectangular-8"
+      },
+      "pdf_page":  2,
+      "component_count":  1,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/0/panelModels/8",
+        "/catalog/categories/0/series/0/panelModels/8"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "rectangular-9",
+      "code":  "01RC3000",
+      "variant":  "",
+      "lid_type":  "integrated-pp",
+      "collection_id":  "rectangular",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/13/id",
+        "line":  5694,
+        "current":  "rectangular-9"
+      },
+      "source_array_index":  13,
+      "product_index_array_index":  13,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/13/id",
+        "line":  146,
+        "current":  "rectangular-9"
+      },
+      "pdf_page":  3,
+      "component_count":  1,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/0/panelModels/9",
+        "/catalog/categories/0/series/0/panelModels/9"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "rectangular-10",
+      "code":  "01RC5000",
+      "variant":  "",
+      "lid_type":  "integrated-pp",
+      "collection_id":  "rectangular",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/14/id",
+        "line":  5726,
+        "current":  "rectangular-10"
+      },
+      "source_array_index":  14,
+      "product_index_array_index":  14,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/14/id",
+        "line":  157,
+        "current":  "rectangular-10"
+      },
+      "pdf_page":  3,
+      "component_count":  1,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/0/panelModels/10",
+        "/catalog/categories/0/series/0/panelModels/10"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "rectangular-11",
+      "code":  "01RC6600",
+      "variant":  "",
+      "lid_type":  "integrated-pp",
+      "collection_id":  "rectangular",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/15/id",
+        "line":  5758,
+        "current":  "rectangular-11"
+      },
+      "source_array_index":  15,
+      "product_index_array_index":  15,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/15/id",
+        "line":  168,
+        "current":  "rectangular-11"
+      },
+      "pdf_page":  3,
+      "component_count":  1,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/0/panelModels/11",
+        "/catalog/categories/0/series/0/panelModels/11"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "rectangular-12",
+      "code":  "01RC2600",
+      "variant":  "",
+      "lid_type":  "integrated-pp",
+      "collection_id":  "rectangular",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/16/id",
+        "line":  5790,
+        "current":  "rectangular-12"
+      },
+      "source_array_index":  16,
+      "product_index_array_index":  16,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/16/id",
+        "line":  179,
+        "current":  "rectangular-12"
+      },
+      "pdf_page":  3,
+      "component_count":  1,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/0/panelModels/12",
+        "/catalog/categories/0/series/0/panelModels/12"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "rectangular-13",
+      "code":  "01RC3700",
+      "variant":  "",
+      "lid_type":  "integrated-pp",
+      "collection_id":  "rectangular",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/17/id",
+        "line":  5822,
+        "current":  "rectangular-13"
+      },
+      "source_array_index":  17,
+      "product_index_array_index":  17,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/17/id",
+        "line":  190,
+        "current":  "rectangular-13"
+      },
+      "pdf_page":  3,
+      "component_count":  1,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/0/panelModels/13",
+        "/catalog/categories/0/series/0/panelModels/13"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "divided-19",
+      "code":  "01-CTXSSG1700ml",
+      "variant":  "",
+      "lid_type":  "integrated-pp",
+      "collection_id":  "divided",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/18/id",
+        "line":  5854,
+        "current":  "divided-19"
+      },
+      "source_array_index":  18,
+      "product_index_array_index":  18,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/18/id",
+        "line":  201,
+        "current":  "divided-19"
+      },
+      "pdf_page":  5,
+      "component_count":  1,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/0/panelModels/19",
+        "/catalog/categories/0/series/0/panelModels/19"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "square-16",
+      "code":  "01SQ4300",
+      "variant":  "",
+      "lid_type":  "integrated-pp",
+      "collection_id":  "square",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/19/id",
+        "line":  5886,
+        "current":  "square-16"
+      },
+      "source_array_index":  19,
+      "product_index_array_index":  19,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/19/id",
+        "line":  212,
+        "current":  "square-16"
+      },
+      "pdf_page":  3,
+      "component_count":  1,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/0/panelModels/16",
+        "/catalog/categories/0/series/0/panelModels/16"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "sets-0",
+      "code":  "01-BXH650/1300ml",
+      "variant":  "",
+      "lid_type":  "integrated-pp",
+      "collection_id":  "sets",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/20/id",
+        "line":  5918,
+        "current":  "sets-0"
+      },
+      "source_array_index":  20,
+      "product_index_array_index":  20,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/20/id",
+        "line":  223,
+        "current":  "sets-0"
+      },
+      "pdf_page":  7,
+      "component_count":  2,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/1/panelModels/0",
+        "/catalog/categories/0/series/1/panelModels/0",
+        "/catalog/series/1/catalogModels/0",
+        "/catalog/categories/0/series/1/catalogModels/0"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "sets-1",
+      "code":  "01-BXH650/1300/2250ml",
+      "variant":  "",
+      "lid_type":  "integrated-pp",
+      "collection_id":  "sets",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/21/id",
+        "line":  5955,
+        "current":  "sets-1"
+      },
+      "source_array_index":  21,
+      "product_index_array_index":  21,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/21/id",
+        "line":  234,
+        "current":  "sets-1"
+      },
+      "pdf_page":  7,
+      "component_count":  3,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/1/panelModels/1",
+        "/catalog/categories/0/series/1/panelModels/1",
+        "/catalog/series/1/catalogModels/1",
+        "/catalog/categories/0/series/1/catalogModels/1"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "sets-2",
+      "code":  "01-B01-BXH400*2/2000ml",
+      "variant":  "",
+      "lid_type":  "integrated-pp",
+      "collection_id":  "sets",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/22/id",
+        "line":  6003,
+        "current":  "sets-2"
+      },
+      "source_array_index":  22,
+      "product_index_array_index":  22,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/22/id",
+        "line":  245,
+        "current":  "sets-2"
+      },
+      "pdf_page":  7,
+      "component_count":  2,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/1/panelModels/2",
+        "/catalog/categories/0/series/1/panelModels/2",
+        "/catalog/series/1/catalogModels/2",
+        "/catalog/categories/0/series/1/catalogModels/2"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "sets-3",
+      "code":  "01-KP650*2/2500ml",
+      "variant":  "",
+      "lid_type":  "integrated-pp",
+      "collection_id":  "sets",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/23/id",
+        "line":  6040,
+        "current":  "sets-3"
+      },
+      "source_array_index":  23,
+      "product_index_array_index":  23,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/23/id",
+        "line":  256,
+        "current":  "sets-3"
+      },
+      "pdf_page":  7,
+      "component_count":  2,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/1/panelModels/3",
+        "/catalog/categories/0/series/1/panelModels/3",
+        "/catalog/series/1/catalogModels/3",
+        "/catalog/categories/0/series/1/catalogModels/3"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "sets-4",
+      "code":  "01-BXH1000*2/4200ml",
+      "variant":  "",
+      "lid_type":  "integrated-pp",
+      "collection_id":  "sets",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/24/id",
+        "line":  6082,
+        "current":  "sets-4"
+      },
+      "source_array_index":  24,
+      "product_index_array_index":  24,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/24/id",
+        "line":  267,
+        "current":  "sets-4"
+      },
+      "pdf_page":  8,
+      "component_count":  2,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/1/panelModels/4",
+        "/catalog/categories/0/series/1/panelModels/4",
+        "/catalog/series/1/catalogModels/4",
+        "/catalog/categories/0/series/1/catalogModels/4"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "sets-5",
+      "code":  "01-KP650*2/1300*2/5000ml",
+      "variant":  "",
+      "lid_type":  "integrated-pp",
+      "collection_id":  "sets",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/25/id",
+        "line":  6119,
+        "current":  "sets-5"
+      },
+      "source_array_index":  25,
+      "product_index_array_index":  25,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/25/id",
+        "line":  278,
+        "current":  "sets-5"
+      },
+      "pdf_page":  8,
+      "component_count":  3,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/1/panelModels/5",
+        "/catalog/categories/0/series/1/panelModels/5",
+        "/catalog/series/1/catalogModels/5",
+        "/catalog/categories/0/series/1/catalogModels/5"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "sets-6",
+      "code":  "01-CTX650*2/2600ml",
+      "variant":  "",
+      "lid_type":  "integrated-pp",
+      "collection_id":  "sets",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/26/id",
+        "line":  6161,
+        "current":  "sets-6"
+      },
+      "source_array_index":  26,
+      "product_index_array_index":  26,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/26/id",
+        "line":  289,
+        "current":  "sets-6"
+      },
+      "pdf_page":  8,
+      "component_count":  2,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/1/panelModels/6",
+        "/catalog/categories/0/series/1/panelModels/6",
+        "/catalog/series/1/catalogModels/6",
+        "/catalog/categories/0/series/1/catalogModels/6"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "sets-7",
+      "code":  "01-CTX1000*2/3700ml",
+      "variant":  "",
+      "lid_type":  "integrated-pp",
+      "collection_id":  "sets",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/27/id",
+        "line":  6198,
+        "current":  "sets-7"
+      },
+      "source_array_index":  27,
+      "product_index_array_index":  27,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/27/id",
+        "line":  300,
+        "current":  "sets-7"
+      },
+      "pdf_page":  8,
+      "component_count":  2,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/1/panelModels/7",
+        "/catalog/categories/0/series/1/panelModels/7",
+        "/catalog/series/1/catalogModels/7",
+        "/catalog/categories/0/series/1/catalogModels/7"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "sets-8",
+      "code":  "01-KP400*2/1000/4300ml",
+      "variant":  "",
+      "lid_type":  "integrated-pp",
+      "collection_id":  "sets",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/28/id",
+        "line":  6235,
+        "current":  "sets-8"
+      },
+      "source_array_index":  28,
+      "product_index_array_index":  28,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/28/id",
+        "line":  311,
+        "current":  "sets-8"
+      },
+      "pdf_page":  9,
+      "component_count":  3,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/1/panelModels/8",
+        "/catalog/categories/0/series/1/panelModels/8",
+        "/catalog/series/1/catalogModels/8",
+        "/catalog/categories/0/series/1/catalogModels/8"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "sets-9",
+      "code":  "01-KP1000*2/4300ml",
+      "variant":  "",
+      "lid_type":  "integrated-pp",
+      "collection_id":  "sets",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/29/id",
+        "line":  6277,
+        "current":  "sets-9"
+      },
+      "source_array_index":  29,
+      "product_index_array_index":  29,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/29/id",
+        "line":  322,
+        "current":  "sets-9"
+      },
+      "pdf_page":  9,
+      "component_count":  2,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/1/panelModels/9",
+        "/catalog/categories/0/series/1/panelModels/9",
+        "/catalog/series/1/catalogModels/9",
+        "/catalog/categories/0/series/1/catalogModels/9"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "sets-10",
+      "code":  "01-KP400*4/4300ml",
+      "variant":  "",
+      "lid_type":  "integrated-pp",
+      "collection_id":  "sets",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/30/id",
+        "line":  6314,
+        "current":  "sets-10"
+      },
+      "source_array_index":  30,
+      "product_index_array_index":  30,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/30/id",
+        "line":  333,
+        "current":  "sets-10"
+      },
+      "pdf_page":  9,
+      "component_count":  2,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/1/panelModels/10",
+        "/catalog/categories/0/series/1/panelModels/10",
+        "/catalog/series/1/catalogModels/10",
+        "/catalog/categories/0/series/1/catalogModels/10"
+      ],
+      "explicit_code_in_pdf":  false,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "silicone-glass-0",
+      "code":  "10RC600",
+      "variant":  "Rectangular",
+      "lid_type":  "silicone-glass",
+      "collection_id":  "silicone-glass",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/31/id",
+        "line":  6351,
+        "current":  "silicone-glass-0"
+      },
+      "source_array_index":  31,
+      "product_index_array_index":  31,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/31/id",
+        "line":  344,
+        "current":  "silicone-glass-0"
+      },
+      "pdf_page":  10,
+      "component_count":  1,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/3/panelModels/0",
+        "/catalog/categories/0/series/3/panelModels/0",
+        "/catalog/series/3/catalogModels/0",
+        "/catalog/categories/0/series/3/catalogModels/0"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "silicone-glass-1",
+      "code":  "10RC900",
+      "variant":  "Rectangular",
+      "lid_type":  "silicone-glass",
+      "collection_id":  "silicone-glass",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/32/id",
+        "line":  6383,
+        "current":  "silicone-glass-1"
+      },
+      "source_array_index":  32,
+      "product_index_array_index":  32,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/32/id",
+        "line":  355,
+        "current":  "silicone-glass-1"
+      },
+      "pdf_page":  10,
+      "component_count":  1,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/3/panelModels/1",
+        "/catalog/categories/0/series/3/panelModels/1",
+        "/catalog/series/3/catalogModels/1",
+        "/catalog/categories/0/series/3/catalogModels/1"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "silicone-glass-2",
+      "code":  "10RC1200",
+      "variant":  "Rectangular",
+      "lid_type":  "silicone-glass",
+      "collection_id":  "silicone-glass",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/33/id",
+        "line":  6415,
+        "current":  "silicone-glass-2"
+      },
+      "source_array_index":  33,
+      "product_index_array_index":  33,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/33/id",
+        "line":  366,
+        "current":  "silicone-glass-2"
+      },
+      "pdf_page":  10,
+      "component_count":  1,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/3/panelModels/2",
+        "/catalog/categories/0/series/3/panelModels/2",
+        "/catalog/series/3/catalogModels/2",
+        "/catalog/categories/0/series/3/catalogModels/2"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "silicone-glass-3",
+      "code":  "10r280",
+      "variant":  "",
+      "lid_type":  "silicone-glass",
+      "collection_id":  "silicone-glass",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/34/id",
+        "line":  6447,
+        "current":  "silicone-glass-3"
+      },
+      "source_array_index":  34,
+      "product_index_array_index":  34,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/34/id",
+        "line":  377,
+        "current":  "silicone-glass-3"
+      },
+      "pdf_page":  11,
+      "component_count":  1,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/3/panelModels/3",
+        "/catalog/categories/0/series/3/panelModels/3",
+        "/catalog/series/3/catalogModels/3",
+        "/catalog/categories/0/series/3/catalogModels/3"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "silicone-glass-4",
+      "code":  "10R630",
+      "variant":  "",
+      "lid_type":  "silicone-glass",
+      "collection_id":  "silicone-glass",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/35/id",
+        "line":  6479,
+        "current":  "silicone-glass-4"
+      },
+      "source_array_index":  35,
+      "product_index_array_index":  35,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/35/id",
+        "line":  388,
+        "current":  "silicone-glass-4"
+      },
+      "pdf_page":  11,
+      "component_count":  1,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/3/panelModels/4",
+        "/catalog/categories/0/series/3/panelModels/4",
+        "/catalog/series/3/catalogModels/4",
+        "/catalog/categories/0/series/3/catalogModels/4"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "silicone-glass-5",
+      "code":  "10R1200",
+      "variant":  "",
+      "lid_type":  "silicone-glass",
+      "collection_id":  "silicone-glass",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/36/id",
+        "line":  6511,
+        "current":  "silicone-glass-5"
+      },
+      "source_array_index":  36,
+      "product_index_array_index":  36,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/36/id",
+        "line":  399,
+        "current":  "silicone-glass-5"
+      },
+      "pdf_page":  11,
+      "component_count":  1,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/3/panelModels/5",
+        "/catalog/categories/0/series/3/panelModels/5",
+        "/catalog/series/3/catalogModels/5",
+        "/catalog/categories/0/series/3/catalogModels/5"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "silicone-glass-6",
+      "code":  "10R2100",
+      "variant":  "",
+      "lid_type":  "silicone-glass",
+      "collection_id":  "silicone-glass",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/37/id",
+        "line":  6543,
+        "current":  "silicone-glass-6"
+      },
+      "source_array_index":  37,
+      "product_index_array_index":  37,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/37/id",
+        "line":  410,
+        "current":  "silicone-glass-6"
+      },
+      "pdf_page":  11,
+      "component_count":  1,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/3/panelModels/6",
+        "/catalog/categories/0/series/3/panelModels/6",
+        "/catalog/series/3/catalogModels/6",
+        "/catalog/categories/0/series/3/catalogModels/6"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "silicone-0",
+      "code":  "10RC600",
+      "variant":  "Profile A",
+      "lid_type":  "pure-silicone",
+      "collection_id":  "silicone",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/38/id",
+        "line":  6575,
+        "current":  "silicone-0"
+      },
+      "source_array_index":  38,
+      "product_index_array_index":  38,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/38/id",
+        "line":  421,
+        "current":  "silicone-0"
+      },
+      "pdf_page":  10,
+      "component_count":  1,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/4/panelModels/0",
+        "/catalog/categories/0/series/4/panelModels/0",
+        "/catalog/series/4/catalogModels/0",
+        "/catalog/categories/0/series/4/catalogModels/0"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "silicone-1",
+      "code":  "10RC900",
+      "variant":  "Profile A",
+      "lid_type":  "pure-silicone",
+      "collection_id":  "silicone",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/39/id",
+        "line":  6607,
+        "current":  "silicone-1"
+      },
+      "source_array_index":  39,
+      "product_index_array_index":  39,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/39/id",
+        "line":  432,
+        "current":  "silicone-1"
+      },
+      "pdf_page":  10,
+      "component_count":  1,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/4/panelModels/1",
+        "/catalog/categories/0/series/4/panelModels/1",
+        "/catalog/series/4/catalogModels/1",
+        "/catalog/categories/0/series/4/catalogModels/1"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "silicone-2",
+      "code":  "10RC1200",
+      "variant":  "Profile A",
+      "lid_type":  "pure-silicone",
+      "collection_id":  "silicone",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/40/id",
+        "line":  6639,
+        "current":  "silicone-2"
+      },
+      "source_array_index":  40,
+      "product_index_array_index":  40,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/40/id",
+        "line":  443,
+        "current":  "silicone-2"
+      },
+      "pdf_page":  10,
+      "component_count":  1,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/4/panelModels/2",
+        "/catalog/categories/0/series/4/panelModels/2",
+        "/catalog/series/4/catalogModels/2",
+        "/catalog/categories/0/series/4/catalogModels/2"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "silicone-3",
+      "code":  "10RC600",
+      "variant":  "Profile B",
+      "lid_type":  "pure-silicone",
+      "collection_id":  "silicone",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/41/id",
+        "line":  6671,
+        "current":  "silicone-3"
+      },
+      "source_array_index":  41,
+      "product_index_array_index":  41,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/41/id",
+        "line":  454,
+        "current":  "silicone-3"
+      },
+      "pdf_page":  10,
+      "component_count":  1,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/4/panelModels/3",
+        "/catalog/categories/0/series/4/panelModels/3",
+        "/catalog/series/4/catalogModels/3",
+        "/catalog/categories/0/series/4/catalogModels/3"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "silicone-4",
+      "code":  "10RC900",
+      "variant":  "Profile B",
+      "lid_type":  "pure-silicone",
+      "collection_id":  "silicone",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/42/id",
+        "line":  6703,
+        "current":  "silicone-4"
+      },
+      "source_array_index":  42,
+      "product_index_array_index":  42,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/42/id",
+        "line":  465,
+        "current":  "silicone-4"
+      },
+      "pdf_page":  10,
+      "component_count":  1,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/4/panelModels/4",
+        "/catalog/categories/0/series/4/panelModels/4",
+        "/catalog/series/4/catalogModels/4",
+        "/catalog/categories/0/series/4/catalogModels/4"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "silicone-5",
+      "code":  "10RC1200",
+      "variant":  "Profile B",
+      "lid_type":  "pure-silicone",
+      "collection_id":  "silicone",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/43/id",
+        "line":  6735,
+        "current":  "silicone-5"
+      },
+      "source_array_index":  43,
+      "product_index_array_index":  43,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/43/id",
+        "line":  476,
+        "current":  "silicone-5"
+      },
+      "pdf_page":  10,
+      "component_count":  1,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/4/panelModels/5",
+        "/catalog/categories/0/series/4/panelModels/5",
+        "/catalog/series/4/catalogModels/5",
+        "/catalog/categories/0/series/4/catalogModels/5"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "alternate-pp-0",
+      "code":  "01RC550",
+      "variant":  "Alternate profile",
+      "lid_type":  "detachable-pp",
+      "collection_id":  "alternate-pp",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/44/id",
+        "line":  6767,
+        "current":  "alternate-pp-0"
+      },
+      "source_array_index":  44,
+      "product_index_array_index":  44,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/44/id",
+        "line":  487,
+        "current":  "alternate-pp-0"
+      },
+      "pdf_page":  11,
+      "component_count":  1,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/2/panelModels/0",
+        "/catalog/categories/0/series/2/panelModels/0",
+        "/catalog/series/2/catalogModels/0",
+        "/catalog/categories/0/series/2/catalogModels/0"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "alternate-pp-1",
+      "code":  "01RC1300",
+      "variant":  "Alternate profile",
+      "lid_type":  "detachable-pp",
+      "collection_id":  "alternate-pp",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/45/id",
+        "line":  6799,
+        "current":  "alternate-pp-1"
+      },
+      "source_array_index":  45,
+      "product_index_array_index":  45,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/45/id",
+        "line":  498,
+        "current":  "alternate-pp-1"
+      },
+      "pdf_page":  11,
+      "component_count":  1,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/2/panelModels/1",
+        "/catalog/categories/0/series/2/panelModels/1",
+        "/catalog/series/2/catalogModels/1",
+        "/catalog/categories/0/series/2/catalogModels/1"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "alternate-pp-2",
+      "code":  "01RC450/280",
+      "variant":  "",
+      "lid_type":  "detachable-pp",
+      "collection_id":  "alternate-pp",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/46/id",
+        "line":  6831,
+        "current":  "alternate-pp-2"
+      },
+      "source_array_index":  46,
+      "product_index_array_index":  46,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/46/id",
+        "line":  509,
+        "current":  "alternate-pp-2"
+      },
+      "pdf_page":  11,
+      "component_count":  2,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/2/panelModels/2",
+        "/catalog/categories/0/series/2/panelModels/2",
+        "/catalog/series/2/catalogModels/2",
+        "/catalog/categories/0/series/2/catalogModels/2"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "value-0",
+      "code":  "02RC580",
+      "variant":  "",
+      "lid_type":  "detachable-pp",
+      "collection_id":  "value",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/47/id",
+        "line":  6868,
+        "current":  "value-0"
+      },
+      "source_array_index":  47,
+      "product_index_array_index":  47,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/47/id",
+        "line":  520,
+        "current":  "value-0"
+      },
+      "pdf_page":  12,
+      "component_count":  1,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/5/panelModels/0",
+        "/catalog/categories/0/series/5/panelModels/0",
+        "/catalog/series/5/catalogModels/0",
+        "/catalog/categories/0/series/5/catalogModels/0"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "value-1",
+      "code":  "02RC850",
+      "variant":  "",
+      "lid_type":  "detachable-pp",
+      "collection_id":  "value",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/48/id",
+        "line":  6900,
+        "current":  "value-1"
+      },
+      "source_array_index":  48,
+      "product_index_array_index":  48,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/48/id",
+        "line":  531,
+        "current":  "value-1"
+      },
+      "pdf_page":  12,
+      "component_count":  1,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/5/panelModels/1",
+        "/catalog/categories/0/series/5/panelModels/1",
+        "/catalog/series/5/catalogModels/1",
+        "/catalog/categories/0/series/5/catalogModels/1"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "value-2",
+      "code":  "02RC1200",
+      "variant":  "",
+      "lid_type":  "detachable-pp",
+      "collection_id":  "value",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/49/id",
+        "line":  6932,
+        "current":  "value-2"
+      },
+      "source_array_index":  49,
+      "product_index_array_index":  49,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/49/id",
+        "line":  542,
+        "current":  "value-2"
+      },
+      "pdf_page":  12,
+      "component_count":  1,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/5/panelModels/2",
+        "/catalog/categories/0/series/5/panelModels/2",
+        "/catalog/series/5/catalogModels/2",
+        "/catalog/categories/0/series/5/catalogModels/2"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "value-3",
+      "code":  "02R700",
+      "variant":  "",
+      "lid_type":  "detachable-pp",
+      "collection_id":  "value",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/50/id",
+        "line":  6964,
+        "current":  "value-3"
+      },
+      "source_array_index":  50,
+      "product_index_array_index":  50,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/50/id",
+        "line":  553,
+        "current":  "value-3"
+      },
+      "pdf_page":  12,
+      "component_count":  1,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/5/panelModels/3",
+        "/catalog/categories/0/series/5/panelModels/3",
+        "/catalog/series/5/catalogModels/3",
+        "/catalog/categories/0/series/5/catalogModels/3"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    },
+    {
+      "id":  "value-4",
+      "code":  "02R1050",
+      "variant":  "",
+      "lid_type":  "detachable-pp",
+      "collection_id":  "value",
+      "source_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/51/id",
+        "line":  6996,
+        "current":  "value-4"
+      },
+      "source_array_index":  51,
+      "product_index_array_index":  51,
+      "product_index_ref":  {
+        "file":  "sandbox-maylendy-steel/data/product-index.json",
+        "pointer":  "/51/id",
+        "line":  564,
+        "current":  "value-4"
+      },
+      "pdf_page":  12,
+      "component_count":  1,
+      "catalog_mirror_pointers":  [
+        "/catalog/series/5/panelModels/4",
+        "/catalog/categories/0/series/5/panelModels/4",
+        "/catalog/series/5/catalogModels/4",
+        "/catalog/categories/0/series/5/catalogModels/4"
+      ],
+      "explicit_code_in_pdf":  true,
+      "index_matches_current_rendering":  true
+    }
+  ],
+  "component_mapping":  [
+    {
+      "record_id":  "rectangular-0",
+      "code":  "01RC400",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/0/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/0/model/details/0/capacity",
+        "line":  5294,
+        "current":  "400 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/0/model/details/0/unitReference",
+        "line":  5296,
+        "current":  "13.5 oz / 1.7 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/0/model/details/0/size",
+        "line":  5295,
+        "current":  "16.5 x 12.5 x 4.5 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  2,
+      "pdf_capacity_text_line":  8,
+      "pdf_capacity_raw":  "400ml/13.5oz/1.7cup",
+      "pdf_size_text_line":  9,
+      "pdf_size_raw":  "Size:16.5x12.5x4.5cm",
+      "printed_values":  {
+        "ml":  400,
+        "oz":  "13.5",
+        "oz_label_present":  true,
+        "cup":  "1.7",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "rectangular-1",
+      "code":  "01RC550",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/1/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/1/model/details/0/capacity",
+        "line":  5326,
+        "current":  "550 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/1/model/details/0/unitReference",
+        "line":  5328,
+        "current":  "18.6 oz / 2.3 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/1/model/details/0/size",
+        "line":  5327,
+        "current":  "16.5 x 12.5 x 6 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  2,
+      "pdf_capacity_text_line":  12,
+      "pdf_capacity_raw":  "550ml/18.6/2.3cup",
+      "pdf_size_text_line":  13,
+      "pdf_size_raw":  "Size:16.5x12.5x6cm",
+      "printed_values":  {
+        "ml":  550,
+        "oz":  "18.6",
+        "oz_label_present":  false,
+        "cup":  "2.3",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "rectangular-2",
+      "code":  "01RC650",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/2/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/2/model/details/0/capacity",
+        "line":  5358,
+        "current":  "650 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/2/model/details/0/unitReference",
+        "line":  5360,
+        "current":  "21.9 oz / 2.7 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/2/model/details/0/size",
+        "line":  5359,
+        "current":  "17.5 x 13 x 5.8 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  2,
+      "pdf_capacity_text_line":  16,
+      "pdf_capacity_raw":  "650ml/21.9oz/2.7cup",
+      "pdf_size_text_line":  17,
+      "pdf_size_raw":  "Size:17 .5x13x5.8cm",
+      "printed_values":  {
+        "ml":  650,
+        "oz":  "21.9",
+        "oz_label_present":  true,
+        "cup":  "2.7",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "rectangular-3",
+      "code":  "01RC1000",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/3/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/3/model/details/0/capacity",
+        "line":  5390,
+        "current":  "1,000 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/3/model/details/0/unitReference",
+        "line":  5392,
+        "current":  "33.8 oz / 4.2 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/3/model/details/0/size",
+        "line":  5391,
+        "current":  "17.5 x 13 x 9.2 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  2,
+      "pdf_capacity_text_line":  20,
+      "pdf_capacity_raw":  "1000ml/33.8oz/4.2cup",
+      "pdf_size_text_line":  21,
+      "pdf_size_raw":  "Size:17 .5x13x9.2cm",
+      "printed_values":  {
+        "ml":  1000,
+        "oz":  "33.8",
+        "oz_label_present":  true,
+        "cup":  "4.2",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "rectangular-4",
+      "code":  "01RC1300",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/4/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/4/model/details/0/capacity",
+        "line":  5422,
+        "current":  "1,300 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/4/model/details/0/unitReference",
+        "line":  5424,
+        "current":  "43.9 oz / 5.5 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/4/model/details/0/size",
+        "line":  5423,
+        "current":  "21.4 x 16.3 x 7.2 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  2,
+      "pdf_capacity_text_line":  24,
+      "pdf_capacity_raw":  "1300ml/43.9oz/5.5cup",
+      "pdf_size_text_line":  25,
+      "pdf_size_raw":  "Size:21.4x16.3x7 .2cm",
+      "printed_values":  {
+        "ml":  1300,
+        "oz":  "43.9",
+        "oz_label_present":  true,
+        "cup":  "5.5",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "rectangular-5",
+      "code":  "01RC2250",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/5/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/5/model/details/0/capacity",
+        "line":  5454,
+        "current":  "2,250 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/5/model/details/0/unitReference",
+        "line":  5456,
+        "current":  "76 oz / 9.5 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/5/model/details/0/size",
+        "line":  5455,
+        "current":  "24.8 x 19.3 x 8.2 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  2,
+      "pdf_capacity_text_line":  28,
+      "pdf_capacity_raw":  "2250ml/76oz/9.5cup",
+      "pdf_size_text_line":  29,
+      "pdf_size_raw":  "Size:24.8x19.3x8.2cm",
+      "printed_values":  {
+        "ml":  2250,
+        "oz":  "76",
+        "oz_label_present":  true,
+        "cup":  "9.5",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "square-14",
+      "code":  "01SQ400",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/6/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/6/model/details/0/capacity",
+        "line":  5486,
+        "current":  "400 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/6/model/details/0/unitReference",
+        "line":  5488,
+        "current":  "14 oz / 1.7 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/6/model/details/0/size",
+        "line":  5487,
+        "current":  "12.3 x 12.3 x 7 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  3,
+      "pdf_capacity_text_line":  65,
+      "pdf_capacity_raw":  "400ml/14oz/1.7cup",
+      "pdf_size_text_line":  66,
+      "pdf_size_raw":  "Size:12.3x12.3x7cm",
+      "printed_values":  {
+        "ml":  400,
+        "oz":  "14",
+        "oz_label_present":  true,
+        "cup":  "1.7",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "square-15",
+      "code":  "01SQ1000",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/7/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/7/model/details/0/capacity",
+        "line":  5518,
+        "current":  "1,000 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/7/model/details/0/unitReference",
+        "line":  5520,
+        "current":  "34 oz / 4.2 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/7/model/details/0/size",
+        "line":  5519,
+        "current":  "25.2 x 12.3 x 7 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  3,
+      "pdf_capacity_text_line":  69,
+      "pdf_capacity_raw":  "1000ml/34oz/4.2cup",
+      "pdf_size_text_line":  70,
+      "pdf_size_raw":  "Size:25.2x12.3x7cm",
+      "printed_values":  {
+        "ml":  1000,
+        "oz":  "34",
+        "oz_label_present":  true,
+        "cup":  "4.2",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "divided-17",
+      "code":  "01-SG450/280ml",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/8/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/8/model/details/0/capacity",
+        "line":  5550,
+        "current":  "730 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/8/model/details/0/unitReference",
+        "line":  5552,
+        "current":  "25 oz / 3.1 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/8/model/details/0/size",
+        "line":  5551,
+        "current":  "21.4 x 16.3 x 5.8 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  5,
+      "pdf_capacity_text_line":  99,
+      "pdf_capacity_raw":  "730ml/25oz/3.1cup",
+      "pdf_size_text_line":  100,
+      "pdf_size_raw":  "Size:21.4x16.3x5.8cm",
+      "printed_values":  {
+        "ml":  730,
+        "oz":  "25",
+        "oz_label_present":  true,
+        "cup":  "3.1",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "divided-18",
+      "code":  "01-SSG400/280/280ml",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/9/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/9/model/details/0/capacity",
+        "line":  5582,
+        "current":  "960 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/9/model/details/0/unitReference",
+        "line":  5584,
+        "current":  "32 oz"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/9/model/details/0/size",
+        "line":  5583,
+        "current":  "25.2 x 19.5 x 5.7 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  5,
+      "pdf_capacity_text_line":  103,
+      "pdf_capacity_raw":  "960ml/32oz/4.6cup",
+      "pdf_size_text_line":  104,
+      "pdf_size_raw":  "Size:25.2x19.5x5.7cm",
+      "printed_values":  {
+        "ml":  960,
+        "oz":  "32",
+        "oz_label_present":  true,
+        "cup":  "4.6",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+        "missing_printed_cup"
+      ]
+    },
+    {
+      "record_id":  "rectangular-6",
+      "code":  "01RC2000",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/10/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/10/model/details/0/capacity",
+        "line":  5614,
+        "current":  "2,000 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/10/model/details/0/unitReference",
+        "line":  5616,
+        "current":  "68 oz"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/10/model/details/0/size",
+        "line":  5615,
+        "current":  "29.8 x 21.4 x 5.8 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  2,
+      "pdf_capacity_text_line":  32,
+      "pdf_capacity_raw":  "2000ml/62oz/8.4cup",
+      "pdf_size_text_line":  33,
+      "pdf_size_raw":  "Size:29.8x21.4x5.8cm",
+      "printed_values":  {
+        "ml":  2000,
+        "oz":  "62",
+        "oz_label_present":  true,
+        "cup":  "8.4",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+        "owner_approved_oz_override",
+        "missing_printed_cup"
+      ]
+    },
+    {
+      "record_id":  "rectangular-7",
+      "code":  "01RC2500",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/11/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/11/model/details/0/capacity",
+        "line":  5646,
+        "current":  "2,500 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/11/model/details/0/unitReference",
+        "line":  5648,
+        "current":  "84 oz / 10.6 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/11/model/details/0/size",
+        "line":  5647,
+        "current":  "29.8 x 21.4 x 7 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  2,
+      "pdf_capacity_text_line":  36,
+      "pdf_capacity_raw":  "2500ml/84oz/10.6cup",
+      "pdf_size_text_line":  37,
+      "pdf_size_raw":  "Size:29.8x21.4x7cm",
+      "printed_values":  {
+        "ml":  2500,
+        "oz":  "84",
+        "oz_label_present":  true,
+        "cup":  "10.6",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "rectangular-8",
+      "code":  "01RC4200",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/12/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/12/model/details/0/capacity",
+        "line":  5678,
+        "current":  "4,200 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/12/model/details/0/unitReference",
+        "line":  5680,
+        "current":  "142 oz / 17.8 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/12/model/details/0/size",
+        "line":  5679,
+        "current":  "29.8 x 21.4 x 10.5 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  2,
+      "pdf_capacity_text_line":  40,
+      "pdf_capacity_raw":  "4200ml/142oz/17 .8cup",
+      "pdf_size_text_line":  41,
+      "pdf_size_raw":  "Size:29.8x21.4x10.5cm",
+      "printed_values":  {
+        "ml":  4200,
+        "oz":  "142",
+        "oz_label_present":  true,
+        "cup":  "17.8",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "rectangular-9",
+      "code":  "01RC3000",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/13/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/13/model/details/0/capacity",
+        "line":  5710,
+        "current":  "3,000 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/13/model/details/0/unitReference",
+        "line":  5712,
+        "current":  "101 oz / 12.7 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/13/model/details/0/size",
+        "line":  5711,
+        "current":  "36.8 x 25.2 x 6.2 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  3,
+      "pdf_capacity_text_line":  49,
+      "pdf_capacity_raw":  "3000ml/101oz/12.7cup",
+      "pdf_size_text_line":  50,
+      "pdf_size_raw":  "Size:36.8x25.2x6.2cm",
+      "printed_values":  {
+        "ml":  3000,
+        "oz":  "101",
+        "oz_label_present":  true,
+        "cup":  "12.7",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "rectangular-10",
+      "code":  "01RC5000",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/14/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/14/model/details/0/capacity",
+        "line":  5742,
+        "current":  "5,000 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/14/model/details/0/unitReference",
+        "line":  5744,
+        "current":  "169 oz / 21.1 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/14/model/details/0/size",
+        "line":  5743,
+        "current":  "36.8 x 25.2 x 8.5 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  3,
+      "pdf_capacity_text_line":  53,
+      "pdf_capacity_raw":  "5000ml/169oz/21.1cup",
+      "pdf_size_text_line":  54,
+      "pdf_size_raw":  "Size:36.8x25.2x8.5cm",
+      "printed_values":  {
+        "ml":  5000,
+        "oz":  "169",
+        "oz_label_present":  true,
+        "cup":  "21.1",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "rectangular-11",
+      "code":  "01RC6600",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/15/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/15/model/details/0/capacity",
+        "line":  5774,
+        "current":  "6,600 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/15/model/details/0/unitReference",
+        "line":  5776,
+        "current":  "223 oz / 27.9 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/15/model/details/0/size",
+        "line":  5775,
+        "current":  "36.8 x 25.2 x 11.3 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  3,
+      "pdf_capacity_text_line":  57,
+      "pdf_capacity_raw":  "6600ml/223oz/27 .9cup",
+      "pdf_size_text_line":  58,
+      "pdf_size_raw":  "Size:36.8x25.2x11.3cm",
+      "printed_values":  {
+        "ml":  6600,
+        "oz":  "223",
+        "oz_label_present":  true,
+        "cup":  "27.9",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "rectangular-12",
+      "code":  "01RC2600",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/16/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/16/model/details/0/capacity",
+        "line":  5806,
+        "current":  "2,600 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/16/model/details/0/unitReference",
+        "line":  5808,
+        "current":  "87 oz / 11 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/16/model/details/0/size",
+        "line":  5807,
+        "current":  "38.8 x 16.5 x 7.5 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  3,
+      "pdf_capacity_text_line":  61,
+      "pdf_capacity_raw":  "2600ml/87oz/11cup",
+      "pdf_size_text_line":  62,
+      "pdf_size_raw":  "Size:38.8x16.5x7 .5cm",
+      "printed_values":  {
+        "ml":  2600,
+        "oz":  "87",
+        "oz_label_present":  true,
+        "cup":  "11",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "rectangular-13",
+      "code":  "01RC3700",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/17/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/17/model/details/0/capacity",
+        "line":  5838,
+        "current":  "3,700 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/17/model/details/0/unitReference",
+        "line":  5840,
+        "current":  "125 oz / 15.6 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/17/model/details/0/size",
+        "line":  5839,
+        "current":  "38.8 x 16.5 x 10 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  3,
+      "pdf_capacity_text_line":  79,
+      "pdf_capacity_raw":  "3700ml/125oz/15.6cup",
+      "pdf_size_text_line":  80,
+      "pdf_size_raw":  "Size:38.8x16.5x10cm",
+      "printed_values":  {
+        "ml":  3700,
+        "oz":  "125",
+        "oz_label_present":  true,
+        "cup":  "15.6",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "divided-19",
+      "code":  "01-CTXSSG1700ml",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/18/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/18/model/details/0/capacity",
+        "line":  5870,
+        "current":  "1,700 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/18/model/details/0/unitReference",
+        "line":  5872,
+        "current":  "57 oz / 7.2 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/18/model/details/0/size",
+        "line":  5871,
+        "current":  "38.8 x 16.5 x 5.8 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  5,
+      "pdf_capacity_text_line":  107,
+      "pdf_capacity_raw":  "1700ml/57oz/7 .2cup",
+      "pdf_size_text_line":  108,
+      "pdf_size_raw":  "Size:38.8x16.5x5.8",
+      "printed_values":  {
+        "ml":  1700,
+        "oz":  "57",
+        "oz_label_present":  true,
+        "cup":  "7.2",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "square-16",
+      "code":  "01SQ4300",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/19/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/19/model/details/0/capacity",
+        "line":  5902,
+        "current":  "4,300 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/19/model/details/0/unitReference",
+        "line":  5904,
+        "current":  "145 oz / 18.2 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/19/model/details/0/size",
+        "line":  5903,
+        "current":  "29 x 29 x 8.7 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  3,
+      "pdf_capacity_text_line":  73,
+      "pdf_capacity_raw":  "4300ml/145oz/18.2cup",
+      "pdf_size_text_line":  74,
+      "pdf_size_raw":  "Size:29x29x8.7cm",
+      "printed_values":  {
+        "ml":  4300,
+        "oz":  "145",
+        "oz_label_present":  true,
+        "cup":  "18.2",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "sets-0",
+      "code":  "01-BXH650/1300ml",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/20/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/20/model/details/0/capacity",
+        "line":  5934,
+        "current":  "650 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/20/model/details/0/unitReference",
+        "line":  5936,
+        "current":  "22 oz / 2.7 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/20/model/details/0/size",
+        "line":  5935,
+        "current":  "17.5 x 13 x 5.8 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  7,
+      "pdf_capacity_text_line":  151,
+      "pdf_capacity_raw":  "650ml/22oz/2.7cup",
+      "pdf_size_text_line":  152,
+      "pdf_size_raw":  "Size:17 .5x13x5.8cm",
+      "printed_values":  {
+        "ml":  650,
+        "oz":  "22",
+        "oz_label_present":  true,
+        "cup":  "2.7",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "sets-0",
+      "code":  "01-BXH650/1300ml",
+      "variant":  "",
+      "component_index":  1,
+      "component_number":  2,
+      "source_pointer":  "/models/20/model/details/1",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/20/model/details/1/capacity",
+        "line":  5939,
+        "current":  "1,300 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/20/model/details/1/unitReference",
+        "line":  5941,
+        "current":  "44 oz / 5.5 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/20/model/details/1/size",
+        "line":  5940,
+        "current":  "21.5 x 16.1 x 7.1 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  7,
+      "pdf_capacity_text_line":  153,
+      "pdf_capacity_raw":  "1300ml/44oz/5.5cup",
+      "pdf_size_text_line":  154,
+      "pdf_size_raw":  "Size:21.5x16.1x7 .1cm",
+      "printed_values":  {
+        "ml":  1300,
+        "oz":  "44",
+        "oz_label_present":  true,
+        "cup":  "5.5",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "sets-1",
+      "code":  "01-BXH650/1300/2250ml",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/21/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/21/model/details/0/capacity",
+        "line":  5971,
+        "current":  "650 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/21/model/details/0/unitReference",
+        "line":  5973,
+        "current":  "22 oz / 2.7 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/21/model/details/0/size",
+        "line":  5972,
+        "current":  "17.5 x 13 x 5.8 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  7,
+      "pdf_capacity_text_line":  163,
+      "pdf_capacity_raw":  "650ml/22oz/2.7cup",
+      "pdf_size_text_line":  164,
+      "pdf_size_raw":  "Size:17 .5x13x5.8cm",
+      "printed_values":  {
+        "ml":  650,
+        "oz":  "22",
+        "oz_label_present":  true,
+        "cup":  "2.7",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "sets-1",
+      "code":  "01-BXH650/1300/2250ml",
+      "variant":  "",
+      "component_index":  1,
+      "component_number":  2,
+      "source_pointer":  "/models/21/model/details/1",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/21/model/details/1/capacity",
+        "line":  5976,
+        "current":  "1,300 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/21/model/details/1/unitReference",
+        "line":  5978,
+        "current":  "44 oz / 5.5 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/21/model/details/1/size",
+        "line":  5977,
+        "current":  "21.5 x 16.1 x 7.1 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  7,
+      "pdf_capacity_text_line":  165,
+      "pdf_capacity_raw":  "1300ml/44oz/5.5cup",
+      "pdf_size_text_line":  166,
+      "pdf_size_raw":  "Size:21.5x16.1x7 .1cn",
+      "printed_values":  {
+        "ml":  1300,
+        "oz":  "44",
+        "oz_label_present":  true,
+        "cup":  "5.5",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "sets-1",
+      "code":  "01-BXH650/1300/2250ml",
+      "variant":  "",
+      "component_index":  2,
+      "component_number":  3,
+      "source_pointer":  "/models/21/model/details/2",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/21/model/details/2/capacity",
+        "line":  5981,
+        "current":  "To confirm"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/21/model/details/2/unitReference",
+        "line":  5983,
+        "current":  ""
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/21/model/details/2/size",
+        "line":  5982,
+        "current":  "24.8 x 19.3 x 8.2 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  7,
+      "pdf_capacity_text_line":  159,
+      "pdf_capacity_raw":  "2500ml/85oz/10.6cup",
+      "pdf_size_text_line":  160,
+      "pdf_size_raw":  "Size:24.8x19.3x8.2cm",
+      "printed_values":  {
+        "ml":  2500,
+        "oz":  "85",
+        "oz_label_present":  true,
+        "cup":  "10.6",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+        "missing_capacity_owner_confirmed",
+        "missing_oz",
+        "missing_printed_cup"
+      ]
+    },
+    {
+      "record_id":  "sets-2",
+      "code":  "01-B01-BXH400*2/2000ml",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/22/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/22/model/details/0/capacity",
+        "line":  6019,
+        "current":  "400 ml x 2"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/22/model/details/0/unitReference",
+        "line":  6021,
+        "current":  "14 oz / 1.7 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/22/model/details/0/size",
+        "line":  6020,
+        "current":  "16.5 x 12.5 x 4.5 cm"
+      },
+      "quantity_in_existing_data":  2,
+      "pdf_page":  7,
+      "pdf_capacity_text_line":  157,
+      "pdf_capacity_raw":  "400ml/14oz/1.7cup",
+      "pdf_size_text_line":  158,
+      "pdf_size_raw":  "Size:16.5x12.5x4.5cm",
+      "printed_values":  {
+        "ml":  400,
+        "oz":  "14",
+        "oz_label_present":  true,
+        "cup":  "1.7",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "sets-2",
+      "code":  "01-B01-BXH400*2/2000ml",
+      "variant":  "",
+      "component_index":  1,
+      "component_number":  2,
+      "source_pointer":  "/models/22/model/details/1",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/22/model/details/1/capacity",
+        "line":  6024,
+        "current":  "2,000 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/22/model/details/1/unitReference",
+        "line":  6026,
+        "current":  "68 oz / 8.5 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/22/model/details/1/size",
+        "line":  6025,
+        "current":  "29.8 x 21.4 x 5.8 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  7,
+      "pdf_capacity_text_line":  161,
+      "pdf_capacity_raw":  "2000ml/68oz/8.5cup",
+      "pdf_size_text_line":  162,
+      "pdf_size_raw":  "Size:29.8x21.4x5.8cm",
+      "printed_values":  {
+        "ml":  2000,
+        "oz":  "68",
+        "oz_label_present":  true,
+        "cup":  "8.5",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "sets-3",
+      "code":  "01-KP650*2/2500ml",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/23/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/23/model/details/0/capacity",
+        "line":  6056,
+        "current":  "650 ml x 2"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/23/model/details/0/unitReference",
+        "line":  6058,
+        "current":  "22 oz / 2.7 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/23/model/details/0/size",
+        "line":  6057,
+        "current":  "17.5 x 13 x 5.8 cm"
+      },
+      "quantity_in_existing_data":  2,
+      "pdf_page":  7,
+      "pdf_capacity_text_line":  174,
+      "pdf_capacity_raw":  "650ml/22oz/2.7cup",
+      "pdf_size_text_line":  175,
+      "pdf_size_raw":  "Size:17 .5x13x5.8cm",
+      "printed_values":  {
+        "ml":  650,
+        "oz":  "22",
+        "oz_label_present":  true,
+        "cup":  "2.7",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "sets-3",
+      "code":  "01-KP650*2/2500ml",
+      "variant":  "",
+      "component_index":  1,
+      "component_number":  2,
+      "source_pointer":  "/models/23/model/details/1",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/23/model/details/1/capacity",
+        "line":  6061,
+        "current":  "2,500 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/23/model/details/1/unitReference",
+        "line":  6063,
+        "current":  "85 oz / 10.6 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/23/model/details/1/size",
+        "line":  6062,
+        "current":  "29.8 x 21.4 x 7 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  7,
+      "pdf_capacity_text_line":  167,
+      "pdf_capacity_raw":  "2500ml/85oz/10.6cup",
+      "pdf_size_text_line":  168,
+      "pdf_size_raw":  "Size:29.8x21.4x7cm",
+      "printed_values":  {
+        "ml":  2500,
+        "oz":  "85",
+        "oz_label_present":  true,
+        "cup":  "10.6",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "sets-4",
+      "code":  "01-BXH1000*2/4200ml",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/24/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/24/model/details/0/capacity",
+        "line":  6098,
+        "current":  "1,000 ml x 2"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/24/model/details/0/unitReference",
+        "line":  6100,
+        "current":  "34 oz / 4.2 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/24/model/details/0/size",
+        "line":  6099,
+        "current":  "17.5 x 13 x 9.2 cm"
+      },
+      "quantity_in_existing_data":  2,
+      "pdf_page":  8,
+      "pdf_capacity_text_line":  199,
+      "pdf_capacity_raw":  "1000ml/34oz/4.2cup",
+      "pdf_size_text_line":  200,
+      "pdf_size_raw":  "Size:17 .5x13x9.2cm",
+      "printed_values":  {
+        "ml":  1000,
+        "oz":  "34",
+        "oz_label_present":  true,
+        "cup":  "4.2",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "sets-4",
+      "code":  "01-BXH1000*2/4200ml",
+      "variant":  "",
+      "component_index":  1,
+      "component_number":  2,
+      "source_pointer":  "/models/24/model/details/1",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/24/model/details/1/capacity",
+        "line":  6103,
+        "current":  "4,200 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/24/model/details/1/unitReference",
+        "line":  6105,
+        "current":  "142 oz / 17.8 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/24/model/details/1/size",
+        "line":  6104,
+        "current":  "29.8 x 21.4 x 10.5 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  8,
+      "pdf_capacity_text_line":  201,
+      "pdf_capacity_raw":  "4200ml/142oz/17 .8cup",
+      "pdf_size_text_line":  202,
+      "pdf_size_raw":  "Size:29.8x21.4x10.5cm",
+      "printed_values":  {
+        "ml":  4200,
+        "oz":  "142",
+        "oz_label_present":  true,
+        "cup":  "17.8",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "sets-5",
+      "code":  "01-KP650*2/1300*2/5000ml",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/25/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/25/model/details/0/capacity",
+        "line":  6135,
+        "current":  "650 ml x 2"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/25/model/details/0/unitReference",
+        "line":  6137,
+        "current":  "22 oz / 2.7 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/25/model/details/0/size",
+        "line":  6136,
+        "current":  "17.5 x 13 x 5.8 cm"
+      },
+      "quantity_in_existing_data":  2,
+      "pdf_page":  8,
+      "pdf_capacity_text_line":  184,
+      "pdf_capacity_raw":  "650ml/22oz/2.7cup",
+      "pdf_size_text_line":  185,
+      "pdf_size_raw":  "Size:17 .5x13x5.8cm",
+      "printed_values":  {
+        "ml":  650,
+        "oz":  "22",
+        "oz_label_present":  true,
+        "cup":  "2.7",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "sets-5",
+      "code":  "01-KP650*2/1300*2/5000ml",
+      "variant":  "",
+      "component_index":  1,
+      "component_number":  2,
+      "source_pointer":  "/models/25/model/details/1",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/25/model/details/1/capacity",
+        "line":  6140,
+        "current":  "1,300 ml x 2"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/25/model/details/1/unitReference",
+        "line":  6142,
+        "current":  "44 oz / 5.5 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/25/model/details/1/size",
+        "line":  6141,
+        "current":  "21.5 x 16.1 x 7.1 cm"
+      },
+      "quantity_in_existing_data":  2,
+      "pdf_page":  8,
+      "pdf_capacity_text_line":  186,
+      "pdf_capacity_raw":  "1300ml/44oz/5.5cup",
+      "pdf_size_text_line":  187,
+      "pdf_size_raw":  "Size:21.5x16.1x7 .1cm",
+      "printed_values":  {
+        "ml":  1300,
+        "oz":  "44",
+        "oz_label_present":  true,
+        "cup":  "5.5",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "sets-5",
+      "code":  "01-KP650*2/1300*2/5000ml",
+      "variant":  "",
+      "component_index":  2,
+      "component_number":  3,
+      "source_pointer":  "/models/25/model/details/2",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/25/model/details/2/capacity",
+        "line":  6145,
+        "current":  "5,000 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/25/model/details/2/unitReference",
+        "line":  6147,
+        "current":  "169 oz / 21.1 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/25/model/details/2/size",
+        "line":  6146,
+        "current":  "36.8 x 25.2 x 8.5 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  8,
+      "pdf_capacity_text_line":  182,
+      "pdf_capacity_raw":  "5000ml/169oz/21.1cup",
+      "pdf_size_text_line":  183,
+      "pdf_size_raw":  "Size:36.8x25.2x8.5cm",
+      "printed_values":  {
+        "ml":  5000,
+        "oz":  "169",
+        "oz_label_present":  true,
+        "cup":  "21.1",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "sets-6",
+      "code":  "01-CTX650*2/2600ml",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/26/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/26/model/details/0/capacity",
+        "line":  6177,
+        "current":  "650 ml x 2"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/26/model/details/0/unitReference",
+        "line":  6179,
+        "current":  "22 oz / 2.7 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/26/model/details/0/size",
+        "line":  6178,
+        "current":  "17.5 x 13 x 5.8 cm"
+      },
+      "quantity_in_existing_data":  2,
+      "pdf_page":  8,
+      "pdf_capacity_text_line":  188,
+      "pdf_capacity_raw":  "650ml/22oz/2.7cup",
+      "pdf_size_text_line":  189,
+      "pdf_size_raw":  "Size:17 .5x13x5.8cm",
+      "printed_values":  {
+        "ml":  650,
+        "oz":  "22",
+        "oz_label_present":  true,
+        "cup":  "2.7",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "sets-6",
+      "code":  "01-CTX650*2/2600ml",
+      "variant":  "",
+      "component_index":  1,
+      "component_number":  2,
+      "source_pointer":  "/models/26/model/details/1",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/26/model/details/1/capacity",
+        "line":  6182,
+        "current":  "2,600 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/26/model/details/1/unitReference",
+        "line":  6184,
+        "current":  "88 oz / 11 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/26/model/details/1/size",
+        "line":  6183,
+        "current":  "38.8 x 16.5 x 7.5 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  8,
+      "pdf_capacity_text_line":  190,
+      "pdf_capacity_raw":  "2600ml/88oz/11cup",
+      "pdf_size_text_line":  191,
+      "pdf_size_raw":  "Size:38.8x16.5x7 .5cm",
+      "printed_values":  {
+        "ml":  2600,
+        "oz":  "88",
+        "oz_label_present":  true,
+        "cup":  "11",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "sets-7",
+      "code":  "01-CTX1000*2/3700ml",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/27/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/27/model/details/0/capacity",
+        "line":  6214,
+        "current":  "1,000 ml x 2"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/27/model/details/0/unitReference",
+        "line":  6216,
+        "current":  "34 oz / 4.2 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/27/model/details/0/size",
+        "line":  6215,
+        "current":  "17.5 x 13 x 9.2 cm"
+      },
+      "quantity_in_existing_data":  2,
+      "pdf_page":  8,
+      "pdf_capacity_text_line":  192,
+      "pdf_capacity_raw":  "1000ml/34oz/4.2cup",
+      "pdf_size_text_line":  193,
+      "pdf_size_raw":  "Size:17 .5x13x9.2cm",
+      "printed_values":  {
+        "ml":  1000,
+        "oz":  "34",
+        "oz_label_present":  true,
+        "cup":  "4.2",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "sets-7",
+      "code":  "01-CTX1000*2/3700ml",
+      "variant":  "",
+      "component_index":  1,
+      "component_number":  2,
+      "source_pointer":  "/models/27/model/details/1",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/27/model/details/1/capacity",
+        "line":  6219,
+        "current":  "3,700 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/27/model/details/1/unitReference",
+        "line":  6221,
+        "current":  "125 oz / 15.6 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/27/model/details/1/size",
+        "line":  6220,
+        "current":  "38.8 x 16.5 x 10.1 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  8,
+      "pdf_capacity_text_line":  194,
+      "pdf_capacity_raw":  "3700ml/125oz/15.6cup",
+      "pdf_size_text_line":  195,
+      "pdf_size_raw":  "Size:38.8*16.5*10.1cm",
+      "printed_values":  {
+        "ml":  3700,
+        "oz":  "125",
+        "oz_label_present":  true,
+        "cup":  "15.6",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "sets-8",
+      "code":  "01-KP400*2/1000/4300ml",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/28/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/28/model/details/0/capacity",
+        "line":  6251,
+        "current":  "400 ml x 2"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/28/model/details/0/unitReference",
+        "line":  6253,
+        "current":  "14 oz / 1.7 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/28/model/details/0/size",
+        "line":  6252,
+        "current":  "12.3 x 12.3 x 7 cm"
+      },
+      "quantity_in_existing_data":  2,
+      "pdf_page":  9,
+      "pdf_capacity_text_line":  213,
+      "pdf_capacity_raw":  "400ml/14oz/1.7cup",
+      "pdf_size_text_line":  214,
+      "pdf_size_raw":  "Size:12.3x12.3x7cm",
+      "printed_values":  {
+        "ml":  400,
+        "oz":  "14",
+        "oz_label_present":  true,
+        "cup":  "1.7",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "sets-8",
+      "code":  "01-KP400*2/1000/4300ml",
+      "variant":  "",
+      "component_index":  1,
+      "component_number":  2,
+      "source_pointer":  "/models/28/model/details/1",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/28/model/details/1/capacity",
+        "line":  6256,
+        "current":  "1,000 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/28/model/details/1/unitReference",
+        "line":  6258,
+        "current":  "34 oz / 4.2 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/28/model/details/1/size",
+        "line":  6257,
+        "current":  "25.2 x 12.3 x 7 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  9,
+      "pdf_capacity_text_line":  215,
+      "pdf_capacity_raw":  "1000ml/34oz/4.2cup",
+      "pdf_size_text_line":  216,
+      "pdf_size_raw":  "Size:25.2x12.3x7cm",
+      "printed_values":  {
+        "ml":  1000,
+        "oz":  "34",
+        "oz_label_present":  true,
+        "cup":  "4.2",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "sets-8",
+      "code":  "01-KP400*2/1000/4300ml",
+      "variant":  "",
+      "component_index":  2,
+      "component_number":  3,
+      "source_pointer":  "/models/28/model/details/2",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/28/model/details/2/capacity",
+        "line":  6261,
+        "current":  "4,300 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/28/model/details/2/unitReference",
+        "line":  6263,
+        "current":  "145 oz / 18.2 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/28/model/details/2/size",
+        "line":  6262,
+        "current":  "29 x 29 x 8.7 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  9,
+      "pdf_capacity_text_line":  217,
+      "pdf_capacity_raw":  "4300ml/145oz/18.2cup",
+      "pdf_size_text_line":  218,
+      "pdf_size_raw":  "Size:29x29x8.7cm",
+      "printed_values":  {
+        "ml":  4300,
+        "oz":  "145",
+        "oz_label_present":  true,
+        "cup":  "18.2",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "sets-9",
+      "code":  "01-KP1000*2/4300ml",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/29/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/29/model/details/0/capacity",
+        "line":  6293,
+        "current":  "1,000 ml x 2"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/29/model/details/0/unitReference",
+        "line":  6295,
+        "current":  "34 oz / 4.2 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/29/model/details/0/size",
+        "line":  6294,
+        "current":  "25.2 x 12.3 x 7 cm"
+      },
+      "quantity_in_existing_data":  2,
+      "pdf_page":  9,
+      "pdf_capacity_text_line":  223,
+      "pdf_capacity_raw":  "1000ml/34oz/4.2cup",
+      "pdf_size_text_line":  224,
+      "pdf_size_raw":  "Size:25.2x12.3x7cm",
+      "printed_values":  {
+        "ml":  1000,
+        "oz":  "34",
+        "oz_label_present":  true,
+        "cup":  "4.2",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "sets-9",
+      "code":  "01-KP1000*2/4300ml",
+      "variant":  "",
+      "component_index":  1,
+      "component_number":  2,
+      "source_pointer":  "/models/29/model/details/1",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/29/model/details/1/capacity",
+        "line":  6298,
+        "current":  "4,300 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/29/model/details/1/unitReference",
+        "line":  6300,
+        "current":  "145 oz / 18.2 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/29/model/details/1/size",
+        "line":  6299,
+        "current":  "29 x 29 x 8.7 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  9,
+      "pdf_capacity_text_line":  208,
+      "pdf_capacity_raw":  "4300ml/145oz/18.2cup",
+      "pdf_size_text_line":  209,
+      "pdf_size_raw":  "Size:29x29x8.7cm",
+      "printed_values":  {
+        "ml":  4300,
+        "oz":  "145",
+        "oz_label_present":  true,
+        "cup":  "18.2",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "sets-10",
+      "code":  "01-KP400*4/4300ml",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/30/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/30/model/details/0/capacity",
+        "line":  6330,
+        "current":  "400 ml x 4"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/30/model/details/0/unitReference",
+        "line":  6332,
+        "current":  "14 oz / 1.7 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/30/model/details/0/size",
+        "line":  6331,
+        "current":  "12.3 x 12.3 x 7 cm"
+      },
+      "quantity_in_existing_data":  4,
+      "pdf_page":  9,
+      "pdf_capacity_text_line":  219,
+      "pdf_capacity_raw":  "400ml/14oz/1.7cup",
+      "pdf_size_text_line":  220,
+      "pdf_size_raw":  "Size:12.3x12.3x7cm",
+      "printed_values":  {
+        "ml":  400,
+        "oz":  "14",
+        "oz_label_present":  true,
+        "cup":  "1.7",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+        "formal_code_and_x4_not_explicit_in_pdf_text"
+      ]
+    },
+    {
+      "record_id":  "sets-10",
+      "code":  "01-KP400*4/4300ml",
+      "variant":  "",
+      "component_index":  1,
+      "component_number":  2,
+      "source_pointer":  "/models/30/model/details/1",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/30/model/details/1/capacity",
+        "line":  6335,
+        "current":  "4,300 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/30/model/details/1/unitReference",
+        "line":  6337,
+        "current":  "145 oz / 18.2 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/30/model/details/1/size",
+        "line":  6336,
+        "current":  "29 x 29 x 8.7 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  9,
+      "pdf_capacity_text_line":  221,
+      "pdf_capacity_raw":  "4300ml/145oz/18.2cup",
+      "pdf_size_text_line":  222,
+      "pdf_size_raw":  "Size:29x29x8.7cm",
+      "printed_values":  {
+        "ml":  4300,
+        "oz":  "145",
+        "oz_label_present":  true,
+        "cup":  "18.2",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+        "formal_code_and_x4_not_explicit_in_pdf_text"
+      ]
+    },
+    {
+      "record_id":  "silicone-glass-0",
+      "code":  "10RC600",
+      "variant":  "Rectangular",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/31/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/31/model/details/0/capacity",
+        "line":  6367,
+        "current":  "600 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/31/model/details/0/unitReference",
+        "line":  6369,
+        "current":  "20.3 oz / 2.5 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/31/model/details/0/size",
+        "line":  6368,
+        "current":  "15.2 x 11.1 x 5.4 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  10,
+      "pdf_capacity_text_line":  256,
+      "pdf_capacity_raw":  "600ml/20.3oz/2.5cup",
+      "pdf_size_text_line":  257,
+      "pdf_size_raw":  "Size:15.2x11.1x5.4cm",
+      "printed_values":  {
+        "ml":  600,
+        "oz":  "20.3",
+        "oz_label_present":  true,
+        "cup":  "2.5",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "silicone-glass-1",
+      "code":  "10RC900",
+      "variant":  "Rectangular",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/32/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/32/model/details/0/capacity",
+        "line":  6399,
+        "current":  "900 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/32/model/details/0/unitReference",
+        "line":  6401,
+        "current":  "30.4 oz / 3.8 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/32/model/details/0/size",
+        "line":  6400,
+        "current":  "17.8 x 12.1 x 5.8 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  10,
+      "pdf_capacity_text_line":  260,
+      "pdf_capacity_raw":  "900ml/30.4oz/3.8cup",
+      "pdf_size_text_line":  261,
+      "pdf_size_raw":  "Size:17 .8x12.1x5.8cm",
+      "printed_values":  {
+        "ml":  900,
+        "oz":  "30.4",
+        "oz_label_present":  true,
+        "cup":  "3.8",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "silicone-glass-2",
+      "code":  "10RC1200",
+      "variant":  "Rectangular",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/33/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/33/model/details/0/capacity",
+        "line":  6431,
+        "current":  "1,200 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/33/model/details/0/unitReference",
+        "line":  6433,
+        "current":  "40.6 oz / 5.1 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/33/model/details/0/size",
+        "line":  6432,
+        "current":  "19.4 x 14.2 x 6 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  10,
+      "pdf_capacity_text_line":  264,
+      "pdf_capacity_raw":  "1200ml/40.6oz/5.1cup",
+      "pdf_size_text_line":  265,
+      "pdf_size_raw":  "Size:19.4x14.2x6cm",
+      "printed_values":  {
+        "ml":  1200,
+        "oz":  "40.6",
+        "oz_label_present":  true,
+        "cup":  "5.1",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "silicone-glass-3",
+      "code":  "10r280",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/34/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/34/model/details/0/capacity",
+        "line":  6463,
+        "current":  "280 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/34/model/details/0/unitReference",
+        "line":  6465,
+        "current":  "9.5 oz / 1.2 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/34/model/details/0/size",
+        "line":  6464,
+        "current":  "10 x 5.3 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  11,
+      "pdf_capacity_text_line":  271,
+      "pdf_capacity_raw":  "280ml/9.5oz/1.2cup",
+      "pdf_size_text_line":  272,
+      "pdf_size_raw":  "Size:10x5.3cm",
+      "printed_values":  {
+        "ml":  280,
+        "oz":  "9.5",
+        "oz_label_present":  true,
+        "cup":  "1.2",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "silicone-glass-4",
+      "code":  "10R630",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/35/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/35/model/details/0/capacity",
+        "line":  6495,
+        "current":  "630 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/35/model/details/0/unitReference",
+        "line":  6497,
+        "current":  "21.3 oz / 2.7 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/35/model/details/0/size",
+        "line":  6496,
+        "current":  "12.8 x 6.5 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  11,
+      "pdf_capacity_text_line":  273,
+      "pdf_capacity_raw":  "630ml/21.3oz/2.7cup",
+      "pdf_size_text_line":  274,
+      "pdf_size_raw":  "Size:12.8x6.5cm",
+      "printed_values":  {
+        "ml":  630,
+        "oz":  "21.3",
+        "oz_label_present":  true,
+        "cup":  "2.7",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "silicone-glass-5",
+      "code":  "10R1200",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/36/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/36/model/details/0/capacity",
+        "line":  6527,
+        "current":  "1,200 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/36/model/details/0/unitReference",
+        "line":  6529,
+        "current":  "40.6 oz / 5.1 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/36/model/details/0/size",
+        "line":  6528,
+        "current":  "15.7 x 8.5 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  11,
+      "pdf_capacity_text_line":  277,
+      "pdf_capacity_raw":  "1200ml/40.6oz/5.1cup",
+      "pdf_size_text_line":  278,
+      "pdf_size_raw":  "Size:15.7x8.5cm",
+      "printed_values":  {
+        "ml":  1200,
+        "oz":  "40.6",
+        "oz_label_present":  true,
+        "cup":  "5.1",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "silicone-glass-6",
+      "code":  "10R2100",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/37/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/37/model/details/0/capacity",
+        "line":  6559,
+        "current":  "2,100 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/37/model/details/0/unitReference",
+        "line":  6561,
+        "current":  "71 oz / 8.9 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/37/model/details/0/size",
+        "line":  6560,
+        "current":  "19 x 10 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  11,
+      "pdf_capacity_text_line":  279,
+      "pdf_capacity_raw":  "2100ml/71oz/8.9cup",
+      "pdf_size_text_line":  280,
+      "pdf_size_raw":  "Size:19x10cm",
+      "printed_values":  {
+        "ml":  2100,
+        "oz":  "71",
+        "oz_label_present":  true,
+        "cup":  "8.9",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "silicone-0",
+      "code":  "10RC600",
+      "variant":  "Profile A",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/38/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/38/model/details/0/capacity",
+        "line":  6591,
+        "current":  "600 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/38/model/details/0/unitReference",
+        "line":  6593,
+        "current":  "20.3 oz / 2.5 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/38/model/details/0/size",
+        "line":  6592,
+        "current":  "15.5 x 11.5 x 5.5 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  10,
+      "pdf_capacity_text_line":  230,
+      "pdf_capacity_raw":  "600ml/20.3oz/2.5cup",
+      "pdf_size_text_line":  231,
+      "pdf_size_raw":  "Size:15.5x11.5x5.5cm",
+      "printed_values":  {
+        "ml":  600,
+        "oz":  "20.3",
+        "oz_label_present":  true,
+        "cup":  "2.5",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "silicone-1",
+      "code":  "10RC900",
+      "variant":  "Profile A",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/39/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/39/model/details/0/capacity",
+        "line":  6623,
+        "current":  "900 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/39/model/details/0/unitReference",
+        "line":  6625,
+        "current":  "30.4 oz / 3.8 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/39/model/details/0/size",
+        "line":  6624,
+        "current":  "18.3 x 12.4 x 5.8 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  10,
+      "pdf_capacity_text_line":  234,
+      "pdf_capacity_raw":  "900ml/30.4oz/3.8cup",
+      "pdf_size_text_line":  235,
+      "pdf_size_raw":  "Size:18.3x12.4x5.8cm",
+      "printed_values":  {
+        "ml":  900,
+        "oz":  "30.4",
+        "oz_label_present":  true,
+        "cup":  "3.8",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "silicone-2",
+      "code":  "10RC1200",
+      "variant":  "Profile A",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/40/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/40/model/details/0/capacity",
+        "line":  6655,
+        "current":  "1,200 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/40/model/details/0/unitReference",
+        "line":  6657,
+        "current":  "40.6 oz / 5.1 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/40/model/details/0/size",
+        "line":  6656,
+        "current":  "19.8 x 14.5 x 6 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  10,
+      "pdf_capacity_text_line":  238,
+      "pdf_capacity_raw":  "1200ml/40.6oz/5.1cup",
+      "pdf_size_text_line":  239,
+      "pdf_size_raw":  "Size:19.8x14.5x6cm",
+      "printed_values":  {
+        "ml":  1200,
+        "oz":  "40.6",
+        "oz_label_present":  true,
+        "cup":  "5.1",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "silicone-3",
+      "code":  "10RC600",
+      "variant":  "Profile B",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/41/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/41/model/details/0/capacity",
+        "line":  6687,
+        "current":  "600 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/41/model/details/0/unitReference",
+        "line":  6689,
+        "current":  "20.3 oz / 2.5 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/41/model/details/0/size",
+        "line":  6688,
+        "current":  "15.5 x 11.5 x 5.8 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  10,
+      "pdf_capacity_text_line":  244,
+      "pdf_capacity_raw":  "600ml/20.3oz/2.5cup",
+      "pdf_size_text_line":  245,
+      "pdf_size_raw":  "Size:15.5x11.5*5.8cm",
+      "printed_values":  {
+        "ml":  600,
+        "oz":  "20.3",
+        "oz_label_present":  true,
+        "cup":  "2.5",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "silicone-4",
+      "code":  "10RC900",
+      "variant":  "Profile B",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/42/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/42/model/details/0/capacity",
+        "line":  6719,
+        "current":  "900 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/42/model/details/0/unitReference",
+        "line":  6721,
+        "current":  "30.4 oz / 3.8 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/42/model/details/0/size",
+        "line":  6720,
+        "current":  "18.3 x 12.5 x 5.9 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  10,
+      "pdf_capacity_text_line":  248,
+      "pdf_capacity_raw":  "900ml/30.4oz/3.8cup",
+      "pdf_size_text_line":  249,
+      "pdf_size_raw":  "Size:18.3x12.5x5.9cm",
+      "printed_values":  {
+        "ml":  900,
+        "oz":  "30.4",
+        "oz_label_present":  true,
+        "cup":  "3.8",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "silicone-5",
+      "code":  "10RC1200",
+      "variant":  "Profile B",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/43/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/43/model/details/0/capacity",
+        "line":  6751,
+        "current":  "1,200 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/43/model/details/0/unitReference",
+        "line":  6753,
+        "current":  "40.6 oz / 5.1 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/43/model/details/0/size",
+        "line":  6752,
+        "current":  "19.8 x 14.5 x 6 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  10,
+      "pdf_capacity_text_line":  252,
+      "pdf_capacity_raw":  "1200ml/40.6oz/5.1cup",
+      "pdf_size_text_line":  253,
+      "pdf_size_raw":  "Size:19.8x14.5x6cm",
+      "printed_values":  {
+        "ml":  1200,
+        "oz":  "40.6",
+        "oz_label_present":  true,
+        "cup":  "5.1",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "alternate-pp-0",
+      "code":  "01RC550",
+      "variant":  "Alternate profile",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/44/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/44/model/details/0/capacity",
+        "line":  6783,
+        "current":  "550 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/44/model/details/0/unitReference",
+        "line":  6785,
+        "current":  "18.6 oz / 2.3 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/44/model/details/0/size",
+        "line":  6784,
+        "current":  "16.8 x 12.8 x 5.8 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  11,
+      "pdf_capacity_text_line":  283,
+      "pdf_capacity_raw":  "550ml/18.6oz/2.3cup",
+      "pdf_size_text_line":  284,
+      "pdf_size_raw":  "Size:16.8x12.8x5.8cm",
+      "printed_values":  {
+        "ml":  550,
+        "oz":  "18.6",
+        "oz_label_present":  true,
+        "cup":  "2.3",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "alternate-pp-1",
+      "code":  "01RC1300",
+      "variant":  "Alternate profile",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/45/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/45/model/details/0/capacity",
+        "line":  6815,
+        "current":  "1,300 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/45/model/details/0/unitReference",
+        "line":  6817,
+        "current":  "43.9 oz / 5.5 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/45/model/details/0/size",
+        "line":  6816,
+        "current":  "22 x 16.8 x 7.2 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  11,
+      "pdf_capacity_text_line":  287,
+      "pdf_capacity_raw":  "1300ml/43.9oz/5.5cup",
+      "pdf_size_text_line":  288,
+      "pdf_size_raw":  "Size:22x16.8x7 .2cm",
+      "printed_values":  {
+        "ml":  1300,
+        "oz":  "43.9",
+        "oz_label_present":  true,
+        "cup":  "5.5",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "alternate-pp-2",
+      "code":  "01RC450/280",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/46/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/46/model/details/0/capacity",
+        "line":  6847,
+        "current":  "450 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/46/model/details/0/unitReference",
+        "line":  6849,
+        "current":  "15.2 oz / 1.9 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/46/model/details/0/size",
+        "line":  6848,
+        "current":  "22 x 16.7 x 5.5 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  11,
+      "pdf_capacity_text_line":  291,
+      "pdf_capacity_raw":  "450ml/15.2oz/1.9cup",
+      "pdf_size_text_line":  293,
+      "pdf_size_raw":  "Size:22x16.7x5.5cm",
+      "printed_values":  {
+        "ml":  450,
+        "oz":  "15.2",
+        "oz_label_present":  true,
+        "cup":  "1.9",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+        "compartment_row_shared_outer_dimensions"
+      ]
+    },
+    {
+      "record_id":  "alternate-pp-2",
+      "code":  "01RC450/280",
+      "variant":  "",
+      "component_index":  1,
+      "component_number":  2,
+      "source_pointer":  "/models/46/model/details/1",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/46/model/details/1/capacity",
+        "line":  6852,
+        "current":  "280 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/46/model/details/1/unitReference",
+        "line":  6854,
+        "current":  "9.5 oz / 1.2 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/46/model/details/1/size",
+        "line":  6853,
+        "current":  "22 x 16.7 x 5.5 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  11,
+      "pdf_capacity_text_line":  292,
+      "pdf_capacity_raw":  "280ml/9.5oz/1.2cup",
+      "pdf_size_text_line":  293,
+      "pdf_size_raw":  "Size:22x16.7x5.5cm",
+      "printed_values":  {
+        "ml":  280,
+        "oz":  "9.5",
+        "oz_label_present":  true,
+        "cup":  "1.2",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+        "compartment_row_shared_outer_dimensions"
+      ]
+    },
+    {
+      "record_id":  "value-0",
+      "code":  "02RC580",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/47/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/47/model/details/0/capacity",
+        "line":  6884,
+        "current":  "580 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/47/model/details/0/unitReference",
+        "line":  6886,
+        "current":  "19.6 oz / 2.5 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/47/model/details/0/size",
+        "line":  6885,
+        "current":  "15.7 x 11.8 x 7 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  12,
+      "pdf_capacity_text_line":  299,
+      "pdf_capacity_raw":  "580ml/19.6oz/2.5cup",
+      "pdf_size_text_line":  300,
+      "pdf_size_raw":  "Size:15.7x11.8x7cm",
+      "printed_values":  {
+        "ml":  580,
+        "oz":  "19.6",
+        "oz_label_present":  true,
+        "cup":  "2.5",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "value-1",
+      "code":  "02RC850",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/48/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/48/model/details/0/capacity",
+        "line":  6916,
+        "current":  "850 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/48/model/details/0/unitReference",
+        "line":  6918,
+        "current":  "28.7 oz / 3.6 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/48/model/details/0/size",
+        "line":  6917,
+        "current":  "18.7 x 13 x 7.3 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  12,
+      "pdf_capacity_text_line":  303,
+      "pdf_capacity_raw":  "850ml/28.7oz/3.6cup",
+      "pdf_size_text_line":  304,
+      "pdf_size_raw":  "Size:18.7x13x7 .3cm",
+      "printed_values":  {
+        "ml":  850,
+        "oz":  "28.7",
+        "oz_label_present":  true,
+        "cup":  "3.6",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "value-2",
+      "code":  "02RC1200",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/49/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/49/model/details/0/capacity",
+        "line":  6948,
+        "current":  "1,200 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/49/model/details/0/unitReference",
+        "line":  6950,
+        "current":  "40.6 oz / 5.1 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/49/model/details/0/size",
+        "line":  6949,
+        "current":  "20.1 x 15.2 x 7.5 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  12,
+      "pdf_capacity_text_line":  307,
+      "pdf_capacity_raw":  "1200ml/40.6oz/5.1cup",
+      "pdf_size_text_line":  308,
+      "pdf_size_raw":  "Size:20.1x15.2x7 .5cm",
+      "printed_values":  {
+        "ml":  1200,
+        "oz":  "40.6",
+        "oz_label_present":  true,
+        "cup":  "5.1",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "value-3",
+      "code":  "02R700",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/50/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/50/model/details/0/capacity",
+        "line":  6980,
+        "current":  "700 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/50/model/details/0/unitReference",
+        "line":  6982,
+        "current":  "23.7 oz / 3 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/50/model/details/0/size",
+        "line":  6981,
+        "current":  "13.7 x 8.2 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  12,
+      "pdf_capacity_text_line":  311,
+      "pdf_capacity_raw":  "700ml/23.7oz/3cup",
+      "pdf_size_text_line":  312,
+      "pdf_size_raw":  "Size:13.7x8.2cm",
+      "printed_values":  {
+        "ml":  700,
+        "oz":  "23.7",
+        "oz_label_present":  true,
+        "cup":  "3",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    },
+    {
+      "record_id":  "value-4",
+      "code":  "02R1050",
+      "variant":  "",
+      "component_index":  0,
+      "component_number":  1,
+      "source_pointer":  "/models/51/model/details/0",
+      "capacity_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/51/model/details/0/capacity",
+        "line":  7012,
+        "current":  "1,050 ml"
+      },
+      "unit_reference_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/51/model/details/0/unitReference",
+        "line":  7014,
+        "current":  "35.5 oz / 4.4 cup"
+      },
+      "size_ref":  {
+        "file":  "sandbox-maylendy-steel/data/catalog-source.json",
+        "pointer":  "/models/51/model/details/0/size",
+        "line":  7013,
+        "current":  "15.6 x 9.2 cm"
+      },
+      "quantity_in_existing_data":  1,
+      "pdf_page":  12,
+      "pdf_capacity_text_line":  315,
+      "pdf_capacity_raw":  "1050ml/35.5oz/4.4cup",
+      "pdf_size_text_line":  316,
+      "pdf_size_raw":  "Size:15.6x9.2cm",
+      "printed_values":  {
+        "ml":  1050,
+        "oz":  "35.5",
+        "oz_label_present":  true,
+        "cup":  "4.4",
+        "cup_label_present":  true
+      },
+      "dimension_numeric_match":  true,
+      "issues":  [
+      ]
+    }
+  ]
+}

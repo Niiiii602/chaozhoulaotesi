@@ -1,0 +1,30 @@
+{
+  "user_confirmed_set": "01-BXH650/1300/2250ml",
+  "components": [
+    {
+      "capacity": "650 ml",
+      "size": "17.5 x 13 x 5.8 cm",
+      "unitReference": "22 oz / 2.7 cup"
+    },
+    {
+      "capacity": "1,300 ml",
+      "size": "21.5 x 16.1 x 7.1 cm",
+      "unitReference": "44 oz / 5.5 cup"
+    },
+    {
+      "capacity": "2,500 ml",
+      "size": "24.8 x 19.3 x 8.2 cm",
+      "unitReference": "85 oz / 10.6 cup"
+    }
+  ],
+  "core_storage_entries": 52,
+  "specification_components": 67,
+  "unresolved_core_capacity_fields": 0,
+  "corrected_copies": {
+    "sets1_copies": 5,
+    "rc2000_copies": 3,
+    "sets3_copies": 5,
+    "tri_ply_series_copies": 2
+  },
+  "policy": "The displayed model code is unchanged. Component 3 is 2500 ml per the user-provided table. Cup values for 01RC2000 and the 960 ml divided model carry printed-catalog labels, not calculated conversion claims."
+}

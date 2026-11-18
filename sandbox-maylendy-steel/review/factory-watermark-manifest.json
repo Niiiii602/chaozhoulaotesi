@@ -1,0 +1,266 @@
+[
+  {
+    "source": "assets/factory-source/facility-exterior.jpg",
+    "sourceSha256": "40c91386dcfe928897b77e05942b2b51e8c7a70124aec80f2ae9317a82a8a818",
+    "output": "assets/factory-watermarked/facility-exterior.jpg",
+    "watermark": "MayLendy",
+    "count": 3,
+    "positions": [
+      [
+        0.23,
+        0.22
+      ],
+      [
+        0.5,
+        0.5
+      ],
+      [
+        0.77,
+        0.78
+      ]
+    ],
+    "width": 1800,
+    "height": 715,
+    "processing": "Original content preserved. Three translucent brand watermarks baked into a separate JPEG copy. Existing carton redactions retained."
+  },
+  {
+    "source": "assets/factory-source/factory-forming.jpg",
+    "sourceSha256": "909ca99b0e53226b4d72f84783cf59a7cc52436bf5e150baceef148fd040ae7c",
+    "output": "assets/factory-watermarked/factory-forming.jpg",
+    "watermark": "MayLendy",
+    "count": 3,
+    "positions": [
+      [
+        0.23,
+        0.22
+      ],
+      [
+        0.5,
+        0.5
+      ],
+      [
+        0.77,
+        0.78
+      ]
+    ],
+    "width": 1706,
+    "height": 1279,
+    "processing": "Original content preserved. Three translucent brand watermarks baked into a separate JPEG copy. Existing carton redactions retained."
+  },
+  {
+    "source": "assets/factory-source/forming-close.jpg",
+    "sourceSha256": "3efde308fd47e0e2c585016916c878402af9714a76a99c6aa1fa2a5e84d19f28",
+    "output": "assets/factory-watermarked/forming-close.jpg",
+    "watermark": "MayLendy",
+    "count": 3,
+    "positions": [
+      [
+        0.23,
+        0.22
+      ],
+      [
+        0.5,
+        0.5
+      ],
+      [
+        0.77,
+        0.78
+      ]
+    ],
+    "width": 1706,
+    "height": 1279,
+    "processing": "Original content preserved. Three translucent brand watermarks baked into a separate JPEG copy. Existing carton redactions retained."
+  },
+  {
+    "source": "assets/factory-source/material-control.jpg",
+    "sourceSha256": "3ea71d5d3407f5bb7ca1f4fa9caee387dcaa71b32dc6f68e70065217c92acc75",
+    "output": "assets/factory-watermarked/material-control.jpg",
+    "watermark": "MayLendy",
+    "count": 3,
+    "positions": [
+      [
+        0.23,
+        0.22
+      ],
+      [
+        0.5,
+        0.5
+      ],
+      [
+        0.77,
+        0.78
+      ]
+    ],
+    "width": 1706,
+    "height": 1279,
+    "processing": "Original content preserved. Three translucent brand watermarks baked into a separate JPEG copy. Existing carton redactions retained."
+  },
+  {
+    "source": "assets/factory-source/sheet-stock.jpg",
+    "sourceSha256": "5161c3691da121931406639c61bc757c75fdcd8cf3c5feea8b757aa3223f1dca",
+    "output": "assets/factory-watermarked/sheet-stock.jpg",
+    "watermark": "MayLendy",
+    "count": 3,
+    "positions": [
+      [
+        0.23,
+        0.22
+      ],
+      [
+        0.5,
+        0.5
+      ],
+      [
+        0.77,
+        0.78
+      ]
+    ],
+    "width": 1706,
+    "height": 1279,
+    "processing": "Original content preserved. Three translucent brand watermarks baked into a separate JPEG copy. Existing carton redactions retained."
+  },
+  {
+    "source": "assets/factory-source/tooling.jpg",
+    "sourceSha256": "ded15e5e42ded8f70665ddd857095d13f6360aca3cfc4f7bc55339e07dfb129f",
+    "output": "assets/factory-watermarked/tooling.jpg",
+    "watermark": "MayLendy",
+    "count": 3,
+    "positions": [
+      [
+        0.23,
+        0.22
+      ],
+      [
+        0.5,
+        0.5
+      ],
+      [
+        0.77,
+        0.78
+      ]
+    ],
+    "width": 1706,
+    "height": 1279,
+    "processing": "Original content preserved. Three translucent brand watermarks baked into a separate JPEG copy. Existing carton redactions retained."
+  },
+  {
+    "source": "assets/factory-source/inspection.jpg",
+    "sourceSha256": "73b00e9e8f1f7c696fa16b60455af2ec3bf4d40fc9a0b09593153fa942b5f612",
+    "output": "assets/factory-watermarked/inspection.jpg",
+    "watermark": "MayLendy",
+    "count": 3,
+    "positions": [
+      [
+        0.23,
+        0.22
+      ],
+      [
+        0.5,
+        0.5
+      ],
+      [
+        0.77,
+        0.78
+      ]
+    ],
+    "width": 1706,
+    "height": 1279,
+    "processing": "Original content preserved. Three translucent brand watermarks baked into a separate JPEG copy. Existing carton redactions retained."
+  },
+  {
+    "source": "assets/factory-source/finished-stock.jpg",
+    "sourceSha256": "c39a77e30e11292dcb57d83a7b2bf205c6ce364e0ca017cd0dee1ab4946ecbb8",
+    "output": "assets/factory-watermarked/finished-stock.jpg",
+    "watermark": "MayLendy",
+    "count": 3,
+    "positions": [
+      [
+        0.23,
+        0.22
+      ],
+      [
+        0.5,
+        0.5
+      ],
+      [
+        0.77,
+        0.78
+      ]
+    ],
+    "width": 1706,
+    "height": 1279,
+    "processing": "Original content preserved. Three translucent brand watermarks baked into a separate JPEG copy. Existing carton redactions retained."
+  },
+  {
+    "source": "assets/factory-source/shipment-staging.jpg",
+    "sourceSha256": "37b7604c408e0450494e5a119157cfca8a091f7389bc9d2b1a6f4c66057fa4fa",
+    "output": "assets/factory-watermarked/shipment-staging.jpg",
+    "watermark": "MayLendy",
+    "count": 3,
+    "positions": [
+      [
+        0.23,
+        0.22
+      ],
+      [
+        0.5,
+        0.5
+      ],
+      [
+        0.77,
+        0.78
+      ]
+    ],
+    "width": 1706,
+    "height": 1279,
+    "processing": "Original content preserved. Three translucent brand watermarks baked into a separate JPEG copy. Existing carton redactions retained."
+  },
+  {
+    "source": "assets/about/people-at-work-archive.webp",
+    "sourceSha256": "26b4b540abf760a1e173913f48d979f8130f8e33b16477849b7b1ac347827fa6",
+    "output": "assets/factory-watermarked/people-at-work-archive.jpg",
+    "watermark": "MayLendy",
+    "count": 3,
+    "positions": [
+      [
+        0.23,
+        0.22
+      ],
+      [
+        0.5,
+        0.5
+      ],
+      [
+        0.77,
+        0.78
+      ]
+    ],
+    "width": 548,
+    "height": 306,
+    "processing": "Original content preserved. Three translucent brand watermarks baked into a separate JPEG copy. Existing carton redactions retained."
+  },
+  {
+    "source": "assets/factory-workshop-poster.webp",
+    "sourceSha256": "a7edbccee7f31727c83327d0f9f31db3e92db6355acb059c18743c16927f59dd",
+    "output": "assets/factory-watermarked/factory-workshop-poster.jpg",
+    "watermark": "MayLendy",
+    "count": 3,
+    "positions": [
+      [
+        0.23,
+        0.22
+      ],
+      [
+        0.5,
+        0.5
+      ],
+      [
+        0.77,
+        0.78
+      ]
+    ],
+    "width": 1280,
+    "height": 420,
+    "processing": "Original content preserved. Three translucent brand watermarks baked into a separate JPEG copy. Existing carton redactions retained."
+  }
+]

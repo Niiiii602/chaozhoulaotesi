@@ -1,0 +1,9 @@
+/* A final-value width reserve keeps the metric and its unit still while counting. */
+.count-up { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.count-up > .count-visual { display: inline-grid; grid-template-columns: auto; vertical-align: baseline; margin: 0; padding: 0; font: inherit; letter-spacing: inherit; color: inherit; }
+.count-up > .count-visual::after { content: attr(data-count-reserve); grid-area: 1 / 1; visibility: hidden; pointer-events: none; font: inherit; letter-spacing: inherit; }
+.count-up [data-count-value] { display: block; grid-area: 1 / 1; margin: 0; padding: 0; font: inherit; letter-spacing: inherit; color: inherit; }
+.count-up > .count-unit { display: inline; margin: 0; padding: 0; font: inherit; letter-spacing: inherit; color: inherit; }
+.facts-grid .count-up > .count-unit { font-size: .56em; letter-spacing: -.015em; color: var(--muted); }
+.count-up > [data-count-final] { margin: -1px; }
+@media print { .count-up [data-count-value] { visibility: hidden; } .count-up > .count-visual::after { visibility: visible; } }

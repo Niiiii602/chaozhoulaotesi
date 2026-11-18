@@ -1,0 +1,65 @@
+{
+  "checks": {
+    "live_video_play_and_seek": true,
+    "8_live_layouts": true
+  },
+  "layouts": [
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "errors": [],
+      "broken": [],
+      "route": "/"
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "errors": [],
+      "broken": [],
+      "route": "/products"
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "errors": [],
+      "broken": [],
+      "route": "/factory-tour"
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "errors": [],
+      "broken": [],
+      "route": "/contact"
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "errors": [],
+      "broken": [],
+      "route": "/"
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "errors": [],
+      "broken": [],
+      "route": "/products"
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "errors": [],
+      "broken": [],
+      "route": "/factory-tour"
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "errors": [],
+      "broken": [],
+      "route": "/contact"
+    }
+  ],
+  "scope": "No enquiry submitted; release-check analytics suppressed."
+}

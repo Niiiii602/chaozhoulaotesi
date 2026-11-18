@@ -1,0 +1,105 @@
+[
+  {
+    "page": "index.html",
+    "width": 1440,
+    "overflow": false,
+    "errors": [],
+    "broken": []
+  },
+  {
+    "page": "index.html",
+    "width": 390,
+    "overflow": false,
+    "errors": [],
+    "broken": []
+  },
+  {
+    "page": "products.html",
+    "width": 1440,
+    "overflow": false,
+    "errors": [],
+    "broken": []
+  },
+  {
+    "page": "oem.html",
+    "width": 1440,
+    "overflow": false,
+    "errors": [],
+    "broken": []
+  },
+  {
+    "page": "guide-storage-lids.html",
+    "width": 390,
+    "overflow": false,
+    "errors": [],
+    "broken": []
+  },
+  {
+    "page": "company.html",
+    "width": 1440,
+    "overflow": false,
+    "errors": [],
+    "broken": []
+  },
+  {
+    "page": "buying-guides.html",
+    "width": 1440,
+    "overflow": false,
+    "errors": [],
+    "broken": []
+  },
+  {
+    "search": "12 options for approximately 1,500 ml · closest catalog capacities shown. Individual container or set-component capacities are used; the actual specifications below remain unchanged.",
+    "models": [
+      {
+        "id": "catalog-steel-1400",
+        "badge": "Nearby capacity · 1,400 ml"
+      },
+      {
+        "id": "rectangular-4",
+        "badge": "Nearby capacity · 1,300 ml"
+      },
+      {
+        "id": "divided-19",
+        "badge": "Nearby capacity · 1,700 ml"
+      },
+      {
+        "id": "sets-0",
+        "badge": "Nearby capacity · 1,300 ml"
+      },
+      {
+        "id": "sets-1",
+        "badge": "Nearby capacity · 1,300 ml"
+      },
+      {
+        "id": "sets-5",
+        "badge": "Nearby capacity · 1,300 ml"
+      },
+      {
+        "id": "alternate-pp-1",
+        "badge": "Nearby capacity · 1,300 ml"
+      },
+      {
+        "id": "silicone-glass-2",
+        "badge": "Nearby capacity · 1,200 ml"
+      },
+      {
+        "id": "silicone-glass-5",
+        "badge": "Nearby capacity · 1,200 ml"
+      },
+      {
+        "id": "silicone-2",
+        "badge": "Nearby capacity · 1,200 ml"
+      },
+      {
+        "id": "silicone-5",
+        "badge": "Nearby capacity · 1,200 ml"
+      },
+      {
+        "id": "value-2",
+        "badge": "Nearby capacity · 1,200 ml"
+      }
+    ],
+    "errors": []
+  }
+]

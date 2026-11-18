@@ -1,0 +1,58 @@
+[
+  {
+    "page": "oem.html",
+    "width": 1440,
+    "shot": "cases-1440.png",
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "page": "oem.html",
+    "width": 1440,
+    "shot": "targets-1440.png",
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "page": "food-storage.html",
+    "width": 1440,
+    "shot": "lids-1440.png",
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "page": "index.html",
+    "width": 1440,
+    "shot": "footer-1440.png",
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "page": "oem.html",
+    "width": 390,
+    "shot": "confidentiality-390.png",
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "page": "oem.html",
+    "width": 390,
+    "shot": "targets-390.png",
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "page": "food-storage.html",
+    "width": 390,
+    "shot": "ms-steel-bamboo-390.png",
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "page": "case-compartment-lunch-box.html",
+    "width": 1440,
+    "shot": "case-detail-1440.png",
+    "overflow": false,
+    "errors": []
+  }
+]

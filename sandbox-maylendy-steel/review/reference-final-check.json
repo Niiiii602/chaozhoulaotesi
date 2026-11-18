@@ -1,0 +1,35 @@
+{
+  "link_issues": [],
+  "review_layouts": [
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "pages": 23,
+      "broken": 0
+    },
+    {
+      "width": 1024,
+      "scrollWidth": 1009,
+      "pages": 23,
+      "broken": 0
+    },
+    {
+      "width": 768,
+      "scrollWidth": 753,
+      "pages": 23,
+      "broken": 0
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "pages": 23,
+      "broken": 0
+    },
+    {
+      "width": 360,
+      "scrollWidth": 345,
+      "pages": 23,
+      "broken": 0
+    }
+  ]
+}

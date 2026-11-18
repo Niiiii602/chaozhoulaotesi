@@ -1,0 +1,439 @@
+{
+  "checks": {
+    "46_production_layouts": true,
+    "prefill_after_route_rewrite": true,
+    "production_action": true,
+    "success_only_after_ack": true,
+    "metadata_and_multipart": true,
+    "preserve_on_business": true,
+    "preserve_on_missing": true,
+    "preserve_on_invalid_json": true,
+    "preserve_on_http_failure": true,
+    "preserve_on_attachment_server": true,
+    "network_failure_preserves": true,
+    "marketing_rejected_without_post": true,
+    "client_attachment_limit": true,
+    "duplicate_submit_guard": true,
+    "capacity_search": true,
+    "comparison": true,
+    "product_analytics_hook": true,
+    "production_watermarked_video": true
+  },
+  "layouts": [
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/"
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/products"
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/food-storage"
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/storage-pp"
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/storage-glass"
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/storage-silicone"
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/storage-clips"
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/cookware"
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/serving-plates"
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/kettles"
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/factory-tour"
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/oem"
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/quality-delivery"
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/about-us"
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/qa"
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/contact"
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/storage-special"
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/case-compartment-lunch-box"
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/case-nesting-storage-set"
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/buying-guides"
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/guide-steel-grades"
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/guide-cookware-construction"
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/guide-storage-lids"
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/"
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/products"
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/food-storage"
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/storage-pp"
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/storage-glass"
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/storage-silicone"
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/storage-clips"
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/cookware"
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/serving-plates"
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/kettles"
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/factory-tour"
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/oem"
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/quality-delivery"
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/about-us"
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/qa"
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/contact"
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/storage-special"
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/case-compartment-lunch-box"
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/case-nesting-storage-set"
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/buying-guides"
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/guide-steel-grades"
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/guide-cookware-construction"
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "errors": [],
+      "broken": 0,
+      "robots": "index,follow",
+      "beacons": 1,
+      "page": "/guide-storage-lids"
+    }
+  ],
+  "scope": "Local production build; all enquiry responses mocked, no live messages or analytics submitted."
+}

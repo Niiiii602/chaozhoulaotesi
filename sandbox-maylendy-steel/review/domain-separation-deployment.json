@@ -1,0 +1,12 @@
+{
+  "deployedAt": "2026-11-18T15:28:55.114033+00:00",
+  "version": "47860fcd-7844-4fe8-8756-e32bbf072337",
+  "deploymentId": "dac3856b-e550-4231-af90-4487c0343783",
+  "previousVersion": "6f1aa31c-96e9-4b56-a260-55afbece774e",
+  "bindingsPreserved": true,
+  "worker": "chaozhoulaotesi",
+  "domainRouting": {
+    "laotes.com": "LAOTESI original website",
+    "maylendy.com": "MayLendy silver website"
+  }
+}

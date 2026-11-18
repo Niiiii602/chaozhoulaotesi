@@ -1,0 +1,792 @@
+[
+  {
+    "path": "/analytics.js",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/about/honors-community.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/analytics-dashboard.css",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/analytics-dashboard.js",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog/cookware-shallow-white.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog/cookware-wok-white.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog/kettle-lifestyle.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog/plate-lifestyle.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog/plate-collection.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog/plate-dimensions.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog/plate-clean.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/app.js",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog/kettle-transparent.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/divided-17.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/alternate-pp-1.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/alternate-pp-0.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/rectangular-0.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/rectangular-10.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/alternate-pp-2.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/rectangular-1.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/divided-18.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/rectangular-2.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog/kettle-white.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/rectangular-13-neutral.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/rectangular-12-neutral.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/rectangular-3.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/rectangular-7.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/rectangular-8.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/rectangular-9.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/divided-19-neutral.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/rectangular-4.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/rectangular-6.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/sets-0-neutral.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/rectangular-5.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/sets-4.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/sets-10.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/sets-5.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/sets-8.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/rectangular-11.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/sets-2.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/sets-7-neutral.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/sets-9.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/sets-1.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/sets-3-neutral.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/silicone-0.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/silicone-glass-1.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/silicone-2.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/silicone-4.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/silicone-glass-2.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/silicone-1.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/silicone-glass-0.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/silicone-glass-3.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/silicone-5.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/silicone-glass-6.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/sets-6-neutral.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/silicone-glass-5.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/silicone-glass-4.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/square-14.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/square-15.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/square-16.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/silicone-3.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/value-3.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/certifications/bsci-audit-redacted.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/value-4.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/value-1.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/value-2.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/certifications/iso-14001-redacted.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/catalog-white/value-0.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/certifications/wca-license-redacted.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/cookware/single-layer-pan-3.jpg",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/cookware/single-layer-pan-4.jpg",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/certifications/iso-9001-redacted.webp",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/cookware/tri-ply-pan-carousel-1.jpg",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/cookware/single-layer-pan-1.jpg",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/cookware/single-layer-pan-5.jpg",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/cookware/tri-ply-pan-carousel-2.jpg",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/cookware/single-layer-pan-2.jpg",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/design/font-5.ttf",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/design/font-3.ttf",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/cookware/tri-ply-pan-carousel-4.jpg",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/design/font-0.ttf",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/cookware/tri-ply-pan-carousel-5.jpg",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/cookware/tri-ply-pan-carousel-3.jpg",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/design/font-7.ttf",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/design/font-1.ttf",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/design/font-4.ttf",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/design/font-2.ttf",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/design/font-6.ttf",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/factory-source/storage-collection.jpg",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/factory-source/cookware-range.jpg",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/factory-source/storage-collection-landscape.jpg",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/factory-watermarked/people-at-work-archive.jpg",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/factory-watermarked/finished-stock.jpg",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/factory-watermarked/facility-exterior.jpg",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/factory-watermarked/factory-workshop-poster.jpg",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/factory-watermarked/factory-forming.jpg",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/factory-watermarked/material-control.jpg",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/design/lucide.min.js",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/factory-watermarked/shipment-staging.jpg",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/factory-watermarked/forming-close.jpg",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/factory-watermarked/inspection.jpg",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/special-lids/04-bamboo-range.jpg",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/factory-watermarked/tooling.jpg",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/special-lids/04-steel-800.jpg",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/special-lids/04-steel-1400.jpg",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/factory-watermarked/sheet-stock.jpg",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/fonts.css",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/showcase/products.js",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/vendor/three-0.160.1.min.js",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/countup.css",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/guides.css",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/production.js",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/showcase.js",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/showcase.css",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/sitemap.xml",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/robots.txt",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/site.css",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/assets/factory-workshop-maylendy.mp4",
+    "status": 200,
+    "sha256Match": true
+  },
+  {
+    "path": "/case-nesting-storage-set",
+    "status": 200,
+    "sha256Match": false,
+    "indexable": true,
+    "canonical": true,
+    "contentMatchAfterEdgeBeaconRemoval": true
+  },
+  {
+    "path": "/buying-guides",
+    "status": 200,
+    "sha256Match": false,
+    "indexable": true,
+    "canonical": true,
+    "contentMatchAfterEdgeBeaconRemoval": true
+  },
+  {
+    "path": "/about-us",
+    "status": 200,
+    "sha256Match": false,
+    "indexable": true,
+    "canonical": true,
+    "contentMatchAfterEdgeBeaconRemoval": true
+  },
+  {
+    "path": "/guide-cookware-construction",
+    "status": 200,
+    "sha256Match": false,
+    "indexable": true,
+    "canonical": true,
+    "contentMatchAfterEdgeBeaconRemoval": true
+  },
+  {
+    "path": "/case-compartment-lunch-box",
+    "status": 200,
+    "sha256Match": false,
+    "indexable": true,
+    "canonical": true,
+    "contentMatchAfterEdgeBeaconRemoval": true
+  },
+  {
+    "path": "/404",
+    "status": 200,
+    "sha256Match": false,
+    "indexable": false,
+    "canonical": false,
+    "contentMatchAfterEdgeBeaconRemoval": true
+  },
+  {
+    "path": "/contact",
+    "status": 200,
+    "sha256Match": false,
+    "indexable": true,
+    "canonical": true,
+    "contentMatchAfterEdgeBeaconRemoval": true
+  },
+  {
+    "path": "/guide-steel-grades",
+    "status": 200,
+    "sha256Match": false,
+    "indexable": true,
+    "canonical": true,
+    "contentMatchAfterEdgeBeaconRemoval": true
+  },
+  {
+    "path": "/factory-tour",
+    "status": 200,
+    "sha256Match": false,
+    "indexable": true,
+    "canonical": true,
+    "contentMatchAfterEdgeBeaconRemoval": true
+  },
+  {
+    "path": "/analytics",
+    "status": 200,
+    "sha256Match": false,
+    "indexable": false,
+    "canonical": true,
+    "contentMatchAfterEdgeBeaconRemoval": true
+  },
+  {
+    "path": "/guide-storage-lids",
+    "status": 200,
+    "sha256Match": false,
+    "indexable": true,
+    "canonical": true,
+    "contentMatchAfterEdgeBeaconRemoval": true
+  },
+  {
+    "path": "/oem",
+    "status": 200,
+    "sha256Match": false,
+    "indexable": true,
+    "canonical": true,
+    "contentMatchAfterEdgeBeaconRemoval": true
+  },
+  {
+    "path": "/food-storage",
+    "status": 200,
+    "sha256Match": false,
+    "indexable": true,
+    "canonical": true,
+    "contentMatchAfterEdgeBeaconRemoval": true
+  },
+  {
+    "path": "/qa",
+    "status": 200,
+    "sha256Match": false,
+    "indexable": true,
+    "canonical": true,
+    "contentMatchAfterEdgeBeaconRemoval": true
+  },
+  {
+    "path": "/products",
+    "status": 200,
+    "sha256Match": false,
+    "indexable": true,
+    "canonical": true,
+    "contentMatchAfterEdgeBeaconRemoval": true
+  },
+  {
+    "path": "/kettles",
+    "status": 200,
+    "sha256Match": false,
+    "indexable": true,
+    "canonical": true,
+    "contentMatchAfterEdgeBeaconRemoval": true
+  },
+  {
+    "path": "/",
+    "status": 200,
+    "sha256Match": false,
+    "indexable": true,
+    "canonical": true,
+    "contentMatchAfterEdgeBeaconRemoval": true
+  },
+  {
+    "path": "/cookware",
+    "status": 200,
+    "sha256Match": false,
+    "indexable": true,
+    "canonical": true,
+    "contentMatchAfterEdgeBeaconRemoval": true
+  },
+  {
+    "path": "/quality-delivery",
+    "status": 200,
+    "sha256Match": false,
+    "indexable": true,
+    "canonical": true,
+    "contentMatchAfterEdgeBeaconRemoval": true
+  },
+  {
+    "path": "/storage-glass",
+    "status": 200,
+    "sha256Match": false,
+    "indexable": true,
+    "canonical": true,
+    "contentMatchAfterEdgeBeaconRemoval": true
+  },
+  {
+    "path": "/storage-clips",
+    "status": 200,
+    "sha256Match": false,
+    "indexable": true,
+    "canonical": true,
+    "contentMatchAfterEdgeBeaconRemoval": true
+  },
+  {
+    "path": "/serving-plates",
+    "status": 200,
+    "sha256Match": false,
+    "indexable": true,
+    "canonical": true,
+    "contentMatchAfterEdgeBeaconRemoval": true
+  },
+  {
+    "path": "/storage-special",
+    "status": 200,
+    "sha256Match": false,
+    "indexable": true,
+    "canonical": true,
+    "contentMatchAfterEdgeBeaconRemoval": true
+  },
+  {
+    "path": "/storage-silicone",
+    "status": 200,
+    "sha256Match": false,
+    "indexable": true,
+    "canonical": true,
+    "contentMatchAfterEdgeBeaconRemoval": true
+  },
+  {
+    "path": "/storage-pp",
+    "status": 200,
+    "sha256Match": false,
+    "indexable": true,
+    "canonical": true,
+    "contentMatchAfterEdgeBeaconRemoval": true
+  }
+]

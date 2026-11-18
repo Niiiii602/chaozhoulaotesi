@@ -1,0 +1,23 @@
+[
+  {
+    "id": "steel-800",
+    "title": "Steel-lid container · 800 ml",
+    "capacity": "800 ml",
+    "lids": "Stainless steel lid",
+    "image": "assets/special-lids/04-steel-800.jpg"
+  },
+  {
+    "id": "steel-1400",
+    "title": "Steel-lid container · 1,400 ml",
+    "capacity": "1,400 ml",
+    "lids": "Stainless steel lid",
+    "image": "assets/special-lids/04-steel-1400.jpg"
+  },
+  {
+    "id": "bamboo-options",
+    "title": "Bamboo-lid food-storage options",
+    "capacity": "Confirm the selected body format",
+    "lids": "Bamboo lid",
+    "image": "assets/special-lids/04-bamboo-range.jpg"
+  }
+]

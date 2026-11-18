@@ -1,0 +1,62 @@
+{
+  "source": "assets/factory-workshop-clean.mp4",
+  "sourceSha256": "da64f25446aeef006c1fb8051f6a7fb82f3ebe1f24988529b5d16285500800ab",
+  "output": "assets/factory-workshop-maylendy.mp4",
+  "outputSha256": "1625a83a60caf80a607af3897160347257d2cd90533db23e5ffb9daa4162dbd4",
+  "sourceBytes": 6068966,
+  "outputBytes": 8018822,
+  "sourceMetadata": {
+    "durationSeconds": 33.8,
+    "codec": "h264",
+    "width": 1280,
+    "height": 420,
+    "audioStreams": []
+  },
+  "outputMetadata": {
+    "durationSeconds": 33.8,
+    "codec": "h264",
+    "width": 1280,
+    "height": 420,
+    "audioStreams": []
+  },
+  "decodedFrames": 1014,
+  "fullDecode": "passed",
+  "fastStart": true,
+  "watermark": {
+    "text": "MayLendy",
+    "count": 3,
+    "positionsNormalized": [
+      [
+        0.23,
+        0.22
+      ],
+      [
+        0.5,
+        0.5
+      ],
+      [
+        0.77,
+        0.78
+      ]
+    ],
+    "font": "Arial Bold",
+    "fontSizePixels": 42,
+    "opacity": 0.45,
+    "application": "Burned into every video frame; independent of HTML, fullscreen or download."
+  },
+  "sourceUnchanged": true,
+  "audio": "Original audio streams copied without re-encoding; no added music.",
+  "encoding": {
+    "video": "H.264 / libx264",
+    "pixelFormat": "yuv420p",
+    "crf": 20,
+    "preset": "medium"
+  },
+  "previewFramesSeconds": [
+    1,
+    8,
+    16,
+    24,
+    33
+  ]
+}

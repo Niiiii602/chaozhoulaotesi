@@ -1,0 +1,45 @@
+{
+  "checks": {
+    "video_sha256": true,
+    "source_unchanged": true,
+    "full_video_decode": true,
+    "watermarks_per_frame": true,
+    "all_final_links": true,
+    "index.html_new_video_only": true,
+    "manufacturing.html_new_video_only": true,
+    "review_five_widths": true
+  },
+  "linkIssues": [],
+  "reviewLayouts": [
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "pages": 23,
+      "broken": 0
+    },
+    {
+      "width": 1024,
+      "scrollWidth": 1009,
+      "pages": 23,
+      "broken": 0
+    },
+    {
+      "width": 768,
+      "scrollWidth": 753,
+      "pages": 23,
+      "broken": 0
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "pages": 23,
+      "broken": 0
+    },
+    {
+      "width": 360,
+      "scrollWidth": 345,
+      "pages": 23,
+      "broken": 0
+    }
+  ]
+}

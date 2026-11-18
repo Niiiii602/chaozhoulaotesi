@@ -1,0 +1,291 @@
+{
+  "three_actual_webgl": true,
+  "six_products_move_right_to_left": true,
+  "edge_gradient": true,
+  "real_click_pauses": true,
+  "real_click_resumes_with_focus": true,
+  "next_control": true,
+  "previous_control": true,
+  "keyboard_navigation": true,
+  "hover_interaction_rendered": true,
+  "touch_swipe_next": true,
+  "offscreen_stops_rendering": true,
+  "reduced_motion_still_and_controls": true,
+  "reduced_motion_manual_navigation": true,
+  "context_loss_fallback": true,
+  "fallback_next": true,
+  "webgl_unavailable_fallback": true,
+  "layout_checks": [
+    {
+      "overflow": false,
+      "misaligned": 0,
+      "rangeRatios": [
+        1.5000185866696405,
+        1.5000185866696405,
+        1.5000185866696405,
+        1.5000185866696405
+      ],
+      "errors": [],
+      "page": "products.html",
+      "width": 1440
+    },
+    {
+      "overflow": false,
+      "misaligned": 0,
+      "rangeRatios": [],
+      "errors": [],
+      "page": "storage-pp.html",
+      "width": 1440
+    },
+    {
+      "overflow": false,
+      "misaligned": 0,
+      "rangeRatios": [],
+      "errors": [],
+      "page": "storage-glass.html",
+      "width": 1440
+    },
+    {
+      "overflow": false,
+      "misaligned": 0,
+      "rangeRatios": [],
+      "errors": [],
+      "page": "storage-silicone.html",
+      "width": 1440
+    },
+    {
+      "overflow": false,
+      "misaligned": 0,
+      "rangeRatios": [],
+      "errors": [],
+      "page": "storage-clips.html",
+      "width": 1440
+    },
+    {
+      "overflow": false,
+      "misaligned": 0,
+      "rangeRatios": [],
+      "errors": [],
+      "page": "storage-special.html",
+      "width": 1440
+    },
+    {
+      "overflow": false,
+      "misaligned": 0,
+      "rangeRatios": [
+        1.500026339356266,
+        1.5,
+        1.500026339356266,
+        1.5
+      ],
+      "errors": [],
+      "page": "products.html",
+      "width": 1024
+    },
+    {
+      "overflow": false,
+      "misaligned": 0,
+      "rangeRatios": [],
+      "errors": [],
+      "page": "storage-pp.html",
+      "width": 1024
+    },
+    {
+      "overflow": false,
+      "misaligned": 0,
+      "rangeRatios": [],
+      "errors": [],
+      "page": "storage-glass.html",
+      "width": 1024
+    },
+    {
+      "overflow": false,
+      "misaligned": 0,
+      "rangeRatios": [],
+      "errors": [],
+      "page": "storage-silicone.html",
+      "width": 1024
+    },
+    {
+      "overflow": false,
+      "misaligned": 0,
+      "rangeRatios": [],
+      "errors": [],
+      "page": "storage-clips.html",
+      "width": 1024
+    },
+    {
+      "overflow": false,
+      "misaligned": 0,
+      "rangeRatios": [],
+      "errors": [],
+      "page": "storage-special.html",
+      "width": 1024
+    },
+    {
+      "overflow": false,
+      "misaligned": 0,
+      "rangeRatios": [
+        1.5000354584781221,
+        1.5000354584781221,
+        1.5000354584781221,
+        1.5000354584781221
+      ],
+      "errors": [],
+      "page": "products.html",
+      "width": 768
+    },
+    {
+      "overflow": false,
+      "misaligned": 0,
+      "rangeRatios": [],
+      "errors": [],
+      "page": "storage-pp.html",
+      "width": 768
+    },
+    {
+      "overflow": false,
+      "misaligned": 0,
+      "rangeRatios": [],
+      "errors": [],
+      "page": "storage-glass.html",
+      "width": 768
+    },
+    {
+      "overflow": false,
+      "misaligned": 0,
+      "rangeRatios": [],
+      "errors": [],
+      "page": "storage-silicone.html",
+      "width": 768
+    },
+    {
+      "overflow": false,
+      "misaligned": 0,
+      "rangeRatios": [],
+      "errors": [],
+      "page": "storage-clips.html",
+      "width": 768
+    },
+    {
+      "overflow": false,
+      "misaligned": 0,
+      "rangeRatios": [],
+      "errors": [],
+      "page": "storage-special.html",
+      "width": 768
+    },
+    {
+      "overflow": false,
+      "misaligned": 0,
+      "rangeRatios": [
+        1.5,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "errors": [],
+      "page": "products.html",
+      "width": 390
+    },
+    {
+      "overflow": false,
+      "misaligned": 0,
+      "rangeRatios": [],
+      "errors": [],
+      "page": "storage-pp.html",
+      "width": 390
+    },
+    {
+      "overflow": false,
+      "misaligned": 0,
+      "rangeRatios": [],
+      "errors": [],
+      "page": "storage-glass.html",
+      "width": 390
+    },
+    {
+      "overflow": false,
+      "misaligned": 0,
+      "rangeRatios": [],
+      "errors": [],
+      "page": "storage-silicone.html",
+      "width": 390
+    },
+    {
+      "overflow": false,
+      "misaligned": 0,
+      "rangeRatios": [],
+      "errors": [],
+      "page": "storage-clips.html",
+      "width": 390
+    },
+    {
+      "overflow": false,
+      "misaligned": 0,
+      "rangeRatios": [],
+      "errors": [],
+      "page": "storage-special.html",
+      "width": 390
+    },
+    {
+      "overflow": false,
+      "misaligned": 0,
+      "rangeRatios": [
+        1.5000376818147563,
+        1.5000376818147563,
+        1.5000376818147563,
+        1.5000376818147563
+      ],
+      "errors": [],
+      "page": "products.html",
+      "width": 360
+    },
+    {
+      "overflow": false,
+      "misaligned": 0,
+      "rangeRatios": [],
+      "errors": [],
+      "page": "storage-pp.html",
+      "width": 360
+    },
+    {
+      "overflow": false,
+      "misaligned": 0,
+      "rangeRatios": [],
+      "errors": [],
+      "page": "storage-glass.html",
+      "width": 360
+    },
+    {
+      "overflow": false,
+      "misaligned": 0,
+      "rangeRatios": [],
+      "errors": [],
+      "page": "storage-silicone.html",
+      "width": 360
+    },
+    {
+      "overflow": false,
+      "misaligned": 0,
+      "rangeRatios": [],
+      "errors": [],
+      "page": "storage-clips.html",
+      "width": 360
+    },
+    {
+      "overflow": false,
+      "misaligned": 0,
+      "rangeRatios": [],
+      "errors": [],
+      "page": "storage-special.html",
+      "width": 360
+    }
+  ],
+  "all_rows_equal_and_buttons_aligned": true,
+  "all_category_images_3_to_2": true,
+  "set_all_values": true,
+  "set_comparison_sync": true,
+  "set_inquiry_sync": true,
+  "no_js_gallery_links": true
+}

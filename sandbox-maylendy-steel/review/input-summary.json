@@ -1,0 +1,36 @@
+{
+  "original_files": 2019,
+  "input_sha256": "74bd00fe6455f3dde1fbd6e121917797a7c660eb072771b7a15b357095523c49",
+  "updatedAt": "2026-11-06T11:55:42.180Z",
+  "filled": 26,
+  "public": [
+    "brandIdentity",
+    "factoryIdentity",
+    "priorityModels",
+    "materials",
+    "dimensions",
+    "lidOptions",
+    "usageLimits",
+    "capacity",
+    "minimumOrder",
+    "conflictResolution",
+    "samplePolicy",
+    "toolingLeadTime",
+    "productionLeadTime",
+    "commercialTerms",
+    "productionSchedule",
+    "inspectionTraceability",
+    "afterSales",
+    "images",
+    "supplyRegions"
+  ],
+  "not_public": [
+    "testReports",
+    "certifications",
+    "publicCases",
+    "thirdPartyLinks",
+    "packaging",
+    "maintenanceOwner",
+    "publicationPolicy"
+  ]
+}

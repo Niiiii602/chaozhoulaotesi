@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /r/
+Disallow: /o/
+Disallow: /analytics
+Disallow: /review/
+Disallow: /data/
+Disallow: /tools/
+Disallow: /launch/
+
+Sitemap: https://maylendy.com/sitemap.xml

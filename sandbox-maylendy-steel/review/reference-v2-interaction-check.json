@@ -1,0 +1,732 @@
+{
+  "checks": {
+    "equivalent_capacity_units": true,
+    "nearby_sorted": true,
+    "exact_first": true,
+    "materials_not_capacity": true,
+    "model_typo": true,
+    "far_capacity_fallback": true,
+    "kettles_liter_search": true,
+    "search_specs_unchanged": true,
+    "clear_all59": true,
+    "storage_includes_lids": true,
+    "empty_state": true,
+    "reset_all59": true,
+    "comparison_limit": true,
+    "comparison_values": true,
+    "mobile_comparison": true,
+    "comparison_prefill": true,
+    "local_form_no_post": true,
+    "local_brief_export": true,
+    "prefill_oem-brief": true,
+    "prefill_delivery-review": true,
+    "prefill_ms-lid": true,
+    "menu_index.html": true,
+    "menu_products.html": true,
+    "menu_food-storage.html": true,
+    "menu_storage-pp.html": true,
+    "menu_storage-glass.html": true,
+    "menu_storage-silicone.html": true,
+    "menu_storage-clips.html": true,
+    "menu_cookware.html": true,
+    "menu_serving-plates.html": true,
+    "menu_kettles.html": true,
+    "menu_manufacturing.html": true,
+    "menu_oem.html": true,
+    "menu_quality.html": true,
+    "menu_company.html": true,
+    "menu_buyer-questions.html": true,
+    "menu_contact.html": true,
+    "menu_storage-special.html": true,
+    "menu_case-compartment-lunch-box.html": true,
+    "menu_case-nesting-storage-set.html": true,
+    "menu_buying-guides.html": true,
+    "menu_guide-steel-grades.html": true,
+    "menu_guide-cookware-construction.html": true,
+    "menu_guide-storage-lids.html": true,
+    "watermarked_factory_switch": true,
+    "footer_guide_position": true,
+    "evidence_dialog": true,
+    "escape_dialog": true,
+    "nojs_products.html": true,
+    "nojs_full_specs": true,
+    "nojs_buyer-questions.html": true,
+    "nojs_index.html": true,
+    "nojs_gallery_links": true,
+    "nojs_guide-steel-grades.html": true,
+    "nojs_guide-cookware-construction.html": true,
+    "nojs_guide-storage-lids.html": true
+  },
+  "evidence": {
+    "search_results": {
+      "1500": [
+        {
+          "id": "catalog-steel-1400",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,400 ml"
+        },
+        {
+          "id": "rectangular-4",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,300 ml"
+        },
+        {
+          "id": "divided-19",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,700 ml"
+        },
+        {
+          "id": "sets-0",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,300 ml"
+        },
+        {
+          "id": "sets-1",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,300 ml"
+        },
+        {
+          "id": "sets-5",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,300 ml"
+        },
+        {
+          "id": "alternate-pp-1",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,300 ml"
+        },
+        {
+          "id": "silicone-glass-2",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,200 ml"
+        },
+        {
+          "id": "silicone-glass-5",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,200 ml"
+        },
+        {
+          "id": "silicone-2",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,200 ml"
+        },
+        {
+          "id": "silicone-5",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,200 ml"
+        },
+        {
+          "id": "value-2",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,200 ml"
+        }
+      ],
+      "1500 ml": [
+        {
+          "id": "catalog-steel-1400",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,400 ml"
+        },
+        {
+          "id": "rectangular-4",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,300 ml"
+        },
+        {
+          "id": "divided-19",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,700 ml"
+        },
+        {
+          "id": "sets-0",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,300 ml"
+        },
+        {
+          "id": "sets-1",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,300 ml"
+        },
+        {
+          "id": "sets-5",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,300 ml"
+        },
+        {
+          "id": "alternate-pp-1",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,300 ml"
+        },
+        {
+          "id": "silicone-glass-2",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,200 ml"
+        },
+        {
+          "id": "silicone-glass-5",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,200 ml"
+        },
+        {
+          "id": "silicone-2",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,200 ml"
+        },
+        {
+          "id": "silicone-5",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,200 ml"
+        },
+        {
+          "id": "value-2",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,200 ml"
+        }
+      ],
+      "1.5 L": [
+        {
+          "id": "catalog-steel-1400",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,400 ml"
+        },
+        {
+          "id": "rectangular-4",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,300 ml"
+        },
+        {
+          "id": "divided-19",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,700 ml"
+        },
+        {
+          "id": "sets-0",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,300 ml"
+        },
+        {
+          "id": "sets-1",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,300 ml"
+        },
+        {
+          "id": "sets-5",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,300 ml"
+        },
+        {
+          "id": "alternate-pp-1",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,300 ml"
+        },
+        {
+          "id": "silicone-glass-2",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,200 ml"
+        },
+        {
+          "id": "silicone-glass-5",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,200 ml"
+        },
+        {
+          "id": "silicone-2",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,200 ml"
+        },
+        {
+          "id": "silicone-5",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,200 ml"
+        },
+        {
+          "id": "value-2",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,200 ml"
+        }
+      ],
+      "1200": [
+        {
+          "id": "silicone-glass-2",
+          "kind": "exact",
+          "badge": "Exact capacity · 1,200 ml"
+        },
+        {
+          "id": "silicone-glass-5",
+          "kind": "exact",
+          "badge": "Exact capacity · 1,200 ml"
+        },
+        {
+          "id": "silicone-2",
+          "kind": "exact",
+          "badge": "Exact capacity · 1,200 ml"
+        },
+        {
+          "id": "silicone-5",
+          "kind": "exact",
+          "badge": "Exact capacity · 1,200 ml"
+        },
+        {
+          "id": "value-2",
+          "kind": "exact",
+          "badge": "Exact capacity · 1,200 ml"
+        },
+        {
+          "id": "rectangular-4",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,300 ml"
+        },
+        {
+          "id": "sets-0",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,300 ml"
+        },
+        {
+          "id": "sets-1",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,300 ml"
+        },
+        {
+          "id": "sets-5",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,300 ml"
+        },
+        {
+          "id": "alternate-pp-1",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,300 ml"
+        },
+        {
+          "id": "value-4",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,050 ml"
+        },
+        {
+          "id": "rectangular-3",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,000 ml"
+        },
+        {
+          "id": "square-15",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,000 ml"
+        },
+        {
+          "id": "sets-4",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,000 ml"
+        },
+        {
+          "id": "sets-7",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,000 ml"
+        },
+        {
+          "id": "sets-8",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,000 ml"
+        },
+        {
+          "id": "sets-9",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,000 ml"
+        },
+        {
+          "id": "catalog-steel-1400",
+          "kind": "near",
+          "badge": "Nearby capacity · 1,400 ml"
+        },
+        {
+          "id": "divided-18",
+          "kind": "near",
+          "badge": "Nearby capacity · 960 ml"
+        },
+        {
+          "id": "silicone-glass-1",
+          "kind": "near",
+          "badge": "Nearby capacity · 900 ml"
+        },
+        {
+          "id": "silicone-1",
+          "kind": "near",
+          "badge": "Nearby capacity · 900 ml"
+        },
+        {
+          "id": "silicone-4",
+          "kind": "near",
+          "badge": "Nearby capacity · 900 ml"
+        }
+      ],
+      "304": [
+        {
+          "id": "rectangular-0",
+          "kind": "text",
+          "badge": ""
+        },
+        {
+          "id": "rectangular-1",
+          "kind": "text",
+          "badge": ""
+        },
+        {
+          "id": "rectangular-2",
+          "kind": "text",
+          "badge": ""
+        },
+        {
+          "id": "rectangular-3",
+          "kind": "text",
+          "badge": "Nearby capacity · 1,000 ml"
+        },
+        {
+          "id": "rectangular-4",
+          "kind": "text",
+          "badge": "Nearby capacity · 1,300 ml"
+        },
+        {
+          "id": "rectangular-5",
+          "kind": "text",
+          "badge": ""
+        },
+        {
+          "id": "square-14",
+          "kind": "text",
+          "badge": ""
+        },
+        {
+          "id": "square-15",
+          "kind": "text",
+          "badge": "Nearby capacity · 1,000 ml"
+        },
+        {
+          "id": "divided-17",
+          "kind": "text",
+          "badge": ""
+        },
+        {
+          "id": "divided-18",
+          "kind": "text",
+          "badge": "Nearby capacity · 960 ml"
+        },
+        {
+          "id": "rectangular-6",
+          "kind": "text",
+          "badge": ""
+        },
+        {
+          "id": "rectangular-7",
+          "kind": "text",
+          "badge": ""
+        },
+        {
+          "id": "rectangular-8",
+          "kind": "text",
+          "badge": ""
+        },
+        {
+          "id": "rectangular-9",
+          "kind": "text",
+          "badge": ""
+        },
+        {
+          "id": "rectangular-10",
+          "kind": "text",
+          "badge": ""
+        },
+        {
+          "id": "rectangular-11",
+          "kind": "text",
+          "badge": ""
+        },
+        {
+          "id": "rectangular-12",
+          "kind": "text",
+          "badge": ""
+        },
+        {
+          "id": "rectangular-13",
+          "kind": "text",
+          "badge": ""
+        },
+        {
+          "id": "divided-19",
+          "kind": "text",
+          "badge": "Nearby capacity · 1,700 ml"
+        },
+        {
+          "id": "square-16",
+          "kind": "text",
+          "badge": ""
+        },
+        {
+          "id": "sets-0",
+          "kind": "text",
+          "badge": "Nearby capacity · 1,300 ml"
+        },
+        {
+          "id": "sets-1",
+          "kind": "text",
+          "badge": "Nearby capacity · 1,300 ml"
+        },
+        {
+          "id": "sets-2",
+          "kind": "text",
+          "badge": ""
+        },
+        {
+          "id": "sets-3",
+          "kind": "text",
+          "badge": ""
+        },
+        {
+          "id": "sets-4",
+          "kind": "text",
+          "badge": "Nearby capacity · 1,000 ml"
+        },
+        {
+          "id": "sets-5",
+          "kind": "text",
+          "badge": "Nearby capacity · 1,300 ml"
+        },
+        {
+          "id": "sets-6",
+          "kind": "text",
+          "badge": ""
+        },
+        {
+          "id": "sets-7",
+          "kind": "text",
+          "badge": "Nearby capacity · 1,000 ml"
+        },
+        {
+          "id": "sets-8",
+          "kind": "text",
+          "badge": "Nearby capacity · 1,000 ml"
+        },
+        {
+          "id": "sets-9",
+          "kind": "text",
+          "badge": "Nearby capacity · 1,000 ml"
+        },
+        {
+          "id": "sets-10",
+          "kind": "text",
+          "badge": ""
+        },
+        {
+          "id": "silicone-glass-0",
+          "kind": "text",
+          "badge": ""
+        },
+        {
+          "id": "silicone-glass-1",
+          "kind": "text",
+          "badge": "Nearby capacity · 900 ml"
+        },
+        {
+          "id": "silicone-glass-2",
+          "kind": "text",
+          "badge": "Exact capacity · 1,200 ml"
+        },
+        {
+          "id": "silicone-glass-3",
+          "kind": "text",
+          "badge": ""
+        },
+        {
+          "id": "silicone-glass-4",
+          "kind": "text",
+          "badge": ""
+        },
+        {
+          "id": "silicone-glass-5",
+          "kind": "text",
+          "badge": "Exact capacity · 1,200 ml"
+        },
+        {
+          "id": "silicone-glass-6",
+          "kind": "text",
+          "badge": ""
+        },
+        {
+          "id": "silicone-0",
+          "kind": "text",
+          "badge": ""
+        },
+        {
+          "id": "silicone-1",
+          "kind": "text",
+          "badge": "Nearby capacity · 900 ml"
+        },
+        {
+          "id": "silicone-2",
+          "kind": "text",
+          "badge": "Exact capacity · 1,200 ml"
+        },
+        {
+          "id": "silicone-3",
+          "kind": "text",
+          "badge": ""
+        },
+        {
+          "id": "silicone-4",
+          "kind": "text",
+          "badge": "Nearby capacity · 900 ml"
+        },
+        {
+          "id": "silicone-5",
+          "kind": "text",
+          "badge": "Exact capacity · 1,200 ml"
+        },
+        {
+          "id": "alternate-pp-0",
+          "kind": "text",
+          "badge": ""
+        },
+        {
+          "id": "alternate-pp-1",
+          "kind": "text",
+          "badge": "Nearby capacity · 1,300 ml"
+        },
+        {
+          "id": "alternate-pp-2",
+          "kind": "text",
+          "badge": ""
+        },
+        {
+          "id": "value-0",
+          "kind": "text",
+          "badge": ""
+        },
+        {
+          "id": "value-1",
+          "kind": "text",
+          "badge": ""
+        },
+        {
+          "id": "value-2",
+          "kind": "text",
+          "badge": "Exact capacity · 1,200 ml"
+        },
+        {
+          "id": "value-3",
+          "kind": "text",
+          "badge": ""
+        },
+        {
+          "id": "value-4",
+          "kind": "text",
+          "badge": "Nearby capacity · 1,050 ml"
+        },
+        {
+          "id": "catalog-steel-800",
+          "kind": "text",
+          "badge": ""
+        },
+        {
+          "id": "catalog-steel-1400",
+          "kind": "text",
+          "badge": "Nearby capacity · 1,400 ml"
+        },
+        {
+          "id": "catalog-bamboo-options",
+          "kind": "text",
+          "badge": ""
+        },
+        {
+          "id": "card-cookware-skillets",
+          "kind": "text",
+          "badge": ""
+        }
+      ],
+      "201": [
+        {
+          "id": "card-cookware-skillets",
+          "kind": "text",
+          "badge": ""
+        },
+        {
+          "id": "card-kettles-household-range",
+          "kind": "text",
+          "badge": ""
+        }
+      ],
+      "01RC2001": [
+        {
+          "id": "rectangular-6",
+          "kind": "similar",
+          "badge": "Similar model code"
+        }
+      ],
+      "100000": [
+        {
+          "id": "card-kettles-household-range",
+          "kind": "near",
+          "badge": "Nearby capacity · 7,500 ml"
+        },
+        {
+          "id": "rectangular-11",
+          "kind": "near",
+          "badge": "Nearby capacity · 6,600 ml"
+        },
+        {
+          "id": "rectangular-10",
+          "kind": "near",
+          "badge": "Nearby capacity · 5,000 ml"
+        },
+        {
+          "id": "sets-5",
+          "kind": "near",
+          "badge": "Nearby capacity · 5,000 ml"
+        }
+      ],
+      "5 L": [
+        {
+          "id": "rectangular-10",
+          "kind": "exact",
+          "badge": "Exact capacity · 5,000 ml"
+        },
+        {
+          "id": "sets-5",
+          "kind": "exact",
+          "badge": "Exact capacity · 5,000 ml"
+        },
+        {
+          "id": "card-kettles-household-range",
+          "kind": "near",
+          "badge": "Nearby capacity · 4,500 ml"
+        },
+        {
+          "id": "square-16",
+          "kind": "near",
+          "badge": "Nearby capacity · 4,300 ml"
+        },
+        {
+          "id": "sets-8",
+          "kind": "near",
+          "badge": "Nearby capacity · 4,300 ml"
+        },
+        {
+          "id": "sets-9",
+          "kind": "near",
+          "badge": "Nearby capacity · 4,300 ml"
+        },
+        {
+          "id": "sets-10",
+          "kind": "near",
+          "badge": "Nearby capacity · 4,300 ml"
+        },
+        {
+          "id": "rectangular-8",
+          "kind": "near",
+          "badge": "Nearby capacity · 4,200 ml"
+        },
+        {
+          "id": "sets-4",
+          "kind": "near",
+          "badge": "Nearby capacity · 4,200 ml"
+        }
+      ]
+    }
+  }
+}

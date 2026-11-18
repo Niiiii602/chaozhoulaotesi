@@ -1,0 +1,23 @@
+{
+  "name": "chaozhoulaotesi",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-09-04",
+  "keep_vars": true,
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    "html_handling": "drop-trailing-slash",
+    "run_worker_first": true
+  },
+  "kv_namespaces": [
+    {
+      "binding": "WEBMAIL_KV",
+      "id": "c6db3c144f7f4f62af86874ce9d2381b"
+    },
+    {
+      "binding": "OUTREACH_KV",
+      "id": "10be3512c1204d5c8b3a3cfd9e13814d"
+    }
+  ]
+}

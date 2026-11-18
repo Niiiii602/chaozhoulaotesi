@@ -1,0 +1,495 @@
+{
+  "catalog": "2026\u7535\u5b50\u56fe\u518c.ai",
+  "treatment": "Original embedded photographs; color-managed CMYK to sRGB, composited onto white. Seven user-identified photographs also receive selective cool-cast neutralization; red seals are preserved. No image generation.",
+  "colorManagement": {
+    "sourceProfile": "U.S. Web Coated (SWOP) v2",
+    "outputProfile": "sRGB",
+    "renderingIntent": "Perceptual",
+    "deviceCmykAssumption": "DeviceCMYK photographs have no embedded output intent; the supplied US Web Coated SWOP profile is used."
+  },
+  "images": [
+    {
+      "file": "assets/catalog-white/rectangular-0.webp",
+      "code": "01RC400",
+      "page": 2,
+      "imageIndex": 7,
+      "object": "Im7.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/rectangular-1.webp",
+      "code": "01RC550",
+      "page": 2,
+      "imageIndex": 6,
+      "object": "Im6.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/rectangular-2.webp",
+      "code": "01RC650",
+      "page": 2,
+      "imageIndex": 5,
+      "object": "Im5.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/rectangular-3.webp",
+      "code": "01RC1000",
+      "page": 2,
+      "imageIndex": 4,
+      "object": "Im4.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/rectangular-4.webp",
+      "code": "01RC1300",
+      "page": 2,
+      "imageIndex": 3,
+      "object": "Im3.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/rectangular-5.webp",
+      "code": "01RC2250",
+      "page": 2,
+      "imageIndex": 2,
+      "object": "Im2.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/rectangular-6.webp",
+      "code": "01RC2000",
+      "page": 2,
+      "imageIndex": 0,
+      "object": "Im0.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/rectangular-7.webp",
+      "code": "01RC2500",
+      "page": 2,
+      "imageIndex": 1,
+      "object": "Im1.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/rectangular-8.webp",
+      "code": "01RC4200",
+      "page": 2,
+      "imageIndex": 8,
+      "object": "Im8.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/rectangular-9.webp",
+      "code": "01RC3000",
+      "page": 3,
+      "imageIndex": 0,
+      "object": "Im0.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/rectangular-10.webp",
+      "code": "01RC5000",
+      "page": 3,
+      "imageIndex": 1,
+      "object": "Im1.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/rectangular-11.webp",
+      "code": "01RC6600",
+      "page": 3,
+      "imageIndex": 3,
+      "object": "Im3.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/rectangular-12-neutral.webp",
+      "code": "01RC2600",
+      "page": 3,
+      "imageIndex": 2,
+      "object": "Im2.png",
+      "sourceColorSpace": "['/Indexed', '/DeviceCMYK', 245, IndirectObject(6406, 0, 1629710025552)]",
+      "colorAdjustment": {
+        "method": "Selective cool-cast neutralization",
+        "strength": 0.95,
+        "preserves": "Red seals, warm reflections, luminance and white background"
+      }
+    },
+    {
+      "file": "assets/catalog-white/rectangular-13-neutral.webp",
+      "code": "01RC3700",
+      "page": 3,
+      "imageIndex": 4,
+      "object": "Im4.png",
+      "sourceColorSpace": "['/Indexed', '/DeviceCMYK', 248, IndirectObject(6405, 0, 1629710025552)]",
+      "colorAdjustment": {
+        "method": "Selective cool-cast neutralization",
+        "strength": 0.95,
+        "preserves": "Red seals, warm reflections, luminance and white background"
+      }
+    },
+    {
+      "file": "assets/catalog-white/square-14.webp",
+      "code": "01SQ400",
+      "page": 3,
+      "imageIndex": 5,
+      "object": "Im5.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/square-15.webp",
+      "code": "01SQ1000",
+      "page": 3,
+      "imageIndex": 7,
+      "object": "Im7.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/square-16.webp",
+      "code": "01SQ4300",
+      "page": 3,
+      "imageIndex": 6,
+      "object": "Im6.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/divided-17.webp",
+      "code": "01-SG450/280ml",
+      "page": 5,
+      "imageIndex": 0,
+      "object": "Im0.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/divided-18.webp",
+      "code": "01-SSG400/280/280ml",
+      "page": 5,
+      "imageIndex": 1,
+      "object": "Im1.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/divided-19-neutral.webp",
+      "code": "01-CTXSSG1700ml",
+      "page": 5,
+      "imageIndex": 3,
+      "object": "Im2.png",
+      "sourceColorSpace": "['/Indexed', '/DeviceCMYK', 247, IndirectObject(6389, 0, 1629710025552)]",
+      "colorAdjustment": {
+        "method": "Selective cool-cast neutralization",
+        "strength": 0.95,
+        "preserves": "Red seals, warm reflections, luminance and white background"
+      }
+    },
+    {
+      "file": "assets/catalog-white/baking-6.webp",
+      "code": "01-KP2000ml",
+      "page": 6,
+      "imageIndex": 0,
+      "object": "Im0.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/baking-7.webp",
+      "code": "01-KP2500ml",
+      "page": 6,
+      "imageIndex": 1,
+      "object": "Im1.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/baking-9.webp",
+      "code": "01-KP3000ml",
+      "page": 6,
+      "imageIndex": 2,
+      "object": "Im2.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/baking-10.webp",
+      "code": "01-KP5000ml",
+      "page": 6,
+      "imageIndex": 3,
+      "object": "Im3.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/sets-0-neutral.webp",
+      "code": "01-BXH650/1300ml",
+      "page": 7,
+      "imageIndex": 3,
+      "object": "Im3.png",
+      "sourceColorSpace": "['/Indexed', '/DeviceCMYK', 251, IndirectObject(6314, 0, 1629710025552)]",
+      "colorAdjustment": {
+        "method": "Selective cool-cast neutralization",
+        "strength": 0.95,
+        "preserves": "Red seals, warm reflections, luminance and white background"
+      }
+    },
+    {
+      "file": "assets/catalog-white/sets-1.webp",
+      "code": "01-BXH650/1300/2250ml",
+      "page": 7,
+      "imageIndex": 2,
+      "object": "Im2.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/sets-2.webp",
+      "code": "01-B01-BXH400*2/2000ml",
+      "page": 7,
+      "imageIndex": 1,
+      "object": "Im1.tif",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/sets-3-neutral.webp",
+      "code": "01-KP650*2/2500ml",
+      "page": 7,
+      "imageIndex": 0,
+      "object": "Im0.png",
+      "sourceColorSpace": "['/Indexed', '/DeviceCMYK', 250, IndirectObject(6315, 0, 1629710025552)]",
+      "colorAdjustment": {
+        "method": "Selective cool-cast neutralization",
+        "strength": 0.95,
+        "preserves": "Red seals, warm reflections, luminance and white background"
+      }
+    },
+    {
+      "file": "assets/catalog-white/sets-4.webp",
+      "code": "01-BXH1000*2/4200ml",
+      "page": 8,
+      "imageIndex": 1,
+      "object": "Im1.tif",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/sets-5.webp",
+      "code": "01-KP650*2/1300*2/5000ml",
+      "page": 8,
+      "imageIndex": 0,
+      "object": "Im0.tif",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/sets-6-neutral.webp",
+      "code": "01-CTX650*2/2600ml",
+      "page": 8,
+      "imageIndex": 3,
+      "object": "Im3.png",
+      "sourceColorSpace": "['/Indexed', '/DeviceCMYK', 250, IndirectObject(6310, 0, 1629710025552)]",
+      "colorAdjustment": {
+        "method": "Selective cool-cast neutralization",
+        "strength": 0.95,
+        "preserves": "Red seals, warm reflections, luminance and white background"
+      }
+    },
+    {
+      "file": "assets/catalog-white/sets-7-neutral.webp",
+      "code": "01-CTX1000*2/3700ml",
+      "page": 8,
+      "imageIndex": 2,
+      "object": "Im2.png",
+      "sourceColorSpace": "['/Indexed', '/DeviceCMYK', 234, IndirectObject(6311, 0, 1629710025552)]",
+      "colorAdjustment": {
+        "method": "Selective cool-cast neutralization",
+        "strength": 0.95,
+        "preserves": "Red seals, warm reflections, luminance and white background"
+      }
+    },
+    {
+      "file": "assets/catalog-white/sets-8.webp",
+      "code": "01-KP400*2/1000/4300ml",
+      "page": 9,
+      "imageIndex": 0,
+      "object": "Im0.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/sets-9.webp",
+      "code": "01-KP1000*2/4300ml",
+      "page": 9,
+      "imageIndex": 1,
+      "object": "Im1.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/sets-10.webp",
+      "code": "01-KP400*4/4300ml",
+      "page": 9,
+      "imageIndex": 2,
+      "object": "Im2.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/silicone-glass-0.webp",
+      "code": "10RC600",
+      "page": 10,
+      "imageIndex": 6,
+      "object": "Im6.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/silicone-glass-1.webp",
+      "code": "10RC900",
+      "page": 10,
+      "imageIndex": 7,
+      "object": "Im7.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/silicone-glass-2.webp",
+      "code": "10RC1200",
+      "page": 10,
+      "imageIndex": 8,
+      "object": "Im8.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/silicone-glass-3.webp",
+      "code": "10r280",
+      "page": 11,
+      "imageIndex": 0,
+      "object": "Im0.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/silicone-glass-4.webp",
+      "code": "10R630",
+      "page": 11,
+      "imageIndex": 1,
+      "object": "Im1.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/silicone-glass-5.webp",
+      "code": "10R1200",
+      "page": 11,
+      "imageIndex": 2,
+      "object": "Im2.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/silicone-glass-6.webp",
+      "code": "10R2100",
+      "page": 11,
+      "imageIndex": 3,
+      "object": "Im3.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/silicone-0.webp",
+      "code": "10RC600",
+      "page": 10,
+      "imageIndex": 0,
+      "object": "Im0.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/silicone-1.webp",
+      "code": "10RC900",
+      "page": 10,
+      "imageIndex": 1,
+      "object": "Im1.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/silicone-2.webp",
+      "code": "10RC1200",
+      "page": 10,
+      "imageIndex": 2,
+      "object": "Im2.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/silicone-3.webp",
+      "code": "10RC600",
+      "page": 10,
+      "imageIndex": 3,
+      "object": "Im3.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/silicone-4.webp",
+      "code": "10RC900",
+      "page": 10,
+      "imageIndex": 4,
+      "object": "Im4.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/silicone-5.webp",
+      "code": "10RC1200",
+      "page": 10,
+      "imageIndex": 5,
+      "object": "Im5.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/alternate-pp-0.webp",
+      "code": "01RC550",
+      "page": 11,
+      "imageIndex": 4,
+      "object": "Im4.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/alternate-pp-1.webp",
+      "code": "01RC1300",
+      "page": 11,
+      "imageIndex": 5,
+      "object": "Im5.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/alternate-pp-2.webp",
+      "code": "01RC450/280",
+      "page": 11,
+      "imageIndex": 6,
+      "object": "Im6.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/value-0.webp",
+      "code": "02RC580",
+      "page": 12,
+      "imageIndex": 0,
+      "object": "Im0.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/value-1.webp",
+      "code": "02RC850",
+      "page": 12,
+      "imageIndex": 1,
+      "object": "Im1.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/value-2.webp",
+      "code": "02RC1200",
+      "page": 12,
+      "imageIndex": 2,
+      "object": "Im2.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/value-3.webp",
+      "code": "02R700",
+      "page": 12,
+      "imageIndex": 3,
+      "object": "Im3.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    },
+    {
+      "file": "assets/catalog-white/value-4.webp",
+      "code": "02R1050",
+      "page": 12,
+      "imageIndex": 4,
+      "object": "Im4.png",
+      "sourceColorSpace": "/DeviceCMYK"
+    }
+  ]
+}

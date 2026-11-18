@@ -1,0 +1,25 @@
+{
+  "durationMs": 1033,
+  "first": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "last": [
+    600000,
+    800000,
+    20000,
+    40000
+  ],
+  "hasIntermediate": true,
+  "configured": [
+    "1000",
+    "1000",
+    "1000",
+    "1000"
+  ],
+  "errors": [],
+  "scope": "live",
+  "passed": true
+}

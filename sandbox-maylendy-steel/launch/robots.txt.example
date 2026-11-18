@@ -1,0 +1,16 @@
+# DRAFT EXAMPLE ONLY — not applied to production.
+# Use only after the public pages, routes and factual content are approved.
+# Keep private owner materials out of the deployed public asset set.
+# Search-bot access and model-training preferences are separate decisions.
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /r/
+Disallow: /o/
+Disallow: /review/
+Disallow: /review.html
+Disallow: /tools/
+Disallow: /data/
+Disallow: /launch/
+
+Sitemap: https://maylendy.com/sitemap.xml

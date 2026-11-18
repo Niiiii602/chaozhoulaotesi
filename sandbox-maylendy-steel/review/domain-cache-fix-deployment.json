@@ -1,0 +1,30 @@
+{
+  "deployedAt": "2026-11-18T16:24:00Z",
+  "worker": "chaozhoulaotesi",
+  "version": "ec5c4a4a-f352-478b-86f2-6f7b5fd923f6",
+  "deploymentId": "6a923952-2a7b-4dbc-96c6-2e0952d4ffca",
+  "previousVersion": "47860fcd-7844-4fe8-8756-e32bbf072337",
+  "traffic": "100%",
+  "message": "Serve www.laotes.com directly and stop caching laotes redirects",
+  "bindingsPreserved": true,
+  "bindingsCompared": 15,
+  "domainRouting": {
+    "laotes.com": "200 LAOTESI original website",
+    "www.laotes.com": "200 LAOTESI original website (no hostname swap)",
+    "maylendy.com": "200 MayLendy silver website",
+    "www.maylendy.com": "301 https://maylendy.com/"
+  },
+  "cachePolicy": {
+    "laotesHtml": "Cache-Control: no-store, 302 for HTML and alias redirects",
+    "escapeHatch": "/?refresh=laotes returns Clear-Site-Data: \"cache\""
+  },
+  "tests": {
+    "routing": "82/82 pass",
+    "live": "38/38 pass"
+  },
+  "notes": [
+    "No DNS, route or email change; existing Worker and four hostnames kept.",
+    "R2 S3 credentials supplied by the owner were not used and are not needed for this release.",
+    "Cloudflare token stored only in the DPAPI vault at %APPDATA%\\MayLendyDeploy\\credentials.json."
+  ]
+}

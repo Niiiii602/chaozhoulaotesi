@@ -1,0 +1,176 @@
+{
+  "checkedAt": "2026-11-18T16:25:09Z",
+  "checks": {
+    "serve_200_www.laotes.com": true,
+    "canonical_laotes_www.laotes.com": true,
+    "no_store_www.laotes.com": true,
+    "serve_200_laotes.com": true,
+    "canonical_laotes_laotes.com": true,
+    "no_store_laotes.com": true,
+    "alias_html_302_uncached": true,
+    "alias_html_www_stays_same_host": true,
+    "clear_site_data_www.laotes.com": true,
+    "clear_site_data_laotes.com": true,
+    "asset_ok_www.laotes.com__products": true,
+    "asset_ok_laotes.com__products": true,
+    "asset_ok_www.laotes.com__assets_catalog-white_sets-7-neutral.webp": true,
+    "asset_ok_laotes.com__styles.css": true,
+    "maylendy_home_200": true,
+    "maylendy_www_canonical_301": true,
+    "maylendy_page_products": true,
+    "maylendy_page_food-storage": true,
+    "maylendy_page_oem": true,
+    "maylendy_page_quality-delivery": true,
+    "maylendy_page_about-us": true,
+    "maylendy_page_qa": true,
+    "maylendy_page_contact": true,
+    "maylendy_page_buying-guides": true,
+    "maylendy_page_guide-steel-grades": true,
+    "maylendy_page_case-compartment-lunch-box": true,
+    "api_health_maylendy.com": true,
+    "api_quote_preserved_maylendy.com": true,
+    "api_analytics_protected_maylendy.com": true,
+    "api_health_laotes.com": true,
+    "api_quote_preserved_laotes.com": true,
+    "api_analytics_protected_laotes.com": true,
+    "private_404_maylendy.com____laotes_index.html": true,
+    "private_404_laotes.com____laotes_index.html": true,
+    "private_404_laotes.com__sandbox-maylendy-steel_index.html": true,
+    "private_404_laotes.com__launch_release-worker.mjs": true,
+    "private_404_maylendy.com__review_OWNER-REVIEW.md": true,
+    "video_range_206": true
+  },
+  "detail": {
+    "serve_200_www.laotes.com": {
+      "status": 200,
+      "location": null,
+      "contentMatch": true
+    },
+    "canonical_laotes_www.laotes.com": {},
+    "no_store_www.laotes.com": {
+      "cacheControl": "no-store"
+    },
+    "serve_200_laotes.com": {
+      "status": 200,
+      "location": null,
+      "contentMatch": true
+    },
+    "canonical_laotes_laotes.com": {},
+    "no_store_laotes.com": {
+      "cacheControl": "no-store"
+    },
+    "alias_html_302_uncached": {
+      "status": 302,
+      "location": "https://laotes.com/",
+      "cacheControl": "no-store"
+    },
+    "alias_html_www_stays_same_host": {
+      "status": 302,
+      "location": "https://www.laotes.com/"
+    },
+    "clear_site_data_www.laotes.com": {
+      "status": 200,
+      "clearSiteData": "\"cache\"",
+      "cacheControl": "no-store"
+    },
+    "clear_site_data_laotes.com": {
+      "status": 200,
+      "clearSiteData": "\"cache\"",
+      "cacheControl": "no-store"
+    },
+    "asset_ok_www.laotes.com__products": {
+      "status": 200,
+      "bytes": 40249
+    },
+    "asset_ok_laotes.com__products": {
+      "status": 200,
+      "bytes": 40249
+    },
+    "asset_ok_www.laotes.com__assets_catalog-white_sets-7-neutral.webp": {
+      "status": 200,
+      "bytes": 73514
+    },
+    "asset_ok_laotes.com__styles.css": {
+      "status": 200,
+      "bytes": 93527
+    },
+    "maylendy_home_200": {
+      "status": 200
+    },
+    "maylendy_www_canonical_301": {
+      "status": 301,
+      "location": "https://maylendy.com/"
+    },
+    "maylendy_page_products": {
+      "status": 200
+    },
+    "maylendy_page_food-storage": {
+      "status": 200
+    },
+    "maylendy_page_oem": {
+      "status": 200
+    },
+    "maylendy_page_quality-delivery": {
+      "status": 200
+    },
+    "maylendy_page_about-us": {
+      "status": 200
+    },
+    "maylendy_page_qa": {
+      "status": 200
+    },
+    "maylendy_page_contact": {
+      "status": 200
+    },
+    "maylendy_page_buying-guides": {
+      "status": 200
+    },
+    "maylendy_page_guide-steel-grades": {
+      "status": 200
+    },
+    "maylendy_page_case-compartment-lunch-box": {
+      "status": 200
+    },
+    "api_health_maylendy.com": {
+      "status": 200,
+      "channel": "zoho"
+    },
+    "api_quote_preserved_maylendy.com": {
+      "status": 405
+    },
+    "api_analytics_protected_maylendy.com": {
+      "status": 401
+    },
+    "api_health_laotes.com": {
+      "status": 200,
+      "channel": "zoho"
+    },
+    "api_quote_preserved_laotes.com": {
+      "status": 405
+    },
+    "api_analytics_protected_laotes.com": {
+      "status": 401
+    },
+    "private_404_maylendy.com____laotes_index.html": {
+      "status": 404
+    },
+    "private_404_laotes.com____laotes_index.html": {
+      "status": 404
+    },
+    "private_404_laotes.com__sandbox-maylendy-steel_index.html": {
+      "status": 404
+    },
+    "private_404_laotes.com__launch_release-worker.mjs": {
+      "status": 404
+    },
+    "private_404_maylendy.com__review_OWNER-REVIEW.md": {
+      "status": 404
+    },
+    "video_range_206": {
+      "status": 206,
+      "bytes": 1024,
+      "contentRange": "bytes 0-1023/8018822"
+    }
+  },
+  "scope": "Read-only live verification; no enquiry, tracking or credential submission"
+}

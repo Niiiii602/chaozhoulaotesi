@@ -1,0 +1,229 @@
+{
+  "checks": {
+    "first_switch_under3s": true,
+    "actual_webgl_two_lanes": true,
+    "opposite_motion": true,
+    "center_depth_and_scale": true,
+    "real_pause": true,
+    "real_resume_with_focus": true,
+    "independent_lane_navigation": true,
+    "keyboard_navigation": true,
+    "reduced_motion_still": true,
+    "all_nine_manual_links": true,
+    "frameless_44px_controls": true,
+    "mobile_touch_drag": true,
+    "offscreen_stops": true,
+    "context_loss_fallback": true,
+    "webgl_unavailable": true,
+    "fallback_next": true,
+    "isolated_texture_fallback": true,
+    "uncaught_errors": true,
+    "real_model_rows_aligned": true
+  },
+  "evidence": {
+    "first_switch_seconds": 1.735,
+    "directions": {
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        3.198600573088869,
+        -2.7248438998340605
+      ]
+    },
+    "gallery_links": [
+      "storage-pp.html#rectangular-6",
+      "storage-glass.html#silicone-glass-6",
+      "storage-silicone.html#silicone-3",
+      "storage-pp.html#divided-19",
+      "storage-pp.html#sets-7",
+      "serving-plates.html#plates-serving-compartment",
+      "cookware.html#cookware-tri-ply",
+      "cookware.html#cookware-tri-ply",
+      "kettles.html#kettles-household-range"
+    ],
+    "model_rows": [
+      {
+        "cards": 59,
+        "misaligned": 0,
+        "page": "products.html",
+        "width": 1440
+      },
+      {
+        "cards": 31,
+        "misaligned": 0,
+        "page": "storage-pp.html",
+        "width": 1440
+      },
+      {
+        "cards": 7,
+        "misaligned": 0,
+        "page": "storage-glass.html",
+        "width": 1440
+      },
+      {
+        "cards": 6,
+        "misaligned": 0,
+        "page": "storage-silicone.html",
+        "width": 1440
+      },
+      {
+        "cards": 8,
+        "misaligned": 0,
+        "page": "storage-clips.html",
+        "width": 1440
+      },
+      {
+        "cards": 3,
+        "misaligned": 0,
+        "page": "storage-special.html",
+        "width": 1440
+      },
+      {
+        "cards": 59,
+        "misaligned": 0,
+        "page": "products.html",
+        "width": 1024
+      },
+      {
+        "cards": 31,
+        "misaligned": 0,
+        "page": "storage-pp.html",
+        "width": 1024
+      },
+      {
+        "cards": 7,
+        "misaligned": 0,
+        "page": "storage-glass.html",
+        "width": 1024
+      },
+      {
+        "cards": 6,
+        "misaligned": 0,
+        "page": "storage-silicone.html",
+        "width": 1024
+      },
+      {
+        "cards": 8,
+        "misaligned": 0,
+        "page": "storage-clips.html",
+        "width": 1024
+      },
+      {
+        "cards": 3,
+        "misaligned": 0,
+        "page": "storage-special.html",
+        "width": 1024
+      },
+      {
+        "cards": 59,
+        "misaligned": 0,
+        "page": "products.html",
+        "width": 768
+      },
+      {
+        "cards": 31,
+        "misaligned": 0,
+        "page": "storage-pp.html",
+        "width": 768
+      },
+      {
+        "cards": 7,
+        "misaligned": 0,
+        "page": "storage-glass.html",
+        "width": 768
+      },
+      {
+        "cards": 6,
+        "misaligned": 0,
+        "page": "storage-silicone.html",
+        "width": 768
+      },
+      {
+        "cards": 8,
+        "misaligned": 0,
+        "page": "storage-clips.html",
+        "width": 768
+      },
+      {
+        "cards": 3,
+        "misaligned": 0,
+        "page": "storage-special.html",
+        "width": 768
+      },
+      {
+        "cards": 59,
+        "misaligned": 0,
+        "page": "products.html",
+        "width": 390
+      },
+      {
+        "cards": 31,
+        "misaligned": 0,
+        "page": "storage-pp.html",
+        "width": 390
+      },
+      {
+        "cards": 7,
+        "misaligned": 0,
+        "page": "storage-glass.html",
+        "width": 390
+      },
+      {
+        "cards": 6,
+        "misaligned": 0,
+        "page": "storage-silicone.html",
+        "width": 390
+      },
+      {
+        "cards": 8,
+        "misaligned": 0,
+        "page": "storage-clips.html",
+        "width": 390
+      },
+      {
+        "cards": 3,
+        "misaligned": 0,
+        "page": "storage-special.html",
+        "width": 390
+      },
+      {
+        "cards": 59,
+        "misaligned": 0,
+        "page": "products.html",
+        "width": 360
+      },
+      {
+        "cards": 31,
+        "misaligned": 0,
+        "page": "storage-pp.html",
+        "width": 360
+      },
+      {
+        "cards": 7,
+        "misaligned": 0,
+        "page": "storage-glass.html",
+        "width": 360
+      },
+      {
+        "cards": 6,
+        "misaligned": 0,
+        "page": "storage-silicone.html",
+        "width": 360
+      },
+      {
+        "cards": 8,
+        "misaligned": 0,
+        "page": "storage-clips.html",
+        "width": 360
+      },
+      {
+        "cards": 3,
+        "misaligned": 0,
+        "page": "storage-special.html",
+        "width": 360
+      }
+    ]
+  }
+}

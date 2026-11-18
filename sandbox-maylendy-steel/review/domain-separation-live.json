@@ -1,0 +1,187 @@
+{
+  "checks": {
+    "both_sites_correct_content": true,
+    "www_and_aliases_stay_on_respective_site": true,
+    "laotes.com_api_health": true,
+    "laotes.com_quote_api_preserved": true,
+    "laotes.com_analytics_protected": true,
+    "laotes.com_namespace_not_exposed": true,
+    "maylendy.com_api_health": true,
+    "maylendy.com_quote_api_preserved": true,
+    "maylendy.com_analytics_protected": true,
+    "maylendy.com_namespace_not_exposed": true
+  },
+  "files": [
+    {
+      "host": "laotes.com",
+      "path": "/",
+      "status": 200,
+      "contentMatch": true,
+      "location": null
+    },
+    {
+      "host": "laotes.com",
+      "path": "/products",
+      "status": 200,
+      "contentMatch": true,
+      "location": null
+    },
+    {
+      "host": "laotes.com",
+      "path": "/factory-tour",
+      "status": 200,
+      "contentMatch": true,
+      "location": null
+    },
+    {
+      "host": "laotes.com",
+      "path": "/quality-delivery",
+      "status": 200,
+      "contentMatch": true,
+      "location": null
+    },
+    {
+      "host": "laotes.com",
+      "path": "/about-us",
+      "status": 200,
+      "contentMatch": true,
+      "location": null
+    },
+    {
+      "host": "laotes.com",
+      "path": "/qa",
+      "status": 200,
+      "contentMatch": true,
+      "location": null
+    },
+    {
+      "host": "laotes.com",
+      "path": "/contact",
+      "status": 200,
+      "contentMatch": true,
+      "location": null
+    },
+    {
+      "host": "laotes.com",
+      "path": "/analytics",
+      "status": 200,
+      "contentMatch": true,
+      "location": null
+    },
+    {
+      "host": "laotes.com",
+      "path": "/styles.css",
+      "status": 200,
+      "contentMatch": true,
+      "location": null
+    },
+    {
+      "host": "laotes.com",
+      "path": "/script.js",
+      "status": 200,
+      "contentMatch": true,
+      "location": null
+    },
+    {
+      "host": "laotes.com",
+      "path": "/products.js",
+      "status": 200,
+      "contentMatch": true,
+      "location": null
+    },
+    {
+      "host": "laotes.com",
+      "path": "/assets/catalog-white/sets-7-neutral.webp",
+      "status": 200,
+      "contentMatch": true,
+      "location": null
+    },
+    {
+      "host": "laotes.com",
+      "path": "/robots.txt",
+      "status": 200,
+      "contentMatch": true,
+      "location": null
+    },
+    {
+      "host": "laotes.com",
+      "path": "/sitemap.xml",
+      "status": 200,
+      "contentMatch": true,
+      "location": null
+    },
+    {
+      "host": "maylendy.com",
+      "path": "/",
+      "status": 200,
+      "contentMatch": true,
+      "location": null
+    },
+    {
+      "host": "maylendy.com",
+      "path": "/products",
+      "status": 200,
+      "contentMatch": true,
+      "location": null
+    },
+    {
+      "host": "maylendy.com",
+      "path": "/factory-tour",
+      "status": 200,
+      "contentMatch": true,
+      "location": null
+    },
+    {
+      "host": "maylendy.com",
+      "path": "/contact",
+      "status": 200,
+      "contentMatch": true,
+      "location": null
+    },
+    {
+      "host": "maylendy.com",
+      "path": "/app.js",
+      "status": 200,
+      "contentMatch": true,
+      "location": null
+    },
+    {
+      "host": "maylendy.com",
+      "path": "/robots.txt",
+      "status": 200,
+      "contentMatch": true,
+      "location": null
+    },
+    {
+      "host": "maylendy.com",
+      "path": "/sitemap.xml",
+      "status": 200,
+      "contentMatch": true,
+      "location": null
+    }
+  ],
+  "redirects": [
+    {
+      "host": "www.laotes.com",
+      "path": "/",
+      "status": 301,
+      "location": "https://laotes.com/",
+      "correct": true
+    },
+    {
+      "host": "laotes.com",
+      "path": "/products.html?q=steel",
+      "status": 301,
+      "location": "https://laotes.com/products?q=steel",
+      "correct": true
+    },
+    {
+      "host": "www.maylendy.com",
+      "path": "/",
+      "status": 301,
+      "location": "https://maylendy.com/",
+      "correct": true
+    }
+  ],
+  "scope": "Read-only live checks, no enquiry or tracking submission"
+}

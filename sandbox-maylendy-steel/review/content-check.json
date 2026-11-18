@@ -1,0 +1,21 @@
+{
+  "public_pages": 17,
+  "issues": [],
+  "checks": {
+    "all52_materials": true,
+    "static52_models": true,
+    "all27_answers": true,
+    "01RC2000_68oz": true,
+    "confirmed_set_complete": true,
+    "core_storage_no_capacity_placeholders": true,
+    "no_unapproved_source": true,
+    "sitemap17": true
+  },
+  "original_files_checked": 2019,
+  "original_modified": [],
+  "original_missing": [],
+  "new_outside_sandbox": [],
+  "owner_input_unchanged": true,
+  "source_photos_checked": 16,
+  "source_photos_modified": []
+}

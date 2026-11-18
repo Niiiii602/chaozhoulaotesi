@@ -1,0 +1,83 @@
+[
+  {
+    "id": "sets-7",
+    "lane": "storage",
+    "name": "Nestable storage sets",
+    "subtitle": "Food storage · PP lids",
+    "src": "assets/catalog-white/sets-7-neutral.webp",
+    "href": "storage-pp.html#sets-7",
+    "matte": "edge-white"
+  },
+  {
+    "id": "rectangular-6",
+    "lane": "storage",
+    "name": "Rectangular food storage",
+    "subtitle": "01RC2000 · 2,000 ml",
+    "src": "assets/catalog-white/rectangular-6.webp",
+    "href": "storage-pp.html#rectangular-6",
+    "matte": "edge-white"
+  },
+  {
+    "id": "silicone-glass-6",
+    "lane": "storage",
+    "name": "Silicone glass lids",
+    "subtitle": "Food storage · clear-view lids",
+    "src": "assets/catalog-white/silicone-glass-6.webp",
+    "href": "storage-glass.html#silicone-glass-6",
+    "matte": "edge-white"
+  },
+  {
+    "id": "silicone-3",
+    "lane": "storage",
+    "name": "Silicone-lid containers",
+    "subtitle": "Food storage · lid color options",
+    "src": "assets/catalog-white/silicone-3.webp",
+    "href": "storage-silicone.html#silicone-3",
+    "matte": "edge-white"
+  },
+  {
+    "id": "divided-19",
+    "lane": "storage",
+    "name": "Divided food storage",
+    "subtitle": "Food storage · separate portions",
+    "src": "assets/catalog-white/divided-19-neutral.webp",
+    "href": "storage-pp.html#divided-19",
+    "matte": "edge-white"
+  },
+  {
+    "id": "cookware-shallow",
+    "lane": "kitchen",
+    "name": "Tri-ply frying pans",
+    "subtitle": "Cookware · shallow pan formats",
+    "src": "assets/catalog/cookware-shallow-white.webp",
+    "href": "cookware.html#cookware-tri-ply",
+    "matte": "edge-white"
+  },
+  {
+    "id": "cookware-wok",
+    "lane": "kitchen",
+    "name": "Stainless steel woks",
+    "subtitle": "Cookware · tri-ply construction",
+    "src": "assets/catalog/cookware-wok-white.webp",
+    "href": "cookware.html#cookware-tri-ply",
+    "matte": "edge-white"
+  },
+  {
+    "id": "kettles-household-range",
+    "lane": "kitchen",
+    "name": "Whistling kettles",
+    "subtitle": "Kettles · five capacity options",
+    "src": "assets/catalog/kettle-white.webp",
+    "href": "kettles.html#kettles-household-range",
+    "matte": "edge-white"
+  },
+  {
+    "id": "plates-serving-compartment",
+    "lane": "kitchen",
+    "name": "Compartment serving plates",
+    "subtitle": "Serving · stainless steel",
+    "src": "assets/catalog/plate-clean.webp",
+    "href": "serving-plates.html#plates-serving-compartment",
+    "matte": "edge-white"
+  }
+]
