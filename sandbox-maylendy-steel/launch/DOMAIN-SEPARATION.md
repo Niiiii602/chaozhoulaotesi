@@ -37,6 +37,16 @@ MayLendy原有143个发布文件逐一校验未变，保留1秒数字增长、�
 - 上传时逐项比对15个绑定（秘密／变量／KV／ASSETS）与线上版本完全一致，未改动域名、邮箱路由或KV数据。
 - 线上38项检查通过：两个品牌首页200且内容与构建包一致；`www.laotes.com`不再301；HTML与别名302带`no-store`；`?refresh=laotes`返回`Clear-Site-Data: "cache"`；MayLendy十个页面200；两站API健康／询盘405／统计401；私有目录与`__laotes`仍404；视频Range仍206。
 
+### 用户浏览器仍跳转的定位（2026-11-18）
+
+上线后用户报告本机浏览器访问`laotes.com`仍跳MayLendy。定位为**浏览器缓存的旧永久跳转**，不是服务器当前行为：
+
+- 服务器：带Chrome UA与`Accept: text/html`请求`laotes.com/`、`laotes.com/products`、`www.laotes.com/`均为200且无`Location`。
+- Cloudflare区域（`12c13956836befc372e491e6c7cd319b`）：无Page Rules、无动态／批量重定向规则集；已执行整区缓存清理，行为不变。
+- 真实Edge配置复现：清理前裸域名跳到maylendy；访问`?refresh=laotes`后再访问裸域名，地址栏保持`https://laotes.com`、标题为LAOTESI。
+- 同一`?refresh=laotes`在Chrome中亦加载LAOTESI，清理指令同样生效。
+- 结论：旧301由浏览器缓存保留；新响应为302＋`no-store`、HTML为`no-store`，清理一次后不会再复现。
+
 ## 检查
 
 - 80项路由／API隔离／Range测试通过，Wrangler试编译通过。
