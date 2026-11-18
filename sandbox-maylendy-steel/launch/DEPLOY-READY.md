@@ -1,11 +1,11 @@
 # MayLendy 上线准备与密钥配置
 
-当前状态：**已通过Cloudflare正式上线 https://maylendy.com/ ，GitHub同步仍缺凭据。** 最新版本、线上验证与回退依据见 [DEPLOYMENT.md](DEPLOYMENT.md)。下文保留上线准备过程，旧凭据检查结论已被本次附件验证更新。
+当前状态：**已通过Cloudflare正式上线 https://maylendy.com/ ，源码与构建已推送到GitHub `main`。** 最新版本、线上验证与回退依据见 [DEPLOYMENT.md](DEPLOYMENT.md)。下文保留上线准备过程，旧凭据检查结论已被后续验证更新。
 
 ## 密钥检查结果
 
-- GitHub：仓库 `Niiiii602/chaozhoulaotesi`，没有找到可用的 GitHub 环境令牌或 CLI 登录。
-- Cloudflare：找到 Wrangler OAuth 缓存，但 API 返回401／403，现有缓存目前不能用于部署。
+- GitHub：仓库 `Niiiii602/chaozhoulaotesi`，凭据已通过DPAPI保管，2026-11-18推送提交`f1e81ce`（仅`sandbox-maylendy-steel/`）。
+- Cloudflare：账户级API令牌已校验并DPAPI保存；发布与回滚记录见[DEPLOYMENT.md](DEPLOYMENT.md)。
 - 密钥没有打印、写入仓库或写入发布资源。
 
 ## 一键配置

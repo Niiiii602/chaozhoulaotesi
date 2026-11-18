@@ -8,7 +8,7 @@
 - 部署ID：`6a923952-2a7b-4dbc-96c6-2e0952d4ffca`
 - 流量：100%新版本；laotes.com与www.laotes.com均直接200显示原LAOTES官网，maylendy.com显示MayLendy银白版，保留1秒数字增长。
 - 最新更新日期：2026-11-18 UTC；前版本`47860fcd-7844-4fe8-8756-e32bbf072337`（更早`6f1aa31c-96e9-4b56-a260-55afbece774e`、`3a871255-b69c-49d4-b422-e62988115caa`、`624fcefc-ed11-4f95-b1e8-933959a83f0e`、原版`97c86f1c-ef60-447b-a8c5-371180140595`）保留。域名分流依据见 [DOMAIN-SEPARATION.md](DOMAIN-SEPARATION.md)。
-- GitHub：**尚未同步，缺少GitHub令牌**；附件提供的是Cloudflare账户令牌及R2相关凭据，不包含GitHub凭据。
+- GitHub：**已同步**，提交`f1e81ce`推送至`main`（仅`sandbox-maylendy-steel/`，911个文件，约121 MB；本地ZIP包与工具缓存已用`.gitignore`排除）；根目录原LAOTES文件未改动。
 
 ## 发布内容与保留项
 
@@ -42,8 +42,10 @@ Cloudflare令牌使用Windows DPAPI加密保存到当前用户配置目录，没
 
 发布前代码、配置及部署快照保存在本次会话临时目录的 `production-snapshot/`，包含未公开配置，不应上传到公共仓库。正式版本ID及回退ID已记录在本文件，长期有效性取决于Cloudflare版本保留策略。
 
-## GitHub待完成
+## GitHub同步
 
-双击 [Configure-GitHub.cmd](Configure-GitHub.cmd)，输入仅限 `Niiiii602/chaozhoulaotesi`、Contents读写权限的GitHub令牌；验证并加密保存后，可继续同步源码及选定发布文件。未取得GitHub凭据前没有执行提交或推送。
+已用仓库范围内有效的GitHub凭据完成提交与推送：提交`f1e81ce`（父提交`4a3fb09`），只包含本次站点沙箱的源码、构建产物、工具与发布记录。推送凭据仅以进程内请求头使用，未写入`remote`地址、`.git/config`或任何文件；令牌以DPAPI保存在`%APPDATA%\MayLendyDeploy\credentials.json`。
+
+如需再次推送，双击 [Configure-GitHub.cmd](Configure-GitHub.cmd) 更新令牌即可。
 
 本次Cloudflare账户令牌权限范围很广，且曾作为附件提供。建议发布验收后在Cloudflare创建最小权限的替代令牌，验证后撤销旧令牌；不要将令牌再发送到聊天、仓库或公开附件。
